@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #ff5938;
+  --sb-size: 5px;
+  background-color: #ebe9e9;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+header {
+  background: url(../src/assets/Home/hero-sections.jpg);
+  width: 100%;
+  height: 100dvh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.abt-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/Home/abt-1.jpg);
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.why-choose {
+  background: linear-gradient(135deg, #031c14 0%, #0b3b2e 50%, #257341 100%);
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+
+.why-choose {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #031c14,
+    #0d4b38
+  );
+  border-radius: 20px;
+  min-height: 600px;
+  
+}
+
+/* Rotating wrapper */
+.rotating-shape {
+  position: absolute;
+  right: -180px;
+  top: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translateY(-50%);
+  animation: rotateShape 20s linear infinite;
+}
+
+/* Each line */
+.rotating-shape span {
+  position: absolute;
+  width: 22px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.18);
+  left: 50%;
+  top: 50%;
+  transform-origin: center -40px;
+  border-radius: 20px;
+}
+
+/* Generate radial lines */
+.rotating-shape span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.rotating-shape span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.rotating-shape span:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.rotating-shape span:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.rotating-shape span:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.rotating-shape span:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.rotating-shape span:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.rotating-shape span:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+/* Rotation animation */
+@keyframes rotateShape {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+
+/* Customize footer */
+.footer-bg {
+  background: linear-gradient(
+    135deg,
+    #135846,
+    #0f4d3d
+  );
+}
