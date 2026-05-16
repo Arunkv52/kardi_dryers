@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious
-} from '@/components/ui/carousel'
+} from './ui/carousel'
 
 import ScrollImg1 from '../assets/Home/carousal/Dryers-1.jpg'
 import ScrollImg2 from '../assets/Home/carousal/Dryers-image.jpg'
