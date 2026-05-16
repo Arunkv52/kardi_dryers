@@ -1,7 +1,18 @@
 import { ArrowRight } from 'lucide-react'
 
+type ButtonProps = {
+  text?: string
+  icon?: boolean
+  variant?: 'primary' | 'secondary' | 'dark' | 'orange'
+  size?: 'sm' | 'md' | 'lg'
+  fullWidth?: boolean
+  className?: string
+  onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+}
+
 const Button = ({
-  text = 'Learn More',
+  text = 'Know More',
   icon = true,
   variant = 'primary',
   size = 'md',
@@ -9,9 +20,9 @@ const Button = ({
   className = '',
   onClick,
   type = 'button',
-}) => {
+}: ButtonProps) => {
   const baseStyles =
-    'inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 cursor-pointer'
+    'inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 cursor-pointer group'
 
   const variants = {
     primary:
@@ -22,7 +33,8 @@ const Button = ({
 
     dark: 'bg-black text-white hover:bg-[#222]',
 
-    orange : 'bg-[#ff5938] text-white hover:bg-[#1d5b33] shadow-md hover:scale-105'
+    orange:
+      'bg-[#ff5938] text-white hover:bg-[#e14d2f] shadow-md hover:scale-105',
   }
 
   const sizes = {
