@@ -73,6 +73,9 @@ const Footer = () => {
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
                 Blog
               </li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                Contact us
+              </li>
             </ul>
           </div>
           <div className='md:w-[15%] w-full md:mt-0 mt-10'>
