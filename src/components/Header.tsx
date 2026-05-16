@@ -8,7 +8,7 @@ const Header = () => {
       <header>
         <Navbar />
         <div className='px-5 md:w-1/2 w-full absolute md:bottom-20 bottom-10'>
-          <p className='bg-[#ff5938] rounded-xl w-fit text-sm px-3 mb-5'>
+          <p className='bg-[#ff5938] rounded-xl w-fit text-sm px-3 mb-5 text-white'>
             We Serve
           </p>
           <h1 className='text-white md:text-6xl text-4xl'>

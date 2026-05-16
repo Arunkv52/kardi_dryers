@@ -40,10 +40,11 @@ header {
   background-size: cover;
 }
 
+/* About us */
 .abt-bg {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./assets/Home/abt-1.jpg);
+    url(./assets/Home/about-us/international.jpg);
   width: 100%;
   height: 500px;
   background-position: center;
@@ -51,6 +52,41 @@ header {
   background-size: cover;
   border-radius: 10px;
 }
+.abt-bg-1 {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/Home/about-us/BuildIntec.jpg);
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.abt-bg-2 {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/Home/about-us/plant-growing.jpg);
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.abt-bg-3 {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/Home/about-us/planting-seed.jpg);
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
 .why-choose {
   background: linear-gradient(135deg, #031c14 0%, #0b3b2e 50%, #257341 100%);
   width: 100%;
@@ -58,18 +94,12 @@ header {
   border-radius: 10px;
 }
 
-
 .why-choose {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    #031c14,
-    #0d4b38
-  );
+  background: linear-gradient(135deg, #031c14, #0d4b38);
   border-radius: 20px;
   min-height: 600px;
-  
 }
 
 /* Rotating wrapper */
@@ -139,12 +169,7 @@ header {
   }
 }
 
-
 /* Customize footer */
 .footer-bg {
-  background: linear-gradient(
-    135deg,
-    #135846,
-    #0f4d3d
-  );
+  background: linear-gradient(135deg, #135846, #0f4d3d);
 }

@@ -2,8 +2,11 @@ import Header from '../components/Header'
 import '../App.css'
 import Footer from '../components/Footer'
 import CarousalItem from '../components/CarousalItem'
-import Download from '../assets/Home/brochure-img.jpg'
+import Download from '../assets/Home/download-brochure.jpg'
 import Button from '../components/myui/Button'
+import Icon1 from '../assets/icons/global-1.svg'
+import Icon2 from '../assets/icons/agri-commodities.svg'
+import Icon3 from '../assets/icons/agri-tech.svg'
 
 
 const Home = () => {
@@ -19,13 +22,16 @@ const Home = () => {
             </p>
           </div>
           <div className='md:w-1/2 w-full'>
-            <h3 className='text-4xl'>
-              The process of turning processedresidual streams into energycan be
-              improved to be better,smarter, and more transparent.
+            <h3 className='text-2xl'>
+              Kardi Dryers is India’s trusted name in agro crop drying
+              technology, delivering customized drying solutions for farmers,
+              plantations, and processors worldwide. Backed by innovation,
+              experience, and global partnerships, we help preserve harvest
+              quality with precision engineering.
             </h3>
 
             <div className=' mt-5'>
-              <Button text="Know More" className='px-4' />
+              <Button text='Know More' className='px-4' />
             </div>
           </div>
         </div>
@@ -33,22 +39,30 @@ const Home = () => {
         <div className='abt-start md:px-0 px-0 md:mt-0 mt-20 md:grid md:grid-cols-4 grid grid-cols-1 gap-10 md:mt-20 mt-0'>
           <div className='abt-bg'>
             <div className='text-area text-white md:text-2xl text-xl relative top-10/12 md:left-5 left-5'>
-              <p>From residual stream to raw material</p>
+              <p className='text-[#ff5938] font-bold'>4,000+</p>
+              <h6 className='text-lg'>Dryers Supplied</h6>
+              <p className='text-sm text-white/50'>Globally</p>
             </div>
           </div>
-          <div className='abt-bg'>
+          <div className='abt-bg-1'>
             <div className='text-area text-white md:text-2xl text-xl relative top-10/12 md:left-5 left-5'>
-              <p>From residual stream to raw material</p>
+              <p className='text-[#ff5938] font-bold'>35+</p>
+              <h6 className='text-lg'>Agricultural Commodities</h6>
+              <p className='text-sm text-white/50'>Served</p>
             </div>
           </div>
-          <div className='abt-bg'>
+          <div className='abt-bg-2'>
             <div className='text-area text-white md:text-2xl text-xl relative top-10/12 md:left-5 left-5'>
-              <p>From residual stream to raw material</p>
+              <p className='text-[#ff5938] font-bold'>8+</p>
+              <h6 className='text-lg'>States & International</h6>
+              <p className='text-sm text-white/50'>Presence</p>
             </div>
           </div>
-          <div className='abt-bg'>
+          <div className='abt-bg-3'>
             <div className='text-area text-white md:text-2xl text-xl relative top-10/12 md:left-5 left-5'>
-              <p>From residual stream to raw material</p>
+              <p className='text-[#ff5938] font-bold'>20+</p>
+              <h6 className='text-lg'>Years of Experience</h6>
+              <p className='text-sm text-white/50'>Since 2001</p>
             </div>
           </div>
         </div>
@@ -58,15 +72,15 @@ const Home = () => {
       <section className='why-choose relative overflow-hidden'>
         <div className='md:px-20 px-10 relative z-10'>
           <div className='py-20 text-white'>
-            <p className='uppercase text-[12px] font-bold mb-5'>
+            <p className='uppercase text-[12px] font-bold mb-5 text-[#ff5938]'>
               Why Choose us
             </p>
 
             <h2 className='md:text-4xl text-xl md:w-1/2 leading-10'>
-              We understand the importance of a reliable and efficient
-              propulsion system for your boat, which is why we offer
-              state-of-the-art marine engines that deliver outstanding
-              performance, reliability, and durability.
+              Our engineering approach ensures uniform drying, reduced moisture
+              loss, and improved product quality across every batch. By adapting
+              each system to local farming conditions, we help farmers achieve
+              better efficiency, higher market value, and long-term reliability.
             </h2>
           </div>
         </div>
@@ -84,87 +98,71 @@ const Home = () => {
         </div>
       </section>
 
-  
       {/* Service Highlight */}
-      <section className='text-2xl md:my-20 my-10'>
+      <section className='text-2xl md:my-20 my-20'>
         <div className='md:px-80 px-10'>
-          <h2 className='md:text-7xl text-4xl'>
-            We develop{' '}
+          <h2 className='md:text-6xl text-4xl'>
+            We deliver advanced agricultural{' '}
             <span className='text-black/50'>
-              sustainable <br />
-              energy solutions
+              <strong>Drying solutions</strong>
             </span>{' '}
           </h2>
           <p className='text-base font-semibold mt-5'>
-            Virya Energy develops, finances, constructs, and operates
-            sustainable energy assets. We accelerate the energy transition by
-            scaling new technologies across the sustainable energy ecosystem. By
-            delivering “fit for purpose energy,” we ensure our renewable
-            solutions match each client’s specific needs, scale, and operational
-            rhythms. We provide renewable energy in the right form, exactly when
-            needed.
+            Kardi Dryers designs, manufactures, and supports high-performance
+            drying systems for agricultural commodities across diverse climates
+            and farming conditions. Our solutions help farmers and processors
+            improve product quality, reduce post-harvest losses, and achieve
+            efficient, reliable drying operations.
           </p>
           <div className='md:grid md:grid-cols-3 md:gap-50 grid grid-cols-1 gap-10 mt-10'>
-            <div className='w-[350px] h-[320px] border border-[#e8e2dd] rounded-[35px] p-12 bg-white'>
+            <div className='w-[350px] h-[320px] border border-[#083326] rounded-[35px] p-12 bg-white'>
               {/* Icon */}
               <div className='relative w-12 h-12'>
-                {/* Head */}
-                <div className='w-6 h-6 bg-[#e8e2dd] rounded-full absolute left-3 top-0'></div>
-
-                {/* Body */}
-                <div className='w-12 h-9 bg-[#ff5b36] rounded-t-full rounded-b-[14px] absolute bottom-0'></div>
+               <img src={Icon1} alt="" />
               </div>
 
               {/* Content */}
               <div className='mt-16'>
-                <h2 className='text-6xl font-medium text-black leading-none'>
-                  700+
+                <h2 className='text-6xl font-medium text-[#ff5938] leading-none'>
+                  4,000+
                 </h2>
 
                 <p className='mt-4 text-[20px] leading-[20px] text-black font-normal'>
-                  Employees over multiple markets
+                  Dryers installed across India and global markets
                 </p>
               </div>
             </div>
-            <div className='w-[350px] h-[320px] border border-[#e8e2dd] rounded-[35px] p-12 bg-white'>
+            <div className='w-[350px] h-[320px] border border-[#083326] rounded-[35px] p-12 bg-white'>
               {/* Icon */}
               <div className='relative w-12 h-12'>
-                {/* Head */}
-                <div className='w-6 h-6 bg-[#e8e2dd] rounded-full absolute left-3 top-0'></div>
-
-                {/* Body */}
-                <div className='w-12 h-9 bg-[#ff5b36] rounded-t-full rounded-b-[14px] absolute bottom-0'></div>
+               <img src={Icon2} alt="" />
               </div>
 
               {/* Content */}
               <div className='mt-16'>
-                <h2 className='text-6xl font-medium text-black leading-none'>
-                  700+
+                <h2 className='text-6xl font-medium  text-[#ff5938] leading-none'>
+                  35+
                 </h2>
 
                 <p className='mt-4 text-[20px] leading-[20px] text-black font-normal'>
-                  Employees over multiple markets
+                  Agricultural commodities successfully processed
                 </p>
               </div>
             </div>
-            <div className='w-[350px] h-[320px] border border-[#e8e2dd] rounded-[35px] p-12 bg-white'>
-              {/* Icon */}
+            <div className='w-[350px] h-[320px] border border-[#083326] rounded-[35px] p-12 bg-white'>
+             {/* Icon */}
               <div className='relative w-12 h-12'>
-                {/* Head */}
-                <div className='w-6 h-6 bg-[#e8e2dd] rounded-full absolute left-3 top-0'></div>
-
-                {/* Body */}
-                <div className='w-12 h-9 bg-[#ff5b36] rounded-t-full rounded-b-[14px] absolute bottom-0'></div>
+               <img src={Icon3} alt="" />
               </div>
 
               {/* Content */}
               <div className='mt-16'>
-                <h2 className='text-6xl font-medium text-black leading-none'>
-                  700+
+                <h2 className='text-6xl font-medium  text-[#ff5938] leading-none'>
+                  20+
                 </h2>
 
                 <p className='mt-4 text-[20px] leading-[20px] text-black font-normal'>
-                  Employees over multiple markets
+                  Years of innovation in agro drying technology
                 </p>
               </div>
             </div>
@@ -176,7 +174,11 @@ const Home = () => {
       <section className='bg-white py-20'>
         <div>
           <div className='prod-heading'>
-            <h2 className='md:text-4xl text-4xl text-center'>Product Ranges</h2>
+            <h2 className='md:text-5xl text-4xl text-center'>
+              Engineered Dryers for{' '}
+              <span className='text-black/50'>Modern Agriculture</span>
+            </h2>
+            <p></p>
           </div>
           <div className='prod-scroll'>
             <CarousalItem />
@@ -188,20 +190,23 @@ const Home = () => {
       <section className='py-20 md:px-40 px-10'>
         <div className='down-brochure md:flex justify-around items-center gap-5'>
           <div className='md:w-1/2 w-full'>
-            <h4 className='text-5xl pb-5'>Our Fit For Purpose <span className='text-black/50'>Brand Promise</span> </h4>
+            <h4 className='text-5xl pb-5'>
+              Discover Our
+              <span className='text-black/50'><strong> Drying Solutions </strong></span>{' '}
+            </h4>
             <p className='pb-10'>
-              For Virya Energy, the energy transition must be adapted to each
-              reality. Our “fit for purpose” approach reflects our commitment to
-              developing customized solutions that exactly meet everyone’s
-              needs. By simplifying access to renewable energy, we we are
-              building a path towards a sustainable future.
+              Get detailed insights into Kardi Dryers’ advanced agro drying
+              technology, including product features, applications, and
+              technical specifications. Find the right drying solution tailored
+              to your crop, climate, and operational needs.
             </p>
-            <Button text='Download Brochure'/>
+            <Button text='Download Brochure' />
           </div>
-          <div className="md:w-1/2 w-full md:py-0 py-10">
-            <img src={Download} alt="" />          
+          <div className='md:w-1/2 w-full md:py-0 py-10'>
+            <img src={Download} alt='' className='h-[500px]' />
           </div>
         </div>
+        
       </section>
 
       {/* Footer */}

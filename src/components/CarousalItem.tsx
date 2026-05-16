@@ -6,6 +6,11 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 
+import ScrollImg1 from '../assets/Home/carousal/Dryers-1.jpg'
+import ScrollImg2 from '../assets/Home/carousal/Dryers-image.jpg'
+import ScrollImg3 from '../assets/Home/carousal/truck-dryers.jpg'
+
+
 const CarousalItem = () => {
   return (
     <>
@@ -16,7 +21,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg1}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -25,24 +30,14 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-3xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Coffee Dryer
                   </h2>
                 </div>
               </div>
@@ -51,7 +46,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg2}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -60,24 +55,14 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-5xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Paddy Dryer
                   </h2>
                 </div>
               </div>
@@ -86,7 +71,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg3}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -95,24 +80,14 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-5xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Kardi-Pedrotti Mobile Dryer
                   </h2>
                 </div>
               </div>
@@ -121,7 +96,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg1}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -130,24 +105,14 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-5xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Sago Dryer
                   </h2>
                 </div>
               </div>
@@ -156,7 +121,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg1}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -165,24 +130,15 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-5xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Nylon Sago Dryer
+
                   </h2>
                 </div>
               </div>
@@ -191,7 +147,7 @@ const CarousalItem = () => {
               <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
                 {/* Image */}
                 <img
-                  src='https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200&auto=format&fit=crop'
+                  src={ScrollImg1}
                   alt='Wind Energy'
                   className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
                 />
@@ -200,24 +156,191 @@ const CarousalItem = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
 
                 {/* Blur Bottom */}
-                <div className='absolute bottom-0 left-0 w-full h-[180px] backdrop-blur-md bg-black/20'></div>
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
 
                 {/* Content */}
-                <div className='absolute bottom-10 left-8 z-10 text-white'>
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
                   {/* Top Label */}
-                  <div className='flex items-center gap-3 mb-5'>
-                    {/* Small Icon */}
-                    <div className='flex flex-col gap-[5px]'>
-                      <span className='w-5 h-[4px] bg-white rounded-full'></span>
-                      <span className='w-3 h-[4px] bg-white rounded-full'></span>
-                    </div>
-
-                    <p className='text-2xl font-medium'>Wind</p>
-                  </div>
-
                   {/* Title */}
-                  <h2 className='text-5xl font-light leading-tight'>
-                    Ollignies North
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Maize Seed Dryer
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Tray Dryer
+
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Cardamom Dryer
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Baby Dryer
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Chilli Dryer
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+             <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Groundnut Dryer
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Flash Dryer
+
+                  </h2>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className='md:basis-1/4'>
+              <div className='w-[350px] rounded-lg overflow-hidden relative group cursor-pointer'>
+                {/* Image */}
+                <img
+                  src={ScrollImg1}
+                  alt='Wind Energy'
+                  className='w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+
+                {/* Overlay */}
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent'></div>
+
+                {/* Blur Bottom */}
+                <div className='absolute bottom-0 left-0 w-full h-[80px] backdrop-blur-md bg-black/20'></div>
+
+                {/* Content */}
+                <div className='absolute bottom-5 left-5 z-10 text-white'>
+                  {/* Top Label */}
+                  {/* Title */}
+                  <h2 className='text-2xl font-light leading-tight'>
+                    Cabin Dryer
                   </h2>
                 </div>
               </div>

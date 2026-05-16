@@ -14,16 +14,16 @@ const Footer = () => {
               <div className='absolute top-0 right-10 w-16 h-40 bg-[#ff5938] rotate-45 rounded-xl'></div>
 
               {/* Large Diagonal Line */}
-              <div className='absolute bottom-[-120px] right-[250px] w-20 h-[600px] bg-[#0a4a3a] rotate-45 rounded-xl'></div>
+              <div className='absolute bottom-30 right-62.5 w-20 h-150 bg-[#0a4a3a] rotate-45 rounded-xl'></div>
 
               {/* Horizontal Line */}
-              <div className='absolute top-40 right-80 w-[500px] h-14 bg-[#0a4a3a] rounded-md'></div>
+              <div className='absolute top-40 right-80 w-125 h-14 bg-[#0a4a3a] rounded-md'></div>
 
               {/* Vertical Line */}
-              <div className='absolute bottom-0 right-40 w-14 h-[300px] bg-[#0a4a3a] rounded-md'></div>
+              <div className='absolute bottom-0 right-40 w-14 h-75 bg-[#0a4a3a] rounded-md'></div>
 
               {/* Small Top Line */}
-              <div className='absolute top-0 right-52 w-14 h-[160px] bg-[#0a4a3a] rounded-md'></div>
+              <div className='absolute top-0 right-52 w-14 h-12.5 bg-[#0a4a3a] rounded-md'></div>
 
               {/* Right Cross Shape */}
               <div className='absolute bottom-24 right-0 w-16 h-56 bg-[#0a4a3a] rotate-45 rounded-xl'></div>
@@ -31,11 +31,11 @@ const Footer = () => {
 
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
-              <h1 className='text-white text-5xl md:text-7xl leading-tight font-light'>
-                Start your{' '}
-                <span className='text-[#ff5938]'>energy transition </span>
+              <h1 className='text-white text-5xl md:text-6xl leading-tight font-light md:mt-0 mt-5'>
+                Dry smarter. 
+                 <span className='text-[#ff5938]'><strong>Preserve better. </strong></span>
                 
-                today.
+                Grow stronger.
               </h1>
             </div>
 
@@ -48,7 +48,7 @@ const Footer = () => {
 
         <div className='footer-top md:flex flex md:flex-row flex-col justify-between'>
           <div className='md:w-[70%] w-full'>
-            <img src={Logo} alt='' className='w-[50px]' />
+            <img src={Logo} alt='' className='w-12.5' />
           </div>
           <div className='md:w-[15%] w-full md:mt-0 mt-10'>
             <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>
