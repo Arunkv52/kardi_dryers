@@ -8,7 +8,7 @@ import { X } from 'lucide-react';
 
 const Navbar = () => {
 
-  const [openMenu, setOpenMenu] = useState(null)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [mobilemenu, setmobilemenu] = useState(false)
 
   const Menu = [

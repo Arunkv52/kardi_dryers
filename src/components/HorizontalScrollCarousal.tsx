@@ -2,6 +2,12 @@ import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 import Prod from '../assets/Home/Cardamom-dryer.webp'
 
+type CardType = {
+  title: string
+  image: string
+}
+
+
 const Example = () => {
   return (
     <div className=''>
@@ -31,7 +37,7 @@ const HorizontalScrollCarousel = () => {
   )
 }
 
-const Card = ({ card }) => {
+const Card = ({ card }: { card: CardType }) => {
   return (
     <div className='w-[450px]'>
       
