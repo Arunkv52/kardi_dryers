@@ -3,8 +3,9 @@ import { useRef } from 'react'
 import Prod from '../assets/Home/Cardamom-dryer.webp'
 
 type CardType = {
+  id: number
   title: string
-  image: string
+  url: string
 }
 
 
