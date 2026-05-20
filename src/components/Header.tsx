@@ -1,11 +1,11 @@
 // Header.tsx
-import { RefObject } from 'react'
+import type { RefObject } from 'react'
 import Navbar from './Navbar'
 import HeroVideo from '../assets/Home/videos/Hero-videos.mp4'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 interface HeaderProps {
-  scrollContainer: RefObject<HTMLElement>
+  scrollContainer: RefObject<HTMLElement | null>
 }
 
 const Header = ({ scrollContainer }: HeaderProps) => {
