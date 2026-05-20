@@ -10,7 +10,7 @@ const WorldWide = () => {
           <p className='text-2xl mt-10 text-white'>Present across <span className='text-white/50'>3 continents</span>, <br />
            in <span className='text-white/50'>15+ countries</span></p>
            <div className='md:mt-10 mt-10'>
-          <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>See Our Products</button>
+          <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>About us</button>
 
            </div>
         </div>

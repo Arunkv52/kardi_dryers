@@ -9,7 +9,7 @@ const BeforeFooter = () => {
         </div>
         <div className='md:mt-0 mt-10'>
           <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>
-            See Our Products
+            Connect with us
           </button>
         </div>
       </div>
