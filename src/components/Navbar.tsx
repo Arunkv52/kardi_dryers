@@ -55,45 +55,44 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-         <div className='hidden lg:flex items-center gap-10 uppercase'>
-  {Menu.map(item => (
-    <div
-      key={item.name}
-      className='relative group'
-      onMouseEnter={() => setOpenMenu(item.name)}
-      onMouseLeave={() => setOpenMenu(null)}
-    >
-      {/* Menu Item */}
-      <div className='cursor-pointer relative overflow-hidden py-2'>
-        <Link
-          to={item.link}
-          className='transition-all duration-300 group-hover:text-[#ff5938]'
-        >
-          {item.name}
-        </Link>
+          <div className='hidden lg:flex items-center gap-2 uppercase'>
+            {Menu.map(item => (
+              <div
+                key={item.name}
+                className='relative group'
+                onMouseEnter={() => setOpenMenu(item.name)}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                {/* Menu Item */}
+                <div className='cursor-pointer relative overflow-hidden py-2 px-3 rounded-lg transition-all duration-300 hover:bg-[#ff5938]/10'>
+                  <Link
+                    to={item.link}
+                    className='transition-all duration-300 group-hover:text-[#ff5938]'
+                  >
+                    {item.name}
+                  </Link>
 
-        {/* Animated Underline */}
-        <span className='absolute left-0 bottom-0 h-[2px] w-0 bg-[#ff5938] transition-all duration-500 group-hover:w-full'></span>
-      </div>
+                  {/* Animated Underline */}
+                  <span className='absolute left-0 bottom-0 h-[2px] w-0 bg-[#ff5938] transition-all duration-500 group-hover:w-full'></span>
+                </div>
 
-      {/* Dropdown */}
-      {openMenu === item.name && item.submenu && (
-        <div className='absolute top-12 left-0 bg-[#F28C28] shadow-2xl rounded-xl p-4 flex flex-col gap-3 min-w-[180px] animate-dropdown origin-top'>
-          {item.submenu.map(subItem => (
-            <Link
-              key={subItem.name}
-              to={subItem.link}
-              className='hover:text-black transition-all duration-300 hover:translate-x-2'
-            >
-              {subItem.name}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  ))}
-</div>
-
+                {/* Dropdown */}
+                {openMenu === item.name && item.submenu && (
+                  <div className='absolute top-12 left-0 bg-[#F28C28] shadow-2xl rounded-xl p-3 flex flex-col gap-2 min-w-[200px] animate-dropdown origin-top'>
+                    {item.submenu.map(subItem => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.link}
+                        className='px-3 py-2 rounded-lg hover:bg-white/20 hover:text-black transition-all duration-300 hover:translate-x-2'
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
           {/* Desktop Button */}
           <button className='hidden lg:block bg-[#ff5938] text-white px-8 py-2 cursor-pointer rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,89,56,0.4)] hover:bg-[#ff4722] active:scale-95'>
             Build With Us
