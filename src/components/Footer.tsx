@@ -5,13 +5,13 @@ import Button from './myui/Button'
 const Footer = () => {
   return (
     <>
-      <footer className='bg-[#0f4237] md:px-15 px-5 py-10'>
-        <section className='px-0 py-15 '>
-          <div className='relative overflow-hidden rounded-[40px] bg-[#135846] px-10 md:px-28 py-16 flex flex-col md:flex-row items-center justify-between'>
+      <footer className=' md:px-15 px-5 md:py-5 py-20 md:max-h-screen'>
+        <section className='px-0 py-10 '>
+          <div className='relative overflow-hidden rounded-[40px] bg-[#135846] px-10 md:px-28 py-10 flex flex-col md:flex-row items-center justify-between'>
             {/* Background Decorative Shapes */}
             <div className='absolute inset-0 overflow-hidden'>
               {/* Top Right Orange Shape */}
-              <div className='absolute top-0 right-10 w-16 h-40 bg-[#ff5938] rotate-45 rounded-xl'></div>
+              <div className='absolute top-0 right-10 w-16 h-40 bg-[#ff5938] rotate-90 rounded-xl'></div>
 
               {/* Large Diagonal Line */}
               <div className='absolute bottom-30 right-62.5 w-20 h-150 bg-[#0a4a3a] rotate-45 rounded-xl'></div>
@@ -31,7 +31,7 @@ const Footer = () => {
 
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
-              <h1 className='text-white text-5xl md:text-6xl leading-tight font-light md:mt-0 mt-5'>
+              <h1 className='text-white text-4xl md:text-6xl leading-tight font-light md:mt-0 mt-5'>
                 Dry smarter. 
                  <span className='text-[#ff5938]'><strong>Preserve better. </strong></span>
                 
@@ -47,7 +47,7 @@ const Footer = () => {
         </section>
 
         <div className='footer-top md:flex flex md:flex-row flex-col justify-between'>
-          <div className='md:w-[70%] w-full'>
+          <div className='md:w-[90%] w-full'>
             <img src={Logo} alt='' className='w-12.5' />
           </div>
           <div className='md:w-[15%] w-full md:mt-0 mt-10'>
@@ -110,7 +110,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className='footer-bottom mt-20 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between'>
+        <div className='footer-bottom mt-10 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between'>
           <p className='text-sm text-gray-300'>
             © 2026 Kardi Dryers. Developed by Prism.
           </p>

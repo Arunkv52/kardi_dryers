@@ -8,7 +8,9 @@ body {
   --sb-track-color: #ffffff;
   --sb-thumb-color: #ff5938;
   --sb-size: 5px;
-  background-color: #ebe9e9;
+  /* Soft diagonal */
+  background: linear-gradient(-260deg, #083326 20%, #000000 100%);
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -31,22 +33,42 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-header {
-  background: url(../src/assets/Home/hero-sections.jpg);
-  width: 100%;
-  height: 100dvh;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+html {
+  scroll-behavior: smooth;
 }
+
+main {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Menu */
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.3s ease forwards;
+}
+
+
+
 
 /* About us */
 .abt-bg {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.5), #083326),
     url(./assets/Home/about-us/international.jpg);
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,10 +76,10 @@ header {
 }
 .abt-bg-1 {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.5), #083326),
     url(./assets/Home/about-us/BuildIntec.jpg);
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,10 +87,10 @@ header {
 }
 .abt-bg-2 {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.5), #083326),
     url(./assets/Home/about-us/plant-growing.jpg);
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,29 +99,24 @@ header {
 
 .abt-bg-3 {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(0, 0, 0, 0.5), #083326),
     url(./assets/Home/about-us/planting-seed.jpg);
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
 }
 
-.why-choose {
-  background: linear-gradient(135deg, #031c14 0%, #0b3b2e 50%, #257341 100%);
-  width: 100%;
-  height: 500px;
-  border-radius: 10px;
-}
+
 
 .why-choose {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #031c14, #0d4b38);
   border-radius: 20px;
-  min-height: 600px;
+  min-height: 100dvh;
 }
 
 /* Rotating wrapper */
@@ -170,6 +187,15 @@ header {
 }
 
 /* Customize footer */
-.footer-bg {
+/* .footer-bg {
   background: linear-gradient(135deg, #135846, #0f4d3d);
+} */
+
+/* Tabs Customize */
+.border-s.text-5xl.tabs-btn button {
+  font-size: 29px;
+  padding: 29px 10px;
 }
+
+/* Product image */
+

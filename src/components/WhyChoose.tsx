@@ -16,7 +16,7 @@ const WhyChoose = () => {
   return (
     <section
       ref={ref}
-      className='why-choose relative h-screen overflow-hidden'
+      className='why-choose relative h-screen overflow-hidden px-10'
     >
       {/* Background Image */}
       <motion.div
