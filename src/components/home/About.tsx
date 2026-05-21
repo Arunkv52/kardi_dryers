@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const About = () => {
   return (
     <>
-      <section className='px-5 md:py-0 py-30'>
+      <section className='md:px-10 px-5 md:py-0 py-30'>
         <div className='abt-all md:flex flex md:flex-row flex-col md:justify-start md:gap-10 gap-5 md:px-0 px-0'>
           <div className='md:w-[30%] w-full'>
             <div className='relative overflow-hidden md:mt-15 bg-black/80 p-5 md:h-[90%] h-[450px] rounded-2xl text-white'>

@@ -1,13 +1,12 @@
 import Logo from '../assets/logo/logo.png'
 import Button from './myui/Button'
 
-
 const Footer = () => {
   return (
     <>
-      <footer className=' md:px-15 px-5 md:py-5 py-20 md:max-h-screen'>
+      <footer className=' md:px-10 px-5 md:py-5 py-20 md:max-h-screen'>
         <section className='px-0 py-10 '>
-          <div className='relative overflow-hidden rounded-[40px] bg-[#135846] px-10 md:px-28 py-10 flex flex-col md:flex-row items-center justify-between'>
+          <div className='relative overflow-hidden rounded-[40px] bg-[#135846] px-10 md:px-15 py-10 flex flex-col md:flex-row items-center justify-between'>
             {/* Background Decorative Shapes */}
             <div className='absolute inset-0 overflow-hidden'>
               {/* Top Right Orange Shape */}
@@ -32,23 +31,27 @@ const Footer = () => {
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
               <h1 className='text-white text-4xl md:text-6xl leading-tight font-light md:mt-0 mt-5'>
-                Dry smarter. 
-                 <span className='text-[#ff5938]'><strong>Preserve better. </strong></span>
-                
+                Dry smarter.
+                <span className='text-[#ff5938]'>
+                  <strong>Preserve better. </strong>
+                </span>
                 Grow stronger.
               </h1>
             </div>
 
             {/* Button */}
             <div className='relative z-10 mt-10 md:mt-0'>
-              <Button text="Get Ready" variant='orange' />
+              <Button text='Get Ready' variant='orange' />
             </div>
           </div>
         </section>
 
         <div className='footer-top md:flex flex md:flex-row flex-col justify-between'>
-          <div className='md:w-[90%] w-full'>
+          <div className='md:w-[55%] w-full'>
             <img src={Logo} alt='' className='w-12.5' />
+            <h1 className='text-white py-2 font-semibold'>
+              KARDI DRYERS PVT LTD
+            </h1>
           </div>
           <div className='md:w-[15%] w-full md:mt-0 mt-10'>
             <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>
@@ -107,6 +110,27 @@ const Footer = () => {
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
                 Custom Drying Systems
               </li>
+            </ul>
+          </div>
+          <div className='md:w-[15%] w-full md:mt-0 mt-10'>
+            <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>Contacts</h6>
+            <ul className='text-white text-base'>
+              <li className='mb-2 text-sm text-white/50'>Location</li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                284, Avvai Shanmugam Salai, Chennai - 600 086.
+              </li>
+             
+            </ul>
+
+            <ul className='text-white text-base md:mt-5'>
+              <li className='mb-2 text-sm text-white/50'>Call us</li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                Phone : +91 9791664050 <br /> Tele-Fax : +91 44 2688 0001
+              </li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                E-mail : info@kardidryers.com
+              </li>
+             
             </ul>
           </div>
         </div>

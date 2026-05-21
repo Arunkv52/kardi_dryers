@@ -7,10 +7,10 @@ const WorldWide = () => {
           <h2 className='text-white md:text-7xl text-5xl'>
             Worldwide <br /> <span className='text-white/50'>impact</span>
           </h2>
-          <p className='text-2xl mt-10 text-white'>Present across <span className='text-white/50'>3 continents</span>, <br />
+          <p className='text-base mt-10 text-white'>Present across <span className='text-white/50'>3 continents</span>, <br />
            in <span className='text-white/50'>15+ countries</span></p>
            <div className='md:mt-10 mt-10'>
-          <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>About us</button>
+          <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>Who Am I ?</button>
 
            </div>
         </div>
