@@ -44,11 +44,11 @@ const Navbar = () => {
       link: '/services'
     },
     {
-      name: 'Download Brochure',
+      name: 'Brochure',
       link: '/downloadbrochure'
     },
     {
-      name: 'Blog',
+      name: 'Newsroom',
       link: '/blog'
     }
   ]
@@ -103,7 +103,7 @@ const Navbar = () => {
           </div>
           {/* Desktop Button */}
           <button className='hidden lg:block bg-[#ff5938] text-white px-8 py-2 cursor-pointer rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,89,56,0.4)] hover:bg-[#ff4722] active:scale-95'>
-            Build With Us
+            Get The Expert
           </button>
 
           {/* Mobile Menu Button */}

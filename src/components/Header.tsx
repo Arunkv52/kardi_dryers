@@ -54,13 +54,11 @@ const Header = ({ scrollContainer }: HeaderProps) => {
           style={{ y: textY, opacity: textOpacity }}
           className='relative z-30 h-full flex flex-col justify-center px-6 md:px-20'
         >
-          <p className='uppercase tracking-[6px] text-[8px] text-white/60 mb-6'>
-            Industrial Drying Technology
-          </p>
+          
           <h1 className='text-white text-5xl md:text-7xl font-light leading-[1.05] max-w-6xl'>
-            Advanced <br />
-            Agricultural <br />
-            Drying Systems
+            Leading the way<br />
+            In Plantation <br />
+            Drying Solution
           </h1>
         </motion.div>
 
