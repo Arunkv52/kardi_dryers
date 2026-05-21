@@ -22,11 +22,19 @@ const Navbar = () => {
       link: '/',
       submenu: [
         {
-          name: 'Products 1',
+          name: 'Coffee Dryer',
           link: '/products1'
         },
         {
-          name: 'Products 2',
+          name: 'Paddy Dryer',
+          link: '/products2'
+        },
+        {
+          name: 'Mobile Dryer',
+          link: '/products2'
+        },
+        {
+          name: 'Sago Dryer',
           link: '/products2'
         }
       ]
