@@ -1,7 +1,7 @@
 // Header.tsx
 import type { RefObject } from 'react'
 import Navbar from './Navbar'
-import HeroVideo from '../assets/Home/videos/Hero-videos.mp4'
+import HeroVideo from '../assets/Home/videos/Kardi - web home page videos.mp4'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 interface HeaderProps {

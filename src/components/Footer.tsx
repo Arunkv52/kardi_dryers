@@ -128,7 +128,7 @@ const Footer = () => {
                 Phone : +91 9791664050 <br /> Tele-Fax : +91 44 2688 0001
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                E-mail : info@kardidryers.com
+                E-mail : sales@kardidryers.com
               </li>
              
             </ul>

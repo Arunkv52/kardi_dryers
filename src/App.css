@@ -9,7 +9,11 @@ body {
   --sb-thumb-color: #ff5938;
   --sb-size: 5px;
   /* Soft diagonal */
-  background: linear-gradient(-260deg, #083326 20%, #000000 100%);
+  background: url(./assets/Webpage-background5.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   scroll-behavior: smooth;
 }
 

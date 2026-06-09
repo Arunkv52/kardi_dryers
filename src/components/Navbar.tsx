@@ -1,151 +1,280 @@
-import { Link } from 'react-router'
-import Logo from '../assets/logo/logo.png'
 import { useState } from 'react'
-import { Logs } from 'lucide-react'
-import { X } from 'lucide-react'
+import { Link } from 'react-router'
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+} from 'lucide-react'
+
+import Logo from '../assets/logo/logo.png'
+
+type MenuItem = {
+  name: string
+  link?: string
+  submenu?: MenuItem[]
+  children?: MenuItem[]
+}
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState<string | null>(null)
-  const [mobilemenu, setmobilemenu] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState<string | null>(null)
 
-  const Menu = [
+  const menuItems: MenuItem[] = [
     {
       name: 'Home',
-      link: '/'
+      link: '/',
     },
     {
       name: 'About',
-      link: '/about'
+      link: '/about',
     },
     {
       name: 'Products',
-      link: '/',
       submenu: [
         {
-          name: 'Coffee Dryer',
-          link: '/products1'
+          name: 'Grain Dryers',
+          children: [
+            {
+              name: 'Basic 15',
+              link: '/grain/basic-15',
+            },
+            {
+              name: 'Basic 25',
+              link: '/grain/basic-25',
+            },
+            {
+              name: 'Basic 35',
+              link: '/grain/basic-35',
+            },
+          ],
         },
         {
-          name: 'Paddy Dryer',
-          link: '/products2'
+          name: 'Spices Dryers',
+          children: [
+            {
+              name: 'Hot Air Dryers',
+              link: '/spices/hot-air',
+            },
+            {
+              name: 'Dehydrate Dryers',
+              link: '/spices/dehydrate',
+            },
+          ],
         },
         {
-          name: 'Mobile Dryer',
-          link: '/products2'
+          name: 'Coffee Dryers',
+          children: [
+            {
+              name: 'Hot Air Dryers',
+              link: '/coffee/hot-air',
+            },
+            {
+              name: 'Dehydrate Dryers',
+              link: '/coffee/dehydrate',
+            },
+          ],
         },
         {
-          name: 'Sago Dryer',
-          link: '/products2'
-        }
-      ]
+          name: 'Sago Dryers',
+          link: '/products/sago',
+        },
+        {
+          name: 'Vegetable Slice Dryers',
+          link: '/products/vegetable',
+        },
+        {
+          name: 'Herbs & Leaf Dryers',
+          link: '/products/herbs',
+        },
+        {
+          name: 'Groundnut Dryers',
+          link: '/products/groundnut',
+        },
+      ],
     },
     {
       name: 'Services',
-      link: '/services'
+      link: '/services',
     },
     {
-      name: 'Brochure',
-      link: '/downloadbrochure'
+      name: 'Videos',
+      link: '/videos',
     },
     {
       name: 'Newsroom',
-      link: '/blog'
-    }
+      link: '/newsroom',
+    },
   ]
 
   return (
-    <>
-      <nav className=''>
-        <div className='flex justify-between items-center px-5 pt-2 text-white'>
-          {/* Logo */}
-          <div>
-            <img src={Logo} alt='' className='md:w-[60px] w-[60px]' />
-          </div>
+    <nav className="absolute top-0 left-0 z-50 w-full">
+      <div className="container mx-auto flex items-center justify-between px-5 py-4">
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Kardi Dryers"
+            className="w-[65px]"
+          />
+        </Link>
 
-          {/* Desktop Menu */}
-          <div className='hidden lg:flex items-center gap-2 uppercase'>
-            {Menu.map(item => (
-              <div
-                key={item.name}
-                className='relative group'
-                onMouseEnter={() => setOpenMenu(item.name)}
-                onMouseLeave={() => setOpenMenu(null)}
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-8">
+          {menuItems.map(item => (
+            <div
+              key={item.name}
+              className="relative group"
+            >
+              <Link
+                to={item.link || '#'}
+                className="flex items-center gap-1 uppercase text-sm font-medium text-white hover:text-[#ff5938] transition"
               >
-                {/* Menu Item */}
-                <div className='cursor-pointer relative overflow-hidden py-2 px-3 rounded-lg transition-all duration-300 hover:bg-[#ff5938]/10'>
-                  <Link
-                    to={item.link}
-                    className='transition-all duration-300 group-hover:text-[#ff5938]'
-                  >
-                    {item.name}
-                  </Link>
+                {item.name}
 
-                  {/* Animated Underline */}
-                  <span className='absolute left-0 bottom-0 h-[2px] w-0 bg-[#ff5938] transition-all duration-500 group-hover:w-full'></span>
-                </div>
-
-                {/* Dropdown */}
-                {openMenu === item.name && item.submenu && (
-                  <div className='absolute top-12 left-0 bg-[#F28C28] shadow-2xl rounded-xl p-3 flex flex-col gap-2 min-w-[200px] animate-dropdown origin-top'>
-                    {item.submenu.map(subItem => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.link}
-                        className='px-3 py-2 rounded-lg hover:bg-white/20 hover:text-black transition-all duration-300 hover:translate-x-2'
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
+                {item.submenu && (
+                  <ChevronDown size={16} />
                 )}
-              </div>
-            ))}
-          </div>
-          {/* Desktop Button */}
-          <button className='hidden lg:block bg-[#ff5938] text-white px-8 py-2 cursor-pointer rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,89,56,0.4)] hover:bg-[#ff4722] active:scale-95'>
-            Get The Expert
-          </button>
+              </Link>
 
-          {/* Mobile Menu Button */}
-          <div
-            className='lg:hidden cursor-pointer bg-[#031c14] p-3 rounded-sm shadow-2xl'
-            onClick={() => setmobilemenu(!mobilemenu)}
-          >
-            {mobilemenu ? <X /> : <Logs />}
-          </div>
+              {/* First Dropdown */}
+              {item.submenu && (
+                <div className="absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[280px] py-3 mt-3">
+                  {item.submenu.map(subItem => (
+                    <div
+                      key={subItem.name}
+                      className="relative group/sub"
+                    >
+                      {/* Category */}
+                      <div className="flex items-center justify-between px-5 py-3 hover:bg-orange-50 cursor-pointer transition">
+                        <span className="text-gray-800">
+                          {subItem.name}
+                        </span>
+
+                        {subItem.children && (
+                          <ChevronRight size={16} />
+                        )}
+                      </div>
+
+                      {/* Child Menu */}
+                      {subItem.children && (
+                        <div className="absolute left-full top-0 invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[240px] py-3">
+                          {subItem.children.map(child => (
+                            <Link
+                              key={child.name}
+                              to={child.link || '/'}
+                              className="block px-5 py-3 hover:bg-orange-50 text-gray-700"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+
+                      {!subItem.children && (
+                        <Link
+                          to={subItem.link || '/'}
+                          className="absolute inset-0"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Mobile Menu */}
-        {mobilemenu && (
-          <div className='lg:hidden px-5 pb-5 flex flex-col gap-5 bg-black/70 pt-5 text-white text-lg'>
-            {Menu.map(item => (
-              <div key={item.name}>
-                <div
-                  className='cursor-pointer'
-                  onClick={() =>
-                    setOpenMenu(openMenu === item.name ? null : item.name)
-                  }
-                >
-                  <Link to={item.link}>{item.name}</Link>
-                </div>
+        {/* CTA */}
+        <button className="hidden lg:block bg-[#ff5938] px-6 py-3 rounded-lg text-white font-medium hover:bg-[#e54d2c] transition">
+          Get The Expert
+        </button>
 
-                {openMenu === item.name && item.submenu && (
-                  <div className='flex flex-col gap-3 pl-5 pt-3'>
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setMobileMenu(!mobileMenu)}
+          className="lg:hidden text-white"
+        >
+          {mobileMenu ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenu && (
+        <div className="lg:hidden bg-[#031c14] text-white px-5 py-6">
+          {menuItems.map(item => (
+            <div key={item.name}>
+              <div
+                className="flex items-center justify-between py-4 border-b border-white/10"
+                onClick={() =>
+                  setMobileOpen(
+                    mobileOpen === item.name
+                      ? null
+                      : item.name
+                  )
+                }
+              >
+                <Link
+                  to={item.link || '#'}
+                  className="font-medium"
+                >
+                  {item.name}
+                </Link>
+
+                {item.submenu && (
+                  <ChevronDown size={18} />
+                )}
+              </div>
+
+              {mobileOpen === item.name &&
+                item.submenu && (
+                  <div className="pl-5 py-3">
                     {item.submenu.map(subItem => (
-                      <Link key={subItem.name} to={subItem.link}>
-                        {subItem.name}
-                      </Link>
+                      <div
+                        key={subItem.name}
+                        className="mb-4"
+                      >
+                        <p className="font-medium text-orange-400">
+                          {subItem.name}
+                        </p>
+
+                        {subItem.children && (
+                          <div className="pl-4 mt-2 space-y-2">
+                            {subItem.children.map(
+                              child => (
+                                <Link
+                                  key={child.name}
+                                  to={child.link || '/'}
+                                  className="block text-white/70"
+                                >
+                                  {child.name}
+                                </Link>
+                              )
+                            )}
+                          </div>
+                        )}
+
+                        {!subItem.children && (
+                          <Link
+                            to={subItem.link || '/'}
+                            className="block mt-2 text-white/70"
+                          >
+                            View Product
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
-              </div>
-            ))}
+            </div>
+          ))}
 
-            <button className='bg-[#ff5938] text-white py-3'>Lets Talk</button>
-          </div>
-        )}
-      </nav>
-    </>
+          <button className="w-full mt-5 bg-[#ff5938] py-3 rounded-lg font-medium">
+            Let's Talk
+          </button>
+        </div>
+      )}
+    </nav>
   )
 }
 
