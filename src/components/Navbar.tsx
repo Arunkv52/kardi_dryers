@@ -82,10 +82,6 @@ const Navbar = () => {
         {
           name: 'Sago Dryers',
           children: [
-            {
-              name: 'Custom Build',
-              link: '/',
-            },
              {
               name: 'Starch / Powder Dryers',
               link: '/',
