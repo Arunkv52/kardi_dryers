@@ -47,6 +47,10 @@ const Navbar = () => {
               name: 'Basic 35',
               link: '/grain/basic-35',
             },
+             {
+              name: 'Other Models',
+              link: '/',
+            },
           ],
         },
         {
@@ -57,8 +61,8 @@ const Navbar = () => {
               link: '/spices/hot-air',
             },
             {
-              name: 'Dehydrate Dryers',
-              link: '/spices/dehydrate',
+              name: 'Dehydrator Dryers',
+              link: '/spices/Dehydrator',
             },
           ],
         },
@@ -70,27 +74,42 @@ const Navbar = () => {
               link: '/coffee/hot-air',
             },
             {
-              name: 'Dehydrate Dryers',
-              link: '/coffee/dehydrate',
+              name: 'Dehydrator Dryers',
+              link: '/coffee/Dehydrator',
             },
           ],
         },
         {
           name: 'Sago Dryers',
-          link: '/products/sago',
+          children: [
+            {
+              name: 'Custom Build',
+              link: '/',
+            },
+             {
+              name: 'Starch / Powder Dryers',
+              link: '/',
+            },
+            {
+              name: 'Flash Dryers (Custom Build)',
+              link: '/'
+            }
+          ]
         },
         {
-          name: 'Vegetable Slice Dryers',
+          name: 'Vegetable / Herbs / Leafs Dryers',
           link: '/products/vegetable',
         },
         {
-          name: 'Herbs & Leaf Dryers',
-          link: '/products/herbs',
-        },
-        {
           name: 'Groundnut Dryers',
-          link: '/products/groundnut',
+          children: [
+            {
+              name: 'Custom Build',
+              link: '/products/groundnut',
+            }
+          ]
         },
+       
       ],
     },
     {

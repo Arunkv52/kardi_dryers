@@ -316,7 +316,7 @@ const About = () => {
 
                 {/* Content */}
                 <div className='text-left mt-20'>
-                  <h2 className='text-6xl font-bold text-black'>20+</h2>
+                  <h2 className='text-6xl font-bold text-black'>25+</h2>
 
                   <p className='text-base leading-tight mt-4 text-black'>
                     Years of Experience

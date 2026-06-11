@@ -1,6 +1,25 @@
 import ServiceImage from '../../assets/Home/hero-sections.jpg'
 
 const Service = () => {
+  const Cardservice = [
+    {
+      title: 'Trusted Industry Expertise',
+      desc: ' Over 20 years of innovation with 4,000+ installations serving farmers and processors worldwide.'
+    },
+    {
+      title: 'Customized Drying Systems',
+      desc: 'Tailored solutions designed for different crops, capacities, climates, and fuel requirements.'
+    },
+    {
+      title: 'Energy Efficient Technology',
+      desc: 'Advanced drying solutions engineered to reduce fuel consumption while maintaining consistent drying quality.'
+    },
+    {
+      title: 'Advanced Crop Protection Solutions',
+      desc: 'Preserve product quality, color, aroma, and moisture balance with uniform drying performance.'
+    }
+  ]
+
   return (
     <>
       {/* Service Highlight */}
@@ -25,54 +44,21 @@ const Service = () => {
             </p>
             <div className='md:relative md:right-190 md:top-10'>
               <div className='md:grid md:grid-cols-4 md:gap-90 grid grid-cols-1 gap-10 mt-10'>
-                <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
-                  {/* Content */}
-                  <div className='mt-5'>
-                    <h2 className='text-2xl font-medium text-black/80 leading-none'>
-                        Trusted Industry Expertise
-                    </h2>
-
-                    <p className='mt-15 text-base leading-[20px] text-black font-normal'>
-                     Over 20 years of innovation with 4,000+ installations serving farmers and processors worldwide.
-                    </p>
-                  </div>
-                </div>
-                <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
-                  {/* Content */}
-                  <div className='mt-5'>
-                    <h2 className='text-2xl font-medium text-black/80 leading-none'>
-                        Customized Drying Systems
-                    </h2>
-
-                    <p className='mt-15 text-base leading-[20px] text-black font-normal'>
-                      Tailored solutions designed for different crops, capacities, climates, and fuel requirements.
-                    </p>
-                  </div>
-                </div>
-                <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
-                  {/* Content */}
-                  <div className='mt-5'>
-                    <h2 className='text-2xl font-medium text-black/80 leading-none'>
-                        Energy Efficient Technology
-                    </h2>
-
-                    <p className='mt-15 text-base leading-[20px] text-black font-normal'>
-                      Advanced drying solutions engineered to reduce fuel consumption while maintaining consistent drying quality.
-                    </p>
-                  </div>
-                </div>
-                <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
-                  {/* Content */}
-                  <div className='mt-5'>
-                    <h2 className='text-2xl font-medium text-black/80 leading-none'>
-                        Reliable Crop Protection
-                    </h2>
-
-                    <p className='mt-15 text-base leading-[20px] text-black font-normal'>
-                      Preserve product quality, color, aroma, and moisture balance with uniform drying performance.
-                    </p>
-                  </div>
-                </div>
+                {Cardservice.map(item => (
+                  <>
+                    <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
+                      {/* Content */}
+                      <div className='mt-5'>
+                        <h2 className='text-2xl font-medium text-black/80 leading-none'>
+                          {item.title}
+                        </h2>
+                        <p className='mt-5 text-base leading-[20px] text-black font-normal'>
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                ))}
               </div>
             </div>
           </div>

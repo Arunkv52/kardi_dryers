@@ -1,10 +1,23 @@
+import Herosection from '../components/about/Herosection'
+import Ourstory from '../components/about/Ourstory'
+import Vision from '../components/about/Vision'
+import Footer from '../components/Footer'
 
 const About = () => {
   return (
     <>
-        <div>
-            <h1>About</h1>    
-        </div> 
+      
+      <section>
+        <Herosection/>
+      </section>
+      <section>
+        <Ourstory />
+      </section>
+      <section>
+        <Vision />
+      </section>
+
+      <Footer />
     </>
   )
 }

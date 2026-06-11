@@ -9,7 +9,7 @@ body {
   --sb-thumb-color: #ff5938;
   --sb-size: 5px;
   /* Soft diagonal */
-  background: url(./assets/Webpage-background5.jpg);
+  background: url(./assets/Webpage-background4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -203,3 +203,14 @@ main {
 
 /* Product image */
 
+
+
+/* About page */
+.abt-herosection{
+  background: url(./assets/about/hero-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
