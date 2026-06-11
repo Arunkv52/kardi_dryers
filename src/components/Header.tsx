@@ -1,7 +1,7 @@
 // Header.tsx
 import type { RefObject } from 'react'
 import Navbar from './Navbar'
-import HeroVideo from '../assets/Home/videos/Kardi - web home page videos.mp4'
+import HeroVideo from '../assets/kardi-hero-bg.mp4'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 interface HeaderProps {
@@ -52,7 +52,7 @@ const Header = ({ scrollContainer }: HeaderProps) => {
 
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className='relative z-30 h-full flex flex-col justify-center px-6 md:px-20'
+          className='relative z-30 h-full flex flex-col justify-center px-6 md:px-10'
         >
           
           <h1 className='text-white text-5xl md:text-7xl font-light leading-[1.05] max-w-6xl'>
