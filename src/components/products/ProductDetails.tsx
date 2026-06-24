@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import ProductImg from '../../assets/products/sago-dryer.png'
 import CofferDryerImg from '../../assets/products/coffee-dryer.png'
 import PaddyDryerImg from '../../assets/products/paddy-dryers.jpg'
 import KardiPedrottiMobileDryerImg from '../../assets/products/mobile-dryer.png'
@@ -13,14 +12,6 @@ import ChilliDryerImg from '../../assets/products/chilli-dryer.png'
 import GroundnutDryerImg from '../../assets/products/groundnut.png'
 import FlashDryerImg from '../../assets/products/flash-dryers.jpg'
 import CabinDryerImg from '../../assets/products/cabin-dryers.png'
-
-
-
-
-
-
-
-
 
 
 
