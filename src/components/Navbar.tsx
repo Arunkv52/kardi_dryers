@@ -31,13 +31,14 @@ const Navbar = () => {
     },
     {
       name: 'Products',
+      link: '/products',
       submenu: [
         {
           name: 'Grain Dryers',
           children: [
             {
               name: 'Basic 15',
-              link: '/grain/basic-15',
+              link: '/basic15',
             },
             {
               name: 'Basic 25',
@@ -61,7 +62,7 @@ const Navbar = () => {
               link: '/spices/hot-air',
             },
             {
-              name: 'Dehydrator Dryers',
+              name: 'Dehydrators',
               link: '/spices/Dehydrator',
             },
           ],
@@ -74,7 +75,7 @@ const Navbar = () => {
               link: '/coffee/hot-air',
             },
             {
-              name: 'Dehydrator Dryers',
+              name: 'Dehydrators',
               link: '/coffee/Dehydrator',
             },
           ],
@@ -82,25 +83,34 @@ const Navbar = () => {
         {
           name: 'Sago Dryers',
           children: [
-             {
-              name: 'Starch / Powder Dryers',
+            {
+              name: 'Sago Pearl Dryers (Sabuthana)',
               link: '/',
             },
-            {
-              name: 'Flash Dryers (Custom Build)',
-              link: '/'
+             {
+              name: 'Starch / Flash Dryers (Custom Built)',
+              link: '/',
             }
           ]
         },
         {
-          name: 'Vegetable / Herbs / Leafs Dryers',
+          name: 'Vegetable / Herbs / Leaves Dryers',
           link: '/products/vegetable',
+        },
+        {
+          name: 'Chilli Dryers',
+          children: [
+            {
+              name: 'Custom Built',
+              link: '/products/groundnut',
+            }
+          ]
         },
         {
           name: 'Groundnut Dryers',
           children: [
             {
-              name: 'Custom Build',
+              name: 'Custom Built',
               link: '/products/groundnut',
             }
           ]
@@ -201,7 +211,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <button className="hidden lg:block bg-[#ff5938] px-6 py-3 rounded-lg text-white font-medium hover:bg-[#e54d2c] transition">
+        <button className="hidden lg:block bg-[#52813b] px-6 py-3 rounded-lg text-white font-medium hover:bg-[#e54d2c] transition">
           Get The Expert
         </button>
 
