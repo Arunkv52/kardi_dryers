@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion'
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -31,7 +32,7 @@ export default function YouTubeShowcase() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <motion.p
-          {...fadeUp}
+          {...fadeUp as any}
           className="mb-5 text-sm font-medium tracking-[0.25em] uppercase text-[#A6824F]"
         >
           On YouTube
@@ -39,7 +40,7 @@ export default function YouTubeShowcase() {
 
         <motion.h2
           {...fadeUp}
-          transition={{ ...fadeUp.transition, delay: 0.05 }}
+          transition={{ ...fadeUp.transition, delay: 0.05 } as any}
           className="text-4xl leading-tight md:text-5xl"
           style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
         >
@@ -48,7 +49,7 @@ export default function YouTubeShowcase() {
 
         <motion.p
           {...fadeUp}
-          transition={{ ...fadeUp.transition, delay: 0.1 }}
+          transition={{ ...fadeUp.transition, delay: 0.1 } as any}
           className="mx-auto mt-5 max-w-xl leading-[1.8] text-white/60"
         >
           Kardi Pedrotti is a joint venture between Kardi Dryers, India and
@@ -59,7 +60,7 @@ export default function YouTubeShowcase() {
 
       <motion.div
         {...fadeUp}
-        transition={{ ...fadeUp.transition, delay: 0.15 }}
+        transition={{ ...fadeUp.transition, delay: 0.15 }as any}
         className="relative mx-auto mt-14 max-w-4xl px-6"
       >
         <div className="border border-[#A6824F]/25 bg-black p-2 shadow-[0_30px_80px_rgba(0,0,0,0.5)] md:p-3">

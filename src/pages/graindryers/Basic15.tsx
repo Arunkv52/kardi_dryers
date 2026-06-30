@@ -12,7 +12,7 @@ type Product = {
   overview: string
   height: string
   heroImage: string | undefined
-  type: string
+  type: string | any
   crops: string[]
   capacityRange: string
   dryingTimeHrs: number
@@ -141,7 +141,7 @@ export default function ProductPage ({
         {/* Hero */}
         <section className='px-6 pb-20 pt-10 lg:px-12'>
           <div className='mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16'>
-            <motion.div {...fadeUp} className='lg:col-span-5'>
+            <motion.div {...fadeUp as any} className='lg:col-span-5'>
               <div className='max-w-md overflow-hidden border border-[#D8D2C2] bg-white/40 p-2 shadow-[0_20px_60px_rgba(43,43,38,0.08)]'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -158,7 +158,7 @@ export default function ProductPage ({
 
             <motion.div
               {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: 0.1 }}
+              transition={{ ...fadeUp.transition, delay: 0.1 } as any}
               className='flex flex-col justify-center lg:col-span-7'
             >
               <p className='mb-5 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'>
@@ -194,7 +194,7 @@ export default function ProductPage ({
 
         {/* Stat strip */}
         <motion.section
-          {...fadeUp}
+          {...fadeUp as any} 
           className='border-y border-[#D8D2C2] bg-white/40'
         >
           <div className='mx-auto grid max-w-6xl grid-cols-1 divide-y divide-[#D8D2C2] px-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x lg:px-12'>
@@ -218,7 +218,7 @@ export default function ProductPage ({
                 <motion.div
                   key={h.title}
                   {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: i * 0.08 }}
+                  transition={{ ...fadeUp.transition, delay: i * 0.08 } as any}
                   className='border-t border-[#A6824F] pt-6'
                 >
                   <h3
@@ -240,7 +240,7 @@ export default function ProductPage ({
         <section id='specifications' className='px-6 py-24 lg:px-12'>
           <div className='mx-auto max-w-6xl'>
             <motion.p
-              {...fadeUp}
+              {...fadeUp as any}
               className='mb-12 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
             >
               Specifications
@@ -263,7 +263,7 @@ export default function ProductPage ({
           id='enquire'
           className='bg-[#15140F] px-6 py-24 text-white lg:px-12'
         >
-          <motion.div {...fadeUp} className='mx-auto max-w-6xl text-center'>
+          <motion.div {...fadeUp as any} className='mx-auto max-w-6xl text-center'>
             <h2
               className='text-3xl md:text-4xl'
               style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
@@ -288,7 +288,7 @@ export default function ProductPage ({
         <section className='px-6 py-24 lg:px-12'>
           <div className='mx-auto max-w-6xl'>
             <motion.p
-              {...fadeUp}
+              {...fadeUp as any}
               className='mb-10 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
             >
               Explore Other Dryers
@@ -360,38 +360,4 @@ function SpecRow ({
   )
 }
 
-function DryingComparison ({ fast, slow }: { fast: number; slow: number }) {
-  const max = Math.max(fast, slow)
-  return (
-    <div className='max-w-md space-y-3'>
-      <div className='flex items-center gap-4'>
-        <span className='w-24 flex-shrink-0 text-xs uppercase tracking-[0.1em] text-[#A6824F]'>
-          Kardi Dryer
-        </span>
-        <div className='h-2 flex-1 bg-[#E4DFCF]'>
-          <div
-            className='h-2 bg-[#A6824F]'
-            style={{ width: `${(fast / max) * 100}%` }}
-          />
-        </div>
-        <span className='w-16 flex-shrink-0 text-right text-sm text-[#2B2B26]'>
-          {fast} hrs
-        </span>
-      </div>
-      <div className='flex items-center gap-4'>
-        <span className='w-24 flex-shrink-0 text-xs uppercase tracking-[0.1em] text-[#8C8678]'>
-          Sun Dried
-        </span>
-        <div className='h-2 flex-1 bg-[#E4DFCF]'>
-          <div
-            className='h-2 bg-[#C9B98F]'
-            style={{ width: `${(slow / max) * 100}%` }}
-          />
-        </div>
-        <span className='w-16 flex-shrink-0 text-right text-sm text-[#5B564B]'>
-          {slow} hrs
-        </span>
-      </div>
-    </div>
-  )
-}
+
