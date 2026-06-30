@@ -3,16 +3,16 @@ import VisionImg from '../../assets/about/landscape-img.jpg'
 const Vision = () => {
   return (
     <>
-      <div className='px-10 bg-white'>
+      <div className='md:px-10 px-5 bg-white'>
         <div className='bg-[#f4f1ea] md:flex justify-start items-center gap-3 '>
-          <div className='w-1/2'>
+          <div className='md:w-1/2 w-full'>
             <img
               src={VisionImg}
               alt=''
               className='h-[600px] w-full object-cover'
             />
           </div>
-          <div className='w-1/2 px-20'>
+          <div className='md:w-1/2 w-full md:px-20 px-5'>
             <div className='text-black'>
               <p className='text-sm py-5 font-semibold text-black/50 '>
                 OUR EXPERTISE
@@ -30,8 +30,8 @@ const Vision = () => {
                 management.
               </p>
               <p>
-                With more than 3,000 installations worldwide and customized
-                capacities ranging from 50 kg/hr to 170 tonnes/day, we serve
+                With more than 4,000 installations worldwide and customized
+                capacities ranging from 50 kg/hr to 170 tons/per batch, we serve
                 farmers, processors, and agribusinesses across India, Sri Lanka,
                 Africa, the Middle East, and beyond.
               </p>

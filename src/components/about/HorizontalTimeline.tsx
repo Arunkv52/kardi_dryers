@@ -1,5 +1,7 @@
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
-import { useRef } from 'react'
+'use client'
+
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const timeline = [
   {
@@ -58,141 +60,133 @@ const timeline = [
   }
 ]
 
-export default function HorizontalTimeline() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end']
-  })
-
-  // Spring-smoothed scroll progress so the pan has gentle inertia
-  // rather than tracking the scrollbar one-to-one. This is the
-  // single biggest lever for making horizontal scroll-jacking feel
-  // considered rather than mechanical.
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 30,
-    mass: 0.5
-  })
-
-  const x = useTransform(smoothProgress, [0, 1], ['0%', '-88.9%'])
-
-  const counterIndex = useTransform(
-    smoothProgress,
-    [0, 1],
-    [1, timeline.length]
-  )
+export default function VerticalTimeline() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section
-      ref={containerRef}
-      className="relative h-[400vh] bg-[#F4F1EA]"
-    >
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
-
-        {/* Fixed chrome: top label + bottom counter, independent of horizontal pan */}
-        <div className="absolute top-12 left-10 z-30">
-          <p className="text-base tracking-[0.2em] uppercase text-[#53823c]">
-            Kardi Dryers — A History
-          </p>
-          <div className="w-10  bg-[#A6824F] mt-3" />
-           
-        </div>
-
-        <div className="absolute bottom-12 right-20 z-30 flex items-center gap-2">
-          <Counter index={counterIndex} />
-          <span className="text-[11px] text-[#8C8678]">
-            {' '}/ {String(timeline.length).padStart(2, '0')}
-          </span>
-        </div>
-
-        <motion.div style={{ x }} className="relative flex items-center">
-          {timeline.map((item, i) => (
-            <Panel key={item.year} item={item} index={i} total={timeline.length} />
-          ))}
-        </motion.div>
+    <section className="relative bg-[#083326] py-28 px-6">
+      {/* Section label */}
+      <div className="max-w-3xl mx-auto mb-20 text-center">
+        <p className="text-sm tracking-[0.25em] uppercase text-[#53823c]">
+          Kardi Dryers — A History
+        </p>
+        <div className="w-12 h-px bg-[#ffffff] mx-auto mt-4" />
       </div>
-    
+
+      {/* Timeline */}
+      <div className="relative max-w-3xl mx-auto">
+        {/* spine — center aligns with marker midpoint at every breakpoint */}
+        <div className="absolute left-7 md:left-8 top-2 bottom-2 w-px bg-[#D8D2C2]" />
+
+        {timeline.map((item, i) => (
+          <TimelineRow
+            key={item.year}
+            item={item}
+            isActive={activeIndex === i}
+            onEnter={() => setActiveIndex(i)}
+            onLeave={() => setActiveIndex((curr) => (curr === i ? null : curr))}
+            onToggle={() => setActiveIndex((curr) => (curr === i ? null : i))}
+          />
+        ))}
+      </div>
     </section>
   )
 }
 
-function Counter({ index }: { index: any }) {
-  const rounded = useTransform(index, (v: number) =>
-    String(Math.min(Math.round(v), 9)).padStart(2, '0')
-  )
-  return (
-    <motion.span className="text-[11px] text-[#5B564B] font-medium tabular-nums">
-      {rounded}
-    </motion.span>
-  )
-}
-
-function Panel({
+function TimelineRow({
   item,
-  index,
-  total
+  isActive,
+  onEnter,
+  onLeave,
+  onToggle
 }: {
   item: (typeof timeline)[number]
-  index: number
-  total: number
+  isActive: boolean
+  onEnter: () => void
+  onLeave: () => void
+  onToggle: () => void
 }) {
   return (
-    <div className="relative w-7xl flex-shrink-0 px-20 flex items-center justify-center">
-      <div className="flex items-start gap-16 max-w-4xl">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      className="relative pl-20 md:pl-28 pb-16 md:pb-20 last:pb-0"
+    >
+      {/* chapter marker, sits on the spine */}
+      <div
+        className={`absolute left-0 top-0 flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full border bg-[#F4F1EA] transition-all duration-500 ${
+          isActive ? 'scale-105 border-[#A6824F]' : 'border-[#C9B98F]'
+        }`}
+      >
+        <span
+          className={`text-sm transition-colors duration-500 ${
+            isActive ? 'text-[#A6824F]' : 'text-[#8C8678]'
+          }`}
+          
+        >
+          {item.chapter}
+        </span>
+      </div>
 
-     
+      {/* year — dormant by default, wakes up on hover/tap */}
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isActive}
+        className="group flex w-full items-baseline gap-4 text-left focus:outline-none"
+      >
+        <span
+          className={`text-5xl md:text-6xl leading-none transition-colors duration-500 ${
+            isActive ? 'text-[#ffffff]' : 'text-[#ffffff]'
+          }`}
+          
+        >
+          {item.year}
+        </span>
 
+        <span
+          className={`text-xs tracking-[0.15em] uppercase text-[#A6824F] transition-opacity duration-500 ${
+            isActive ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {item.title}
+        </span>
 
+        {/* plus → × hint that something opens here */}
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          className={`ml-auto h-3 w-3 flex-shrink-0 transition-all duration-500 ${
+            isActive ? 'rotate-45 text-[#A6824F]' : 'text-[#C9B98F]'
+          }`}
+        >
+          <path d="M12 5v14M5 12h14" strokeLinecap="round" />
+        </svg>
+      </button>
 
-        {/* Year + chapter marker */}
-        <div className="flex-shrink-0 w-44 pt-1">
-          <span
-            className="block leading-none text-[#2B2B26] text-7xl"          >
-            {item.year}
-          </span>
-
-          <div className="flex items-center gap-3 mt-30">
-            <div className="w-9 h-9 rounded-full border border-[#C9B98F] flex items-center justify-center flex-shrink-0">
-              <span
-                className="text-[12px] text-[#A6824F]"
-                style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-              >
-                {item.chapter}
-              </span>
-            </div>
-            <span className="text-[11px] tracking-[0.12em] uppercase text-[#8C8678]">
-              Chapter
-            </span>
-          </div>
-        </div>
-
-        {/* Vertical hairline divider */}
-        <div className="w-px self-stretch bg-[#D8D2C2] flex-shrink-0" />
-
-        {/* Content */}
-        <div className="max-w-md pt-1">
-          <h2
-            className="text-[#2B2B26] mb-4 text-3xl font-bold"
+      {/* detail card — height-animated, fully collapsed when dormant */}
+      <motion.div
+        initial={false}
+        animate={{ height: isActive ? 'auto' : 0, opacity: isActive ? 1 : 0 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        className="overflow-hidden"
+      >
+        <div className="mt-5 max-w-xl rounded-sm border-l-2 border-[#A6824F] bg-white/60 px-7 py-6 shadow-[0_8px_30px_rgba(43,43,38,0.06)]">
+          <h3
+            className="mb-2 text-xl md:text-2xl text-[#2B2B26]"
+            style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
           >
             {item.title}
-          </h2>
-          <p className="text-[15px] leading-[1.8] text-[#5B564B] font-inter">
-            {item.desc}
-          </p>
+          </h3>
+          <p className="text-[15px] leading-[1.8] text-[#5B564B]">{item.desc}</p>
         </div>
-      </div>
-
-      {/* Footer rule: filled segment shows position within the full run */}
-      <div className="absolute bottom-24 left-20 right-20 flex items-center gap-3">
-        <div className="flex-1 h-px bg-[#D8D2C2] relative overflow-hidden">
-          <div
-            className="absolute inset-y-0 left-0 bg-[#A6824F]"
-            style={{ width: `${((index + 1) / total) * 100}%` }}
-          />
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

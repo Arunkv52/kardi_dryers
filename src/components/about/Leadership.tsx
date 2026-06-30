@@ -1,6 +1,6 @@
 import FounderImg from '../../assets/about/Owners/manikandan.jpg'
 import BalanImg from '../../assets/about/Owners/balan.jpg'
-import DilipImg from '../../assets/about/owners/dhilipan.jpg'
+import DilipImg from '../../assets/about/Owners/dhilipan.jpg'
 
 const Leadership = () => {
   const Foundercard = [
@@ -19,13 +19,13 @@ const Leadership = () => {
     {
       Image: DilipImg,
       OwnerName: 'P Dilipan',
-      Role: 'General Manager — Marketing, Sales & Business Development',
+      Role: 'General Manager — Marketi/ng, Sales & Business Development',
       desc: "A Mechanical Engineer from Government College of Technology, Coimbatore, with 28 years of experience in marketing & sales, program & product life cycle management, business development & strategies, and CRM across GE Consumer & Industrial (USA), Boston Scientific (USA), KLA-Tencor (USA), HCL Technologies & Americas."
     }
   ]
 
   return (
-    <div className="py-20 bg-white">
+    <div className="md:py-20 py-10 bg-white">
       <div className="mx-auto px-10">
 
         {/* Section header — matches the timeline's masthead language */}

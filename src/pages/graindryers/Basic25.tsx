@@ -27,19 +27,18 @@ type Product = {
 }
 
 // Product details
-
-const basic15: Product = {
-  slug: 'basic-15',
+const basic25: Product = {
+  slug: 'basic-25',
 
   category: 'Mobile Paddy Dryer',
 
-  name: 'Basic 15',
+  name: 'Basic 25',
 
   tagline:
-    'Compact mobile paddy dryer designed for efficient grain drying with reliable performance.',
+    'High-performance mobile paddy dryer designed for medium-scale grain drying with improved capacity and efficiency.',
 
   overview:
-    'Basic 15 is suitable for small and medium-scale farmers who require a compact, fuel-efficient mobile drying solution for paddy and maize.',
+    'Basic 25 is ideal for farmers and commercial operators looking for a reliable, fuel-efficient mobile drying solution for paddy and maize with higher batch capacity.',
 
   heroImage: ProdImage,
 
@@ -47,7 +46,7 @@ const basic15: Product = {
 
   crops: ['Paddy', 'Maize'],
 
-  capacityRange: '1 - 1.25 Ton',
+  capacityRange: '2 - 2.5 Ton',
 
   dryingTimeHrs: 4,
 
@@ -56,43 +55,53 @@ const basic15: Product = {
   fuel: 'Diesel',
 
   locations: ['India'],
-  height: '3975 mm',
+
+  height: '4400 mm',
 
   highlights: [
     {
-      title: 'Compact Design',
-      desc: 'Easy to transport and operate in different farm locations.'
+      title: 'Higher Capacity',
+      desc: 'Designed to handle larger grain batches with improved productivity.'
     },
     {
       title: 'Fast Drying',
-      desc: 'Reduces drying time while maintaining grain quality.'
+      desc: 'Ensures uniform drying while maintaining grain quality.'
     },
     {
       title: 'Fuel Efficient',
-      desc: 'Powered using 10KW (25 PTO HP) with optimized fuel consumption.'
+      desc: 'Powered using 11.2KW (30 PTO HP) for efficient fuel consumption.'
     },
     {
       title: 'Automatic Burner',
-      desc: 'Single-stage automatic diesel burner for consistent drying.'
+      desc: 'Single-stage automatic diesel burner for reliable and consistent drying.'
     }
   ],
 
   specifications: [
-    { label: 'Height', value: '3975 mm' },
-    { label: 'Width', value: '2010 mm' },
-    { label: 'Total Length', value: '5718 mm' },
-    { label: 'Weight', value: '1500 Kg' },
-    { label: 'Power Required', value: '10KW (25 PTO HP)' },
-    { label: 'Batch Capacity (Maize)', value: '1.25 Ton' },
-    { label: 'Batch Capacity (Paddy)', value: '1 Ton' },
-    { label: 'Loading Time', value: '10 min' },
-    { label: 'Unloading Time', value: '5 min' },
-    { label: 'Average Daily Output (Paddy)', value: '8 Ton' },
-    { label: 'Average Daily Output (Maize)', value: '9 Ton' },
+    { label: 'Height', value: '4400 mm' },
+    { label: 'Width', value: '2903 mm' },
+    { label: 'Total Length', value: '6105 mm' },
+    { label: 'Weight', value: '2000 Kg' },
+    { label: 'Power Required', value: '11.2KW (30 PTO HP)' },
+    { label: 'Batch Capacity (Maize)', value: '2.5 Ton' },
+    { label: 'Batch Capacity (Paddy)', value: '2 Ton' },
+    { label: 'Loading Time', value: '25 min' },
+    { label: 'Unloading Time', value: '15 min' },
+    {
+      label: 'Average Daily Output (Paddy)',
+      value: '12*'
+    },
+    {
+      label: 'Average Daily Output (Maize)',
+      value: '15*'
+    },
     { label: 'Electric Motors', value: '5' },
     { label: 'Fan Type', value: 'Centrifugal' },
     { label: 'Agitator', value: 'Yes' },
-    { label: 'Burner', value: 'Diesel Automatic Single Stage' }
+    {
+      label: 'Burner Diesel Automatic Single Stage',
+      value: 'Yes'
+    }
   ]
 }
 
@@ -117,7 +126,7 @@ const fadeUp = {
 }
 
 export default function ProductPage ({
-  product = basic15
+  product = basic25
 }: {
   product?: Product
 }) {

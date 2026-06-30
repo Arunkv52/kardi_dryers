@@ -1,41 +1,45 @@
 const Ourstory = () => {
   return (
     <>
-      <div className='bg-white md:flex justify-between items-start gap-20 md:py-20 md:px-10'>
-        <div className='w-1/2 '>
+      <div className='bg-white md:flex justify-between items-start gap-20 md:py-20 md:px-10 px-5 py-20'>
+        <div className='md:w-1/2 w-full'>
           <p className='text-[#52813b]  uppercase text-xs font-bold'>
             About us
           </p>
           <h4 className='text-5xl py-3 leading-11 text-geist'>
-            THE MOST SOLD IN EUROPE, WITH WORLDWIDE DELIVERY
+            We've the technology that expands With you
           </h4>
         </div>
-        <div className='w-1/2 font-inter text-base font-medium text-black/50'>
+        <div className='md:w-1/2 w-fullfont-inter text-base font-medium text-black/50'>
           <p className='py-2'>
-            Kardi Dryers is a leading dryer manufacturing company established in
-            2001 with manufacturing facilities in Chennai and Kerala. The
-            company is recognized as the inventor of cardamom dryers and one of
-            the top manufacturers of sago dryers in India. Kardi Dryers offers a
-            wide range of drying solutions. The company provides customized
-            drying solutions ranging from 50 kg/hr to 170 tonnes/day, catering
-            to more than 35 different crops. With over 3000 dryers installed
-            globally, Kardi Dryers has a strong presence across India, Sri
-            Lanka, African countries, and the Middle East.
+            Dryers form vital equipment of the agriculture industry. Different
+            techniques are used for different products. Kardi Dryers (P) Ltd,
+            specializing in post harvest drying of agricultural products, was
+            founded in 2001, by a team of Technocrats with engineering
+            background and over 5 decades of combined experience in this field.
+            By virtue of being agriculturists themselves, they possess the
+            required cultivation experience too.
           </p>
           <p className='py-2'>
-            The company is also committed to supporting farmers through
-            community drying centres established for small farmers in Kerala
-            Pedrotti Dryers was established in 1958. We were involved with the
-            manufacturing of grain dryers since the beginning among other
-            agricultural equipments.Starting in 1975 grain dryers became our
-            sole production which allowed us to become fully specialized in this
-            field. Now we trust to be the first European manufacturer of
-            recirculating batch dryers, mobile or stationary.
+            This unique combination of technical knowledge and practical
+            exposure, forms the underlying foundation to develop new generation
+            Dryers for various agricultural crops. Thus the world's first,
+            commercial, small scale Dryer for Cardamom, a spice crop was
+            introduced. Today the organization holds a supply reference of more
+            than 1500 Dryers, the world over, for 30 different agricultural
+            products.
           </p>
-          <p className='py-2'> F.LLI PEDROTTI
-            S.R.L. exported their dryers through all Europe since the early
-            sixties. The great experience achieved allowed us to extend
-            successfully our marketing even in Asia, Africa and South America.</p>
+          <p className='py-2'>
+            Rapid advancements made in the technologies, combined with higher
+            demands for efficiency, Kardi Dryers is committed to continuous R&D.
+            It is an year round ongoing in-house program. This conscious effort
+            has contributed greatly to meet the emerging demand, by introducing
+            new brand of Dryers year after year. Increased functionality,
+            operational reliability and service life are the driving factors of
+            our R&D program. A well equipped factory with the latest equipments
+            and a strong team of technical professionals in Design, Manufacture,
+            Testing, QA, Service and R&D ensure right product delivery
+          </p>
         </div>
       </div>
     </>

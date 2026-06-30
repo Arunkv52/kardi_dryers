@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <div className="relative bg-prod-hero bg-cover bg-center h-[80vh] min-h-[480px] max-h-[760px]">
+    <div className="relative bg-prod-hero bg-cover bg-center h-[80vh] min-h-[280px] max-h-[460px]">
       {/* Cinematic overlay — darkest at the bottom where the type sits, fading
           out toward the top so the photograph still reads clearly up there.
           This replaces relying on the background image alone for contrast,

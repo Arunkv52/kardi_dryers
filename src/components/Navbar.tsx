@@ -1,11 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
-import {
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-} from 'lucide-react'
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 
 import Logo from '../assets/logo/logo.png'
 
@@ -23,11 +18,11 @@ const Navbar = () => {
   const menuItems: MenuItem[] = [
     {
       name: 'Home',
-      link: '/',
+      link: '/'
     },
     {
       name: 'About',
-      link: '/about',
+      link: '/about'
     },
     {
       name: 'Products',
@@ -38,71 +33,71 @@ const Navbar = () => {
           children: [
             {
               name: 'Basic 15',
-              link: '/basic15',
+              link: '/basic15'
             },
             {
               name: 'Basic 25',
-              link: '/grain/basic-25',
+              link: '/basic25'
             },
             {
               name: 'Basic 35',
-              link: '/grain/basic-35',
+              link: '/basic35'
             },
-             {
+            {
               name: 'Other Models',
-              link: '/',
-            },
-          ],
+              link: 'https://pedrottisrl.it/'
+            }
+          ]
         },
         {
           name: 'Spices Dryers',
           children: [
             {
               name: 'Hot Air Dryers',
-              link: '/spices/hot-air',
+              link: '/basic35'
             },
             {
               name: 'Dehydrators',
-              link: '/spices/Dehydrator',
-            },
-          ],
+              link: '/basic35'
+            }
+          ]
         },
         {
           name: 'Coffee Dryers',
           children: [
             {
               name: 'Hot Air Dryers',
-              link: '/coffee/hot-air',
+              link: '/basic35'
             },
             {
               name: 'Dehydrators',
-              link: '/coffee/Dehydrator',
-            },
-          ],
+              link: '/basic35'
+            }
+          ]
         },
         {
           name: 'Sago Dryers',
           children: [
             {
               name: 'Sago Pearl Dryers (Sabuthana)',
-              link: '/',
+              link: '/basic35'
             },
-             {
+            {
               name: 'Starch / Flash Dryers (Custom Built)',
-              link: '/',
+              link: '/basic35'
             }
           ]
         },
         {
           name: 'Vegetable / Herbs / Leaves Dryers',
-          link: '/products/vegetable',
+          link: '/basic35'
         },
         {
           name: 'Chilli Dryers',
           children: [
             {
               name: 'Custom Built',
-              link: '/products/groundnut',
+              link: '/basic35'
             }
           ]
         },
@@ -111,84 +106,67 @@ const Navbar = () => {
           children: [
             {
               name: 'Custom Built',
-              link: '/products/groundnut',
+              link: '/basic35'
             }
           ]
-        },
-       
-      ],
+        }
+      ]
     },
     {
       name: 'Services',
-      link: '/services',
+      link: '/services'
     },
     {
       name: 'Videos',
-      link: '/videos',
+      link: '/videos'
     },
     {
       name: 'Newsroom',
-      link: '/newsroom',
-    },
+      link: '/newsroom'
+    }
   ]
 
   return (
-    <nav className="absolute top-0 left-0 z-50 w-full">
-      <div className="container mx-auto flex items-center justify-between px-5 py-4">
+    <nav className='absolute top-0 left-0 z-50 w-full'>
+      <div className='container mx-auto flex items-center justify-between px-5 py-4'>
         {/* Logo */}
-        <Link to="/">
-          <img
-            src={Logo}
-            alt="Kardi Dryers"
-            className="w-[65px]"
-          />
+        <Link to={'/'}>
+          <img src={Logo} alt='Kardi Dryers' className='w-[65px] cursor-pointer' />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className='hidden lg:flex items-center gap-8'>
           {menuItems.map(item => (
-            <div
-              key={item.name}
-              className="relative group"
-            >
+            <div key={item.name} className='relative group'>
               <Link
                 to={item.link || '#'}
-                className="flex items-center gap-1 uppercase text-sm font-medium text-white hover:text-[#ff5938] transition"
+                className='flex items-center gap-1 uppercase text-sm font-medium text-white hover:text-[#ff5938] transition'
               >
                 {item.name}
 
-                {item.submenu && (
-                  <ChevronDown size={16} />
-                )}
+                {item.submenu && <ChevronDown size={16} />}
               </Link>
 
               {/* First Dropdown */}
               {item.submenu && (
-                <div className="absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[280px] py-3 mt-3">
+                <div className='absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[280px] py-3 mt-3'>
                   {item.submenu.map(subItem => (
-                    <div
-                      key={subItem.name}
-                      className="relative group/sub"
-                    >
+                    <div key={subItem.name} className='relative group/sub'>
                       {/* Category */}
-                      <div className="flex items-center justify-between px-5 py-3 hover:bg-orange-50 cursor-pointer transition">
-                        <span className="text-gray-800">
-                          {subItem.name}
-                        </span>
+                      <div className='flex items-center justify-between px-5 py-3 hover:bg-orange-50 cursor-pointer transition'>
+                        <span className='text-gray-800'>{subItem.name}</span>
 
-                        {subItem.children && (
-                          <ChevronRight size={16} />
-                        )}
+                        {subItem.children && <ChevronRight size={16} />}
                       </div>
 
                       {/* Child Menu */}
                       {subItem.children && (
-                        <div className="absolute left-full top-0 invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[240px] py-3">
+                        <div className='absolute left-full top-0 invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 transition-all duration-300 bg-white rounded-xl shadow-2xl min-w-[240px] py-3'>
                           {subItem.children.map(child => (
                             <Link
                               key={child.name}
                               to={child.link || '/'}
-                              className="block px-5 py-3 hover:bg-orange-50 text-gray-700"
+                              className='block px-5 py-3 hover:bg-orange-50 text-gray-700'
                             >
                               {child.name}
                             </Link>
@@ -199,7 +177,7 @@ const Navbar = () => {
                       {!subItem.children && (
                         <Link
                           to={subItem.link || '/'}
-                          className="absolute inset-0"
+                          className='absolute inset-0'
                         />
                       )}
                     </div>
@@ -211,14 +189,14 @@ const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <button className="hidden lg:block bg-[#52813b] px-6 py-3 rounded-lg text-white font-medium hover:bg-[#e54d2c] transition">
-          Get The Expert
+        <button className='hidden lg:block bg-[#52813b] px-6 py-3 rounded-lg text-white font-medium hover:bg-[#e54d2c] transition'>
+          <Link to={'/contact'}>Get The Expert</Link>
         </button>
 
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileMenu(!mobileMenu)}
-          className="lg:hidden text-white"
+          className='lg:hidden text-white bg-black py-3 px-5 rounded-xl shadow-lg'
         >
           {mobileMenu ? <X /> : <Menu />}
         </button>
@@ -226,76 +204,61 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenu && (
-        <div className="lg:hidden bg-[#031c14] text-white px-5 py-6">
+        <div className='lg:hidden bg-[#031c14] text-white px-5 py-6'>
           {menuItems.map(item => (
             <div key={item.name}>
               <div
-                className="flex items-center justify-between py-4 border-b border-white/10"
+                className='flex items-center justify-between py-4 border-b border-white/10'
                 onClick={() =>
-                  setMobileOpen(
-                    mobileOpen === item.name
-                      ? null
-                      : item.name
-                  )
+                  setMobileOpen(mobileOpen === item.name ? null : item.name)
                 }
               >
-                <Link
-                  to={item.link || '#'}
-                  className="font-medium"
-                >
+                <Link to={item.link || '#'} className='font-medium'>
                   {item.name}
                 </Link>
 
-                {item.submenu && (
-                  <ChevronDown size={18} />
-                )}
+                {item.submenu && <ChevronDown size={18} />}
               </div>
 
-              {mobileOpen === item.name &&
-                item.submenu && (
-                  <div className="pl-5 py-3">
-                    {item.submenu.map(subItem => (
-                      <div
-                        key={subItem.name}
-                        className="mb-4"
-                      >
-                        <p className="font-medium text-orange-400">
-                          {subItem.name}
-                        </p>
+              {mobileOpen === item.name && item.submenu && (
+                <div className='pl-5 py-3'>
+                  {item.submenu.map(subItem => (
+                    <div key={subItem.name} className='mb-4'>
+                      <p className='font-medium text-orange-400'>
+                        {subItem.name}
+                      </p>
 
-                        {subItem.children && (
-                          <div className="pl-4 mt-2 space-y-2">
-                            {subItem.children.map(
-                              child => (
-                                <Link
-                                  key={child.name}
-                                  to={child.link || '/'}
-                                  className="block text-white/70"
-                                >
-                                  {child.name}
-                                </Link>
-                              )
-                            )}
-                          </div>
-                        )}
+                      {subItem.children && (
+                        <div className='pl-4 mt-2 space-y-2'>
+                          {subItem.children.map(child => (
+                            <Link
+                              key={child.name}
+                              to={child.link || '/'}
+                              className='block text-white/70'
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
 
-                        {!subItem.children && (
-                          <Link
-                            to={subItem.link || '/'}
-                            className="block mt-2 text-white/70"
-                          >
-                            View Product
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
+                      {!subItem.children && (
+                        <Link
+                          to={subItem.link || '/'}
+                          className='block mt-2 text-white/70'
+                        >
+                          View Product
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
 
-          <button className="w-full mt-5 bg-[#ff5938] py-3 rounded-lg font-medium">
-            Let's Talk
+          <button className='w-full mt-5 bg-[#ff5938] py-3 rounded-lg font-medium'>
+            <Link to={'/contact'}>Let's Talk</Link>
           </button>
         </div>
       )}
