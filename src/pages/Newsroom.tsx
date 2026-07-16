@@ -144,7 +144,7 @@ export default function NewsroomPage () {
   return (
     <>
     <Navbar />
-      <main className='bg-[#F4F1EA] text-[#2B2B26]'>
+      <main className='bg-[#083326] text-[#ffffff]'>
         {/* Heading */}
         <section className='px-6 pb-4 pt-40 lg:px-12'>
           <motion.div {...fadeUp} className='mx-auto max-w-6xl text-center'>
@@ -157,7 +157,7 @@ export default function NewsroomPage () {
             >
               News &amp; Announcements
             </h1>
-            <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#5B564B]'>
+            <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#e1e1e1]'>
               Milestones, partnerships, and updates from Kardi Dryers and Kardi
               Pedrotti, straight from our team.
             </p>
@@ -225,7 +225,7 @@ export default function NewsroomPage () {
                     )}
                     <span
                       className={`relative z-10 ${
-                        isActive ? 'text-white' : 'text-[#5B564B]'
+                        isActive ? 'text-white' : 'text-[#dedede]'
                       }`}
                     >
                       {cat}

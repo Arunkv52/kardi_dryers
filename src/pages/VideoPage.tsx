@@ -23,7 +23,7 @@ export default function YouTubeShowcase() {
 
     <>
     <Navbar />
-    <section className="relative overflow-hidden bg-[#15140F] py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-[#083326] py-24 text-white md:py-32">
       {/* ambient glow, same quiet accent used elsewhere on dark sections */}
       <div
         aria-hidden

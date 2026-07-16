@@ -12,33 +12,21 @@ const Ourstory = () => {
         </div>
         <div className='md:w-1/2 w-fullfont-inter text-base font-medium text-black/50'>
           <p className='py-2'>
-            Dryers form vital equipment of the agriculture industry. Different
-            techniques are used for different products. Kardi Dryers (P) Ltd,
-            specializing in post harvest drying of agricultural products, was
-            founded in 2001, by a team of Technocrats with engineering
-            background and over 5 decades of combined experience in this field.
-            By virtue of being agriculturists themselves, they possess the
-            required cultivation experience too.
+            Kardi Dryers Private Limited, a Chennai-based pioneer in
+            agricultural drying solutions, has entered into a joint venture with
+            Fratelli Pedrotti S.r.l., Italy, a globally renowned manufacturer of
+            grain dryers. Together, they have established Kardi Pedrotti Dryers
+            Private Limited in Chennai to manufacture state-of-the-art grain
+            dryers in India.
           </p>
           <p className='py-2'>
-            This unique combination of technical knowledge and practical
-            exposure, forms the underlying foundation to develop new generation
-            Dryers for various agricultural crops. Thus the world's first,
-            commercial, small scale Dryer for Cardamom, a spice crop was
-            introduced. Today the organization holds a supply reference of more
-            than 1500 Dryers, the world over, for 30 different agricultural
-            products.
-          </p>
-          <p className='py-2'>
-            Rapid advancements made in the technologies, combined with higher
-            demands for efficiency, Kardi Dryers is committed to continuous R&D.
-            It is an year round ongoing in-house program. This conscious effort
-            has contributed greatly to meet the emerging demand, by introducing
-            new brand of Dryers year after year. Increased functionality,
-            operational reliability and service life are the driving factors of
-            our R&D program. A well equipped factory with the latest equipments
-            and a strong team of technical professionals in Design, Manufacture,
-            Testing, QA, Service and R&D ensure right product delivery
+            With over 25 years of expertise in the Indian agricultural sector
+            and backed by Fratelli Pedrotti's 60 years of international
+            experience in grain drying technology, Kardi Pedrotti brings
+            world-class drying solutions to Indian farmers and agribusinesses.
+            The company combines proven European technology with local
+            manufacturing excellence to deliver efficient, reliable, and
+            high-performance grain dryers tailored to Indian conditions.
           </p>
         </div>
       </div>

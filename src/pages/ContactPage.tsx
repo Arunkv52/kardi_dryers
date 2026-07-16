@@ -181,20 +181,20 @@ export default function ContactPage () {
   return (
     <>
       <Navbar />
-      <main className='bg-[#F4F1EA] text-[#2B2B26]'>
+      <main className='bg-[#083326] text-[#ffffff]'>
         {/* Heading */}
         <section className='px-6 pb-4 pt-30 lg:px-12'>
           <motion.div {...fadeUp} className='mx-auto max-w-6xl text-center'>
-            <p className='mb-5 text-sm font-medium tracking-[0.25em] uppercase text-[#A6824F]'>
+            <p className='mb-5 text-sm font-medium tracking-[0.25em] uppercase text-[#f1f1f1]'>
               Contact
             </p>
             <h1
               className='text-4xl leading-tight md:text-5xl'
-              style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
+              
             >
               Let's Start a Conversation
             </h1>
-            <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#5B564B]'>
+            <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#f1f1f1]'>
               Tell us about your crop, your volume, and your location — our team
               will recommend the right dryer and get back to you personally.
             </p>
@@ -233,9 +233,7 @@ export default function ContactPage () {
                     </div>
                     <h2
                       className='mt-6 text-2xl text-[#2B2B26] md:text-3xl'
-                      style={{
-                        fontFamily: 'var(--font-serif, Georgia, serif)'
-                      }}
+                      
                     >
                       Message received
                     </h2>
@@ -246,7 +244,7 @@ export default function ContactPage () {
                     <button
                       type='button'
                       onClick={sendAnother}
-                      className='mt-8 border border-[#C9B98F] px-6 py-3 text-sm tracking-[0.05em] text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#A6824F]'
+                      className='mt-8 border border-[#C9B98F] px-6 py-3 text-sm tracking-[0.05em] text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#f1f1f1]'
                     >
                       Send another message
                     </button>
@@ -265,7 +263,7 @@ export default function ContactPage () {
                     {/* Name */}
                     <div>
                       <label htmlFor='name' className={labelClass}>
-                        Name <span className='text-[#A6824F]'>*</span>
+                        Name <span className='text-[#f1f1f1]'>*</span>
                       </label>
                       <input
                         id='name'
@@ -289,7 +287,7 @@ export default function ContactPage () {
                     {/* Email */}
                     <div>
                       <label htmlFor='email' className={labelClass}>
-                        Email <span className='text-[#A6824F]'>*</span>
+                        Email <span className='text-[#f1f1f1]'>*</span>
                       </label>
                       <input
                         id='email'
@@ -313,7 +311,7 @@ export default function ContactPage () {
                     {/* Mobile + OTP */}
                     <div>
                       <label htmlFor='mobile' className={labelClass}>
-                        Mobile Number <span className='text-[#A6824F]'>*</span>
+                        Mobile Number <span className='text-[#f1f1f1]'>*</span>
                       </label>
 
                       <div className='flex items-start gap-3'>
@@ -368,7 +366,7 @@ export default function ContactPage () {
                           <button
                             type='button'
                             onClick={changeNumber}
-                            className='flex-shrink-0 whitespace-nowrap border border-[#C9B98F] px-5 py-3 text-sm text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#A6824F]'
+                            className='flex-shrink-0 whitespace-nowrap border border-[#C9B98F] px-5 py-3 text-sm text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#f1f1f1]'
                           >
                             Change
                           </button>
@@ -423,7 +421,7 @@ export default function ContactPage () {
                                 <p className='mt-2 border border-dashed border-[#C9B98F] bg-[#F4F1EA] px-3 py-2 text-xs text-[#8C8678]'>
                                   Demo mode — no SMS backend connected yet. Your
                                   test code is{' '}
-                                  <span className='font-medium text-[#A6824F]'>
+                                  <span className='font-medium text-[#f1f1f1]'>
                                     {devOtp}
                                   </span>
                                 </p>
@@ -467,7 +465,7 @@ export default function ContactPage () {
                                   <button
                                     type='button'
                                     onClick={sendOtp}
-                                    className='text-xs text-[#A6824F] underline-offset-2 hover:underline'
+                                    className='text-xs text-[#f1f1f1] underline-offset-2 hover:underline'
                                   >
                                     Resend code
                                   </button>
@@ -485,7 +483,7 @@ export default function ContactPage () {
                     {/* Product */}
                     <div>
                       <label htmlFor='product' className={labelClass}>
-                        Product <span className='text-[#A6824F]'>*</span>
+                        Product <span className='text-[#f1f1f1]'>*</span>
                       </label>
                       <div className='relative'>
                         <select
@@ -574,7 +572,7 @@ export default function ContactPage () {
               <div className='border border-[#D8D2C2] bg-white/40'>
                 {/* Locations */}
                 <div className='space-y-6 p-8'>
-                  <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'>
+                  <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#f1f1f1]'>
                     Visit Us
                   </p>
 
@@ -582,10 +580,10 @@ export default function ContactPage () {
                   <LocationRow label='Factory' value={CONTACT.factory} />
                 </div>
 
-                <div className='h-px bg-[#D8D2C2]' />
+                <div className='h-px bg-[#8e6b0c]' />
 
                 {/* Direct contact */}
-                <div className='space-y-4 p-8'>
+                <div className='space-y-4 p-8 text-[#ffffff]'>
                   <ContactRow
                     label='Call'
                     value={CONTACT.phone}
@@ -606,14 +604,14 @@ export default function ContactPage () {
                     href={WHATSAPP_URL}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex items-center gap-3 pt-1 text-sm text-[#53823c] transition-opacity hover:opacity-70'
+                    className='flex items-center gap-3 pt-1 text-sm text-[#ffffff] transition-opacity hover:opacity-70'
                   >
                     <ChatIcon />
                     Chat on WhatsApp
                   </a>
                 </div>
 
-                <div className='h-px bg-[#D8D2C2]' />
+                <div className='h-px bg-[#f7f7f7]' />
 
                 {/* Map */}
                 <div className='aspect-[4/3] w-full grayscale-[15%]'>
@@ -629,7 +627,7 @@ export default function ContactPage () {
 
                 {/* Social */}
                 <div className='flex items-center justify-between p-8'>
-                  <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'>
+                  <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#f1f1f1]'>
                     Follow Us
                   </p>
                   <div className='flex items-center gap-3'>
@@ -640,7 +638,7 @@ export default function ContactPage () {
                         target='_blank'
                         rel='noopener noreferrer'
                         aria-label={s.name}
-                        className='flex h-10 w-10 items-center justify-center rounded-full border border-[#C9B98F] text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#A6824F]'
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-[#C9B98F] text-[#e6e6e6] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#f1f1f1]'
                       >
                         {s.name === 'YouTube' ? (
                           <YouTubeIcon />
@@ -664,14 +662,14 @@ export default function ContactPage () {
 function LocationRow ({ label, value }: { label: string; value: string }) {
   return (
     <div className='flex gap-3'>
-      <span className='mt-0.5 flex-shrink-0 text-[#A6824F]'>
+      <span className='mt-0.5 flex-shrink-0 text-[#f1f1f1]'>
         <PinIcon />
       </span>
       <div>
-        <p className='text-xs uppercase tracking-[0.1em] text-[#8C8678]'>
+        <p className='text-xs uppercase tracking-[0.1em] text-[#ffffff]'>
           {label}
         </p>
-        <p className='mt-1 text-[15px] leading-[1.7] text-[#2B2B26]'>{value}</p>
+        <p className='mt-1 text-[15px] leading-[1.7] text-[#e7e7e7]'>{value}</p>
       </div>
     </div>
   )
@@ -696,11 +694,11 @@ function ContactRow ({
     <div className='flex items-center justify-between gap-3'>
       <a
         href={href}
-        className='flex items-center gap-3 text-[15px] text-[#2B2B26] transition-colors hover:text-[#A6824F]'
+        className='flex items-center gap-3 text-[15px] text-[#f2f2ec] transition-colors hover:text-[#f1f1f1]'
       >
-        <span className='text-[#A6824F]'>{icon}</span>
+        <span className='text-[#f1f1f1]'>{icon}</span>
         <span>
-          <span className='block text-xs uppercase tracking-[0.1em] text-[#8C8678]'>
+          <span className='block text-xs uppercase tracking-[0.1em] text-[#ffffff]'>
             {label}
           </span>
           {value}
@@ -709,9 +707,9 @@ function ContactRow ({
       <button
         type='button'
         onClick={onCopy}
-        className='flex-shrink-0 text-xs text-[#8C8678] underline-offset-2 hover:text-[#A6824F] hover:underline'
+        className='flex-shrink-0 text-xs text-[#e2e2e0] underline-offset-2 hover:text-[#f1f1f1] hover:underline'
       >
-        {copied ? 'Copied' : 'Copy'}
+       
       </button>
     </div>
   )
