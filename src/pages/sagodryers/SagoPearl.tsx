@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import HeroSection from '../../components/products/HeroSection'
-import ProdImage from '../../assets/products/Kardi-Dryers.jpg'
+import ProdImage from '../../assets/products/sago-dryer.png'
 
 type Product = {
   slug: string
@@ -130,11 +130,11 @@ export default function SagoPearl ({
             <motion.div {...(fadeUp as any)} className='lg:col-span-5'>
               <div className='max-w-md overflow-hidden border border-[#D8D2C2] bg-white/40 p-2 shadow-[0_20px_60px_rgba(43,43,38,0.08)]'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                {/* <img
-                  src={product.heroImage}
+                <img
+                  src={ProdImage}
                   alt={product.name}
                   className='h-auto w-full object-cover'
-                /> */}
+                />
               </div>
               <p className='mt-3 text-xs tracking-[0.1em] text-[#8C8678]'>
                 Fig. 01 — {product.type} system, {product.locations.join(', ')}{' '}
