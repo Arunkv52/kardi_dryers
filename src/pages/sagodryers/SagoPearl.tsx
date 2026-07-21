@@ -93,18 +93,7 @@ const basic15: Product = {
   ]
 }
 
-const relatedProducts = [
-  {
-    name: 'Cardamom & Pepper Dryer',
-    category: 'Spice Processing',
-    slug: 'cardamom-pepper-dryer'
-  },
-  {
-    name: 'Mobile Paddy Dryer',
-    category: 'Grain Processing',
-    slug: 'mobile-paddy-dryer'
-  }
-]
+
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -118,7 +107,7 @@ export default function SagoPearl ({
 }: {
   product?: Product
 }) {
-  const speedMultiple = product.sunDriedHrs / product.dryingTimeHrs
+ 
 
   return (
     <>
@@ -289,21 +278,7 @@ export default function SagoPearl ({
   )
 }
 
-function StatBlock ({ value, label }: { value: string; label: string }) {
-  return (
-    <div className='flex flex-col items-center gap-2 px-6 py-10 text-center'>
-      <span
-        className='text-4xl text-[#2B2B26] md:text-5xl'
-        style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-      >
-        {value}
-      </span>
-      <span className='text-xs uppercase tracking-[0.15em] text-[#8C8678]'>
-        {label}
-      </span>
-    </div>
-  )
-}
+
 
 function SpecRow ({
   label,

@@ -96,18 +96,6 @@ const basic15: Product = {
   ]
 }
 
-const relatedProducts = [
-  {
-    name: 'Cardamom & Pepper Dryer',
-    category: 'Spice Processing',
-    slug: 'cardamom-pepper-dryer'
-  },
-  {
-    name: 'Mobile Paddy Dryer',
-    category: 'Grain Processing',
-    slug: 'mobile-paddy-dryer'
-  }
-]
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },

@@ -1,4 +1,3 @@
-import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import Logo from '../../assets/logo/logo.png'
 
@@ -71,19 +70,9 @@ function Sprout () {
 }
 
 export default function ComingSoonPage () {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'submitted'>('idle')
-  const [error, setError] = useState('')
 
-  function handleSubmit (e: FormEvent) {
-    e.preventDefault()
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      setError('Enter a valid email address.')
-      return
-    }
-    setError('')
-    setStatus('submitted')
-  }
+
+  
 
   return (
     <div className='min-h-screen bg-[#F3EEE3] text-[#201F1A]' style={sansFont}>

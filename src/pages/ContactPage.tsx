@@ -91,7 +91,6 @@ export default function ContactPage () {
   const [otpError, setOtpError] = useState<string | null>(null)
   const [resendIn, setResendIn] = useState(0)
   const [submitted, setSubmitted] = useState(false)
-  const [copiedField, setCopiedField] = useState<string | null>(null)
 
   const mobile = watch('mobile') || ''
   const comments = watch('comments') || ''
@@ -111,12 +110,7 @@ export default function ContactPage () {
     return () => clearTimeout(t)
   }, [resendIn])
 
-  function copy (field: string, value: string) {
-    navigator.clipboard?.writeText(value).then(() => {
-      setCopiedField(field)
-      setTimeout(() => setCopiedField(f => (f === field ? null : f)), 1800)
-    })
-  }
+
 
   // DEMO ONLY — there is no SMS backend wired up here. This generates and
   // checks a code entirely in the browser, which is fine for previewing the
@@ -578,16 +572,16 @@ export default function ContactPage () {
                     label='Call'
                     value={CONTACT.phone}
                     href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
-                    onCopy={() => copy('phone', CONTACT.phone)}
-                    copied={copiedField === 'phone'}
+                   
+                    
                     icon={<PhoneIcon />}
                   />
                   <ContactRow
                     label='Email'
                     value={CONTACT.email}
                     href={`mailto:${CONTACT.email}`}
-                    onCopy={() => copy('email', CONTACT.email)}
-                    copied={copiedField === 'email'}
+                    
+                    
                     icon={<MailIcon />}
                   />
                   <a
@@ -670,15 +664,11 @@ function ContactRow ({
   value,
   href,
   icon,
-  onCopy,
-  copied
 }: {
   label: string
   value: string
   href: string
   icon: React.ReactNode
-  onCopy: () => void
-  copied: boolean
 }) {
   return (
     <div className='flex items-center justify-between gap-3'>
@@ -696,7 +686,7 @@ function ContactRow ({
       </a>
       <button
         type='button'
-        onClick={onCopy}
+       
         className='flex-shrink-0 text-xs text-[#e2e2e0] underline-offset-2 hover:text-[#f1f1f1] hover:underline'
       ></button>
     </div>

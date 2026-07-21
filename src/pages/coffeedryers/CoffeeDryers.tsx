@@ -48,73 +48,7 @@ type Product = {
 
 // Product details
 
-const basic15: Product = {
-  slug: 'basic-15',
 
-  category: 'Mobile Paddy Dryer',
-
-  name: 'Basic 15',
-
-  tagline:
-    'Compact mobile paddy dryer designed for efficient grain drying with reliable performance.',
-
-  overview:
-    'Basic 15 is suitable for small and medium-scale farmers who require a compact, fuel-efficient mobile drying solution for paddy and maize.',
-
-  heroImage: ProdImage,
-
-  type: 'Mobile Paddy Dryer',
-
-  crops: ['Paddy', 'Maize'],
-
-  capacityRange: '1 - 1.25 Ton',
-
-  dryingTimeHrs: 4,
-
-  sunDriedHrs: 24,
-
-  fuel: 'Diesel',
-
-  locations: ['India'],
-  height: '3975 mm',
-
-  highlights: [
-    {
-      title: 'Compact Design',
-      desc: 'Easy to transport and operate in different farm locations.'
-    },
-    {
-      title: 'Fast Drying',
-      desc: 'Reduces drying time while maintaining grain quality.'
-    },
-    {
-      title: 'Fuel Efficient',
-      desc: 'Powered using 10KW (25 PTO HP) with optimized fuel consumption.'
-    },
-    {
-      title: 'Automatic Burner',
-      desc: 'Single-stage automatic diesel burner for consistent drying.'
-    }
-  ],
-
-  specifications: [
-    { label: 'Height', value: '3975 mm' },
-    { label: 'Width', value: '2010 mm' },
-    { label: 'Total Length', value: '5718 mm' },
-    { label: 'Weight', value: '1500 Kg' },
-    { label: 'Power Required', value: '10KW (25 PTO HP)' },
-    { label: 'Batch Capacity (Maize)', value: '1.25 Ton' },
-    { label: 'Batch Capacity (Paddy)', value: '1 Ton' },
-    { label: 'Loading Time', value: '10 min' },
-    { label: 'Unloading Time', value: '5 min' },
-    { label: 'Average Daily Output (Paddy)', value: '8 Ton' },
-    { label: 'Average Daily Output (Maize)', value: '9 Ton' },
-    { label: 'Electric Motors', value: '5' },
-    { label: 'Fan Type', value: 'Centrifugal' },
-    { label: 'Agitator', value: 'Yes' },
-    { label: 'Burner', value: 'Diesel Automatic Single Stage' }
-  ]
-}
 
 // Kardi Coffee Dryer — content sourced from the Benefits / Capacities / Model
 // Range sheets
@@ -229,18 +163,7 @@ const coffeeDryer: Product = {
   ]
 }
 
-const relatedProducts = [
-  {
-    name: 'Cardamom & Pepper Dryer',
-    category: 'Spice Processing',
-    slug: 'cardamom-pepper-dryer'
-  },
-  {
-    name: 'Mobile Paddy Dryer',
-    category: 'Grain Processing',
-    slug: 'mobile-paddy-dryer'
-  }
-]
+
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -540,19 +463,3 @@ function StatBlock ({ value, label }: { value: string; label: string }) {
   )
 }
 
-function SpecRow ({
-  label,
-  children
-}: {
-  label: string
-  children: React.ReactNode
-}) {
-  return (
-    <div className='grid gap-4 border-b border-[#D8D2C2] py-7 sm:grid-cols-[160px_1fr] sm:items-center'>
-      <span className='text-sm uppercase tracking-[0.1em] text-[#8C8678]'>
-        {label}
-      </span>
-      <div>{children}</div>
-    </div>
-  )
-}
