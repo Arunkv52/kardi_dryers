@@ -12,7 +12,7 @@ type Product = {
   overview: string
   height: string
   heroImage: string | undefined
-  type: string
+  type: string | any
   crops: string[]
   capacityRange: string
   dryingTimeHrs: number
@@ -27,18 +27,17 @@ type Product = {
 }
 
 // Product details
-const basic25: Product = {
-  slug: 'basic-25',
+
+const basic15: Product = {
+  slug: 'basic-15',
 
   category: 'Mobile Paddy Dryer',
 
-  name: 'Basic 25',
+  name: 'KDF - SG Series',
 
-  tagline:
-    'High-performance mobile paddy dryer designed for medium-scale grain drying with improved capacity and efficiency.',
+  tagline: '',
 
-  overview:
-    'Basic 25 is ideal for farmers and commercial operators looking for a reliable, fuel-efficient mobile drying solution for paddy and maize with higher batch capacity.',
+  overview: '',
 
   heroImage: ProdImage,
 
@@ -46,7 +45,7 @@ const basic25: Product = {
 
   crops: ['Paddy', 'Maize'],
 
-  capacityRange: '2 - 2.5 Ton',
+  capacityRange: '1 - 1.25 Ton',
 
   dryingTimeHrs: 4,
 
@@ -55,53 +54,42 @@ const basic25: Product = {
   fuel: 'Diesel',
 
   locations: ['India'],
-
-  height: '4400 mm',
+  height: '3975 mm',
 
   highlights: [
     {
-      title: 'Higher Capacity',
-      desc: 'Designed to handle larger grain batches with improved productivity.'
+      title: 'Compact Design',
+      desc: 'Easy to transport and operate in different farm locations.'
     },
     {
       title: 'Fast Drying',
-      desc: 'Ensures uniform drying while maintaining grain quality.'
+      desc: 'Reduces drying time while maintaining grain quality.'
     },
     {
       title: 'Fuel Efficient',
-      desc: 'Powered using 11.2KW (30 PTO HP) for efficient fuel consumption.'
+      desc: 'Powered using 10KW (25 PTO HP) with optimized fuel consumption.'
     },
     {
       title: 'Automatic Burner',
-      desc: 'Single-stage automatic diesel burner for reliable and consistent drying.'
+      desc: 'Single-stage automatic diesel burner for consistent drying.'
     }
   ],
 
   specifications: [
-    { label: 'Height', value: '4400 mm' },
-    { label: 'Width', value: '2903 mm' },
-    { label: 'Total Length', value: '6105 mm' },
-    { label: 'Weight', value: '2000 Kg' },
-    { label: 'Power Required', value: '11.2KW (30 PTO HP)' },
-    { label: 'Batch Capacity (Maize)', value: '2.5 Ton' },
-    { label: 'Batch Capacity (Paddy)', value: '2 Ton' },
-    { label: 'Loading Time', value: '25 min' },
-    { label: 'Unloading Time', value: '15 min' },
+    { label: 'Type', value: 'Continous Conveyor Dryer' },
+    { label: 'Rated Capacity', value: '500 kgs to 200 kgs / Hour (±10%)' },
+    { label: 'Input Moisture (Wet)', value: '40% (Maximum)' },
+    { label: 'Output Moisture (Dry)', value: '11%' },
     {
-      label: 'Average Daily Output (Paddy)',
-      value: '12*'
+      label: 'Fuel Type',
+      value: 'Firewood/furmana oil/Biogars/coal/Brickettes'
     },
     {
-      label: 'Average Daily Output (Maize)',
-      value: '15*'
+      label: 'Kilograms',
+      value: '500 kgs/1000 kgs / 1200 kgs / 1500 kgs/2000 kgs'
     },
-    { label: 'Electric Motors', value: '5' },
-    { label: 'Fan Type', value: 'Centrifugal' },
-    { label: 'Agitator', value: 'Yes' },
-    {
-      label: 'Burner Diesel Automatic Single Stage',
-      value: 'Yes'
-    }
+    { label: 'Power Required', value: '10KW / 15KW / 19KW / 29KW / 37KW' },
+    { label: 'Series', value: 'KDF - SG 0807 / KDF - SG 1012 / KDF - SG 1516 / KDF - SG 2122' }
   ]
 }
 
@@ -125,8 +113,8 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
 }
 
-export default function ProductPage ({
-  product = basic25
+export default function SagoPearl ({
+  product = basic15
 }: {
   product?: Product
 }) {
@@ -150,14 +138,14 @@ export default function ProductPage ({
         {/* Hero */}
         <section className='px-6 pb-20 pt-10 lg:px-12'>
           <div className='mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16'>
-            <motion.div {...fadeUp as any} className='lg:col-span-5'>
+            <motion.div {...(fadeUp as any)} className='lg:col-span-5'>
               <div className='max-w-md overflow-hidden border border-[#D8D2C2] bg-white/40 p-2 shadow-[0_20px_60px_rgba(43,43,38,0.08)]'>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                {/* <img
                   src={product.heroImage}
                   alt={product.name}
                   className='h-auto w-full object-cover'
-                />
+                /> */}
               </div>
               <p className='mt-3 text-xs tracking-[0.1em] text-[#8C8678]'>
                 Fig. 01 — {product.type} system, {product.locations.join(', ')}{' '}
@@ -166,8 +154,8 @@ export default function ProductPage ({
             </motion.div>
 
             <motion.div
-              {...fadeUp as any}
-              transition={{ ...fadeUp.transition, delay: 0.1 }}
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.1 } as any}
               className='flex flex-col justify-center lg:col-span-7'
             >
               <p className='mb-5 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'>
@@ -202,8 +190,8 @@ export default function ProductPage ({
         </section>
 
         {/* Stat strip */}
-        <motion.section
-          {...fadeUp as any}
+        {/* <motion.section
+          {...fadeUp as any} 
           className='border-y border-[#D8D2C2] bg-white/40'
         >
           <div className='mx-auto grid max-w-6xl grid-cols-1 divide-y divide-[#D8D2C2] px-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x lg:px-12'>
@@ -217,7 +205,7 @@ export default function ProductPage ({
               label='Faster Than Sun Drying'
             />
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Highlights */}
         <section className='px-6 py-24 lg:px-12'>
@@ -226,8 +214,8 @@ export default function ProductPage ({
               {product.highlights.map((h, i) => (
                 <motion.div
                   key={h.title}
-                  {...fadeUp as any}
-                  transition={{ ...fadeUp.transition, delay: i * 0.08 }}
+                  {...fadeUp}
+                  transition={{ ...fadeUp.transition, delay: i * 0.08 } as any}
                   className='border-t border-[#A6824F] pt-6'
                 >
                   <h3
@@ -249,15 +237,13 @@ export default function ProductPage ({
         <section id='specifications' className='px-6 py-24 lg:px-12'>
           <div className='mx-auto max-w-6xl'>
             <motion.p
-              {...fadeUp as any}
+              {...(fadeUp as any)}
               className='mb-12 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
             >
               Specifications
             </motion.p>
 
             <div className='border-t border-[#D8D2C2]'>
-           
-
               {product.specifications.map(spec => (
                 <SpecRow key={spec.label} label={spec.label}>
                   <span className='text-lg text-[#2B2B26]'>{spec.value}</span>
@@ -272,7 +258,10 @@ export default function ProductPage ({
           id='enquire'
           className='bg-[#15140F] px-6 py-24 text-white lg:px-12'
         >
-          <motion.div {...fadeUp as any} className='mx-auto max-w-6xl text-center'>
+          <motion.div
+            {...(fadeUp as any)}
+            className='mx-auto max-w-6xl text-center'
+          >
             <h2
               className='text-3xl md:text-4xl'
               style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
@@ -293,7 +282,7 @@ export default function ProductPage ({
           </motion.div>
         </section>
 
-     
+       
       </main>
       <Footer />
     </>
@@ -332,5 +321,3 @@ function SpecRow ({
     </div>
   )
 }
-
-

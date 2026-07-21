@@ -38,17 +38,13 @@ const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(
 )}&output=embed`
 
 const PRODUCTS = [
+  'Grain Dryers',
+  'Spices Dryers',
+  'Coffee Dryers',
   'Sago Dryers',
-  'Cardamom & Pepper Dryer',
-  'Mobile Paddy Dryer',
-  'Wood Log Furnace',
-  'Wood Chips Furnace',
-  'Biomass Pellet Burner',
-  'Diesel/Kerosene Burner',
-  'Biomass Heater',
-  'Thermic Fluid Heater',
-  'Hot Water System',
-  'Other / Not Listed'
+  'Vegetable / Herbs / Leaves Dryers',
+  'Chilli Dryers',
+  'Groundnut Dryers'
 ]
 
 const RESEND_SECONDS = 30
@@ -188,10 +184,7 @@ export default function ContactPage () {
             <p className='mb-5 text-sm font-medium tracking-[0.25em] uppercase text-[#f1f1f1]'>
               Contact
             </p>
-            <h1
-              className='text-4xl leading-tight md:text-5xl'
-              
-            >
+            <h1 className='text-4xl leading-tight md:text-5xl'>
               Let's Start a Conversation
             </h1>
             <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#f1f1f1]'>
@@ -231,10 +224,7 @@ export default function ContactPage () {
                         />
                       </svg>
                     </div>
-                    <h2
-                      className='mt-6 text-2xl text-[#2B2B26] md:text-3xl'
-                      
-                    >
+                    <h2 className='mt-6 text-2xl text-[#2B2B26] md:text-3xl'>
                       Message received
                     </h2>
                     <p className='mt-3 max-w-sm leading-[1.8] text-[#5B564B]'>
@@ -708,9 +698,7 @@ function ContactRow ({
         type='button'
         onClick={onCopy}
         className='flex-shrink-0 text-xs text-[#e2e2e0] underline-offset-2 hover:text-[#f1f1f1] hover:underline'
-      >
-       
-      </button>
+      ></button>
     </div>
   )
 }

@@ -54,11 +54,11 @@ const Navbar = () => {
           children: [
             {
               name: 'Hot Air Dryers',
-              link: '/basic35'
+              link: '/comesoon'
             },
             {
               name: 'Dehydrators',
-              link: '/basic35'
+              link: '/custombuilt'
             }
           ]
         },
@@ -67,11 +67,11 @@ const Navbar = () => {
           children: [
             {
               name: 'Hot Air Dryers',
-              link: '/basic35'
+              link: '/cofeedryers'
             },
             {
               name: 'Dehydrators',
-              link: '/basic35'
+              link: '/custombuilt'
             }
           ]
         },
@@ -80,24 +80,24 @@ const Navbar = () => {
           children: [
             {
               name: 'Sago Pearl Dryers (Sabuthana)',
-              link: '/basic35'
+              link: '/sagopearl'
             },
             {
               name: 'Starch / Flash Dryers (Custom Built)',
-              link: '/basic35'
+              link: '/custombuilt'
             }
           ]
         },
         {
           name: 'Vegetable / Herbs / Leaves Dryers',
-          link: '/basic35'
+          link: '/comesoon'
         },
         {
           name: 'Chilli Dryers',
           children: [
             {
               name: 'Custom Built',
-              link: '/basic35'
+              link: '/custombuilt'
             }
           ]
         },
@@ -106,7 +106,7 @@ const Navbar = () => {
           children: [
             {
               name: 'Custom Built',
-              link: '/basic35'
+              link: '/custombuilt'
             }
           ]
         }
@@ -122,7 +122,7 @@ const Navbar = () => {
     },
     {
       name: 'Newsroom',
-      link: '/newsroom'
+      link: '/blogsoon'
     }
   ]
 

@@ -136,7 +136,7 @@ export default function ProductPage ({
     <>
       <Navbar />
       <HeroSection />
-      <main className='bg-[#F4F1EA] text-[#2B2B26] py-20'>
+      <main className='bg-[#F4F1EA] text-[#2B2B26] pt-20'>
         {/* Breadcrumb */}
         <div className='mx-auto max-w-6xl px-6 pt-10 md:px-0'>
           <a
@@ -293,43 +293,7 @@ export default function ProductPage ({
           </motion.div>
         </section>
 
-        {/* Related products */}
-        <section className='px-6 py-24 lg:px-12'>
-          <div className='mx-auto max-w-6xl'>
-            <motion.p
-              {...fadeUp as any}
-              className='mb-10 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
-            >
-              Explore Other Dryers
-            </motion.p>
-            <div className='grid gap-5 sm:grid-cols-2'>
-              {relatedProducts.map(p => (
-                <a
-                  key={p.slug}
-                  href={`/products/${p.slug}`}
-                  className='group flex items-center justify-between border border-[#D8D2C2] px-7 py-6 transition-colors duration-300 hover:border-[#A6824F]'
-                >
-                  <div>
-                    <p className='text-xs uppercase tracking-[0.15em] text-[#8C8678]'>
-                      {p.category}
-                    </p>
-                    <p
-                      className='mt-1 text-xl text-[#2B2B26]'
-                      style={{
-                        fontFamily: 'var(--font-serif, Georgia, serif)'
-                      }}
-                    >
-                      {p.name}
-                    </p>
-                  </div>
-                  <span className='text-[#C9B98F] transition-colors duration-300 group-hover:text-[#A6824F]'>
-                    →
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+       
       </main>
       <Footer />
     </>

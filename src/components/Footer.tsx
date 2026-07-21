@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
         <div className='footer-bottom mt-10 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between'>
           <p className='text-sm text-gray-300'>
-            © 2026 Kardi Dryers. Developed by Prism.
+            © 2026 Kardi Dryers. Developed by Prism Adverto
           </p>
 
           <div className='bt-left md:mt-0 mt-3'>
