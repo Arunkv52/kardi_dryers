@@ -1,5 +1,3 @@
-import { Link } from 'react-router'
-import Logo from '../../assets/logo/logo.png'
 import KardiBackground from '../../components/KardiBackground'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -7,17 +5,7 @@ import Footer from '../../components/Footer'
 const displayFont = { fontFamily: "'Fraunces', ui-serif, Georgia, serif" }
 const sansFont = { fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }
 
-function KMark ({ className = '' }: { className?: string }) {
-  return (
-    <div
-      className={`flex items-center justify-center rounded-full border border-white/25 text-[#F3EEE3] ${className}`}
-      style={displayFont}
-      aria-hidden='true'
-    >
-      K
-    </div>
-  )
-}
+
 
 function Sprout () {
   // The one deliberate signature move on this page: a line-drawn sprout
@@ -104,7 +92,7 @@ export default function ComingSoonPage () {
 
           {/* ---------------- Teaser stat strip ---------------- */}
           <section className='border-b border-black/[0.08 bg-white'>
-            <div className='mx-auto grid max-w-5xl grid-cols-1 divide-y divide-black/[0.08] sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
+            <div className='mx-auto grid max-w-5xl grid-cols-1 divide-y divide-black/8 sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
               {[
                 { big: 'Every crop', small: 'BUILT TO DRY' },
                 { big: 'Any scale', small: 'SMALL FARM TO MILL' },

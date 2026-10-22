@@ -11,7 +11,6 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
 }
 
-const topics = ['Field Notes', 'Product Deep-Dives', 'Farmer Stories']
 
 export default function BlogComingSoon () {
   const [email, setEmail] = useState('')
@@ -86,7 +85,7 @@ export default function BlogComingSoon () {
                   />
                   <button
                     type='submit'
-                    className='h-12 shrink-0 bg-[#000000] px-7 text-sm tracking-[0.05em] text-white transition-colors duration-300 hover:bg-[#A6824F]'
+                    className='h-12 shrink-0 bg-[#000000] px-7 text-sm tracking-wider text-white transition-colors duration-300 hover:bg-[#A6824F]'
                   >
                     Notify Me
                   </button>
