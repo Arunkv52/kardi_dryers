@@ -16,18 +16,18 @@ const heatingSystems = [
 
 const AlliedProducts = () => {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#083326] px-6 py-24 text-white md:px-10">
+    <section className="relative flex min-h-screen items-center overflow-hidden  px-6 py-24 text-white md:px-10">
       {/* ambient glow — single accent, kept quiet */}
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 top-0 h-[480px] w-[480px] rounded-full bg-[#A6824F]/10 blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-6xl">
+      <div className="relative mx-auto w-full">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left content — pins in place while the list scrolls beside it */}
-          <div className="lg:sticky lg:top-32 lg:self-start">
-            <span className="mb-6 block text-sm font-thin tracking-[0.25em] uppercase text-[#A6824F]">
+          <div className="lg:sticky lg:top-0 lg:self-start">
+            <span className="mb-6 block text-sm font-thin tracking-[0.25em] uppercase text-[#f1f1f1]">
               Furnaces, Burners &amp; Heating Systems
             </span>
 
@@ -40,7 +40,7 @@ const AlliedProducts = () => {
             </h2>
 
             <div className="mt-10 flex items-center gap-4">
-              <div className="h-px w-10 bg-[#A6824F]" />
+              <div className="h-px w-10 bg-[#f1f1f1]" />
               <span className="text-xs uppercase tracking-[0.2em] text-white/40">
                 {String(heatingSystems.length).padStart(2, '0')} systems
               </span>

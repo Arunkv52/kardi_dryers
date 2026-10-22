@@ -1,15 +1,14 @@
 import { motion } from 'framer-motion'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import HeroSection from '../../components/products/HeroSection'
 import ProdImage from '../../assets/products/Kardi-Dryers.jpg'
-
 // Crop-form photos, extracted from the "Capacities of Kardi Coffee Dryers" sheet
 import driedParchment from '../../assets/products/coffee/crop-dried-parchment.png'
 import coffeeCherry from '../../assets/products/coffee/crop-coffee-cherry.png'
 import driedCherry from '../../assets/products/coffee/crop-dried-cherry.png'
 import greenPepper from '../../assets/products/coffee/crop-green-pepper.jpg'
 import blackPepper from '../../assets/products/coffee/crop-black-pepper.jpg'
+import KardiBackground from '../../components/KardiBackground'
 
 type Product = {
   slug: string
@@ -47,8 +46,6 @@ type Product = {
 }
 
 // Product details
-
-
 
 // Kardi Coffee Dryer — content sourced from the Benefits / Capacities / Model
 // Range sheets
@@ -163,8 +160,6 @@ const coffeeDryer: Product = {
   ]
 }
 
-
-
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -181,268 +176,287 @@ export default function CofeeDryers ({
 
   return (
     <>
-      <Navbar />
-      <HeroSection />
-      <main className='bg-[#F4F1EA] text-[#2B2B26] pt-20'>       
-       
- {/* Benefits */}
-        {product.benefits && (
-          <section className='px-6 py-15 lg:px-12'>
-            <div className='mx-auto max-w-6xl'>
-              <motion.p
-                {...fadeUp as any}
-                className='mb-4 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
-              >
-                Benefits
-              </motion.p>
-              <motion.h2
-                {...fadeUp as any}
-                className='mb-12 max-w-2xl text-3xl text-[#2B2B26] md:text-4xl'
-                style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-              >
-                Why processors choose the {product.name.toLowerCase()}
-              </motion.h2>
-
-              <div className='grid gap-x-10 gap-y-6 sm:grid-cols-2'>
-                {product.benefits.map((benefit, i) => (
-                  <motion.div
-                    key={benefit}
-                    {...fadeUp}
-                    transition={{ ...fadeUp.transition, delay: i * 0.04 } as any}
-                    className='flex items-start gap-3 border-b border-[#D8D2C2] pb-4'
-                  >
-                    <svg
-                      viewBox='0 0 20 20'
-                      className='mt-0.5 h-4 w-4 shrink-0 text-[#A6824F]'
-                      fill='none'
-                      aria-hidden='true'
-                    >
-                      <path
-                        d='M4 10.5 8 14.5 16 5.5'
-                        stroke='currentColor'
-                        strokeWidth='1.6'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
-                    <span className='text-[15px] leading-[1.7] text-[#2B2B26]'>
-                      {benefit}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-        {/* Stat strip */}
-        <motion.section
-          {...fadeUp as any}
-          className='border-y border-[#D8D2C2] bg-white/40'
-        >
-          <div className='mx-auto grid max-w-6xl grid-cols-1 divide-y divide-[#D8D2C2] px-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x lg:px-12'>
-            <StatBlock value={product.capacityRange} label='Capacity' />
-            <StatBlock
-              value={`${product.dryingTimeHrs} hrs`}
-              label='Drying Time'
-            />
-            <StatBlock
-              value={`${speedMultiple.toFixed(1)}×`}
-              label='Faster Than Sun Drying'
-            />
-          </div>
-        </motion.section>
-
-        {/* Highlights */}
-        <section className='px-6 py-24 lg:px-12'>
-          <div className='mx-auto max-w-6xl'>
-            <div className='grid gap-10 md:grid-cols-3 md:gap-12'>
-              {product.highlights.map((h, i) => (
-                <motion.div
-                  key={h.title}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: i * 0.08 } as any}
-                  className='border-t border-[#A6824F] pt-6'
+      <KardiBackground>
+        <Navbar />
+        
+        <main className='  pt-20'>
+          {/* Benefits */}
+          {product.benefits && (
+            <section className='px-6 py-15 lg:px-12'>
+              <div className='mx-auto max-w-6xl'>
+                <motion.p
+                  {...(fadeUp as any)}
+                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
                 >
-                  <h3
-                    className='text-xl text-[#2B2B26]'
-                    style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-                  >
-                    {h.title}
-                  </h3>
-                  <p className='mt-3 text-[15px] leading-[1.8] text-[#5B564B]'>
-                    {h.desc}
-                  </p>
-                </motion.div>
-              ))}
+                  Benefits
+                </motion.p>
+                <motion.h2
+                  {...(fadeUp as any)}
+                  className='mb-12 max-w-2xl text-3xl  md:text-4xl'
+                  style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
+                >
+                  Why processors choose the {product.name.toLowerCase()}
+                </motion.h2>
+
+                <div className='grid gap-x-10 gap-y-6 sm:grid-cols-2'>
+                  {product.benefits.map((benefit, i) => (
+                    <motion.div
+                      key={benefit}
+                      {...fadeUp}
+                      transition={
+                        { ...fadeUp.transition, delay: i * 0.04 } as any
+                      }
+                      className='flex items-start gap-3 border-b border-[#D8D2C2] pb-4'
+                    >
+                      <svg
+                        viewBox='0 0 20 20'
+                        className='mt-0.5 h-4 w-4 shrink-0'
+                        fill='none'
+                        aria-hidden='true'
+                      >
+                        <path
+                          d='M4 10.5 8 14.5 16 5.5'
+                          stroke='currentColor'
+                          strokeWidth='1.6'
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                        />
+                      </svg>
+                      <span className='text-[15px] leading-[1.7]'>
+                        {benefit}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+          {/* Stat strip */}
+          <motion.section
+            {...(fadeUp as any)}
+            className='border-y border-[#D8D2C2] bg-white/40 text-white'
+          >
+            <div className='mx-auto grid max-w-6xl text-white grid-cols-1 divide-y divide-[#D8D2C2] px-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x lg:px-12'>
+              <StatBlock value={product.capacityRange} label='Capacity'/>
+              <StatBlock
+                value={`${product.dryingTimeHrs} hrs`}
+                label='Drying Time'
+              />
+              <StatBlock
+                value={`${speedMultiple.toFixed(1)}×`}
+                label='Faster Than Sun Drying'
+              />
             </div>
-          </div>
-        </section>
+          </motion.section>
 
-       
-
-        {/* Capacities & crop forms */}
-        {product.capacities && (
-          <section className='border-t border-[#D8D2C2] bg-white/40 px-6 py-24 lg:px-12'>
+          {/* Highlights */}
+          <section className='px-6 py-24 lg:px-12'>
             <div className='mx-auto max-w-6xl'>
-              <motion.p
-                {...fadeUp as any}
-                className='mb-4 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
-              >
-                Capacities
-              </motion.p>
-              <motion.h2
-                {...fadeUp as any}
-                className='mb-8 max-w-2xl text-3xl text-[#2B2B26] md:text-4xl'
-                style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-              >
-                Batch sizes for every scale of operation
-              </motion.h2>
-
-              <motion.div {...fadeUp as any} className='flex flex-wrap gap-3'>
-                {product.capacities.batches.map(batch => (
-                  <span
-                    key={batch}
-                    className='rounded-full border border-[#C9B98F] px-5 py-2 text-sm text-[#5B564B]'
-                  >
-                    {batch}
-                  </span>
-                ))}
-              </motion.div>
-              <motion.p
-                {...fadeUp as any}
-                className='mt-5 text-sm italic text-[#8C8678]'
-              >
-                {product.capacities.note}
-              </motion.p>
-
-              <div className='mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-5'>
-                {product.capacities.forms.map((form, i) => (
+              <div className='grid gap-10 md:grid-cols-3 md:gap-12'>
+                {product.highlights.map((h, i) => (
                   <motion.div
-                    key={form.label}
+                    key={h.title}
                     {...fadeUp}
-                    transition={{ ...fadeUp.transition, delay: i * 0.06 } as any}
-                    className='flex flex-col items-center text-center'
+                    transition={
+                      { ...fadeUp.transition, delay: i * 0.08 } as any
+                    }
+                    className='border-t border-[#A6824F] pt-6'
                   >
-                    <div className='h-28 w-28 overflow-hidden rounded-full border border-[#D8D2C2] bg-[#F4F1EA] shadow-[0_10px_30px_rgba(43,43,38,0.08)] sm:h-32 sm:w-32'>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={form.image}
-                        alt={form.label}
-                        className='h-full w-full object-cover'
-                      />
-                    </div>
-                    <p className='mt-4 text-xs uppercase tracking-[0.12em] text-[#8C8678]'>
-                      {form.label}
+                    <h3
+                      className='text-xl '
+                      style={{
+                        fontFamily: 'var(--font-serif, Georgia, serif)'
+                      }}
+                    >
+                      {h.title}
+                    </h3>
+                    <p className='mt-3 text-[15px] leading-[1.8] '>
+                      {h.desc}
                     </p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
-        )}
 
-        {/* Model range */}
-        {product.models && (
-          <section className='border-t border-[#D8D2C2] px-6 py-24 lg:px-12'>
-            <div className='mx-auto max-w-6xl'>
-              <motion.p
-                {...fadeUp as any}
-                className='mb-4 text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'
-              >
-                Model Range
-              </motion.p>
-              <motion.h2
-                {...fadeUp as any}
-                className='mb-12 max-w-2xl text-3xl text-[#2B2B26] md:text-4xl'
+          {/* Capacities & crop forms */}
+          {product.capacities && (
+            <section className='border-t border-[#D8D2C2] bg-white/40 px-6 py-24 lg:px-12 text-white'>
+              <div className='mx-auto max-w-6xl'>
+                <motion.p
+                  {...(fadeUp as any)}
+                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
+                >
+                  Capacities
+                </motion.p>
+                <motion.h2
+                  {...(fadeUp as any)}
+                  className='mb-8 max-w-2xl text-3xl  md:text-4xl'
+                  style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
+                >
+                  Batch sizes for every scale of operation
+                </motion.h2>
+
+                <motion.div
+                  {...(fadeUp as any)}
+                  className='flex flex-wrap gap-3'
+                >
+                  {product.capacities.batches.map(batch => (
+                    <span
+                      key={batch}
+                      className='rounded-full border border-[#C9B98F] px-5 py-2 text-sm'
+                    >
+                      {batch}
+                    </span>
+                  ))}
+                </motion.div>
+                <motion.p
+                  {...(fadeUp as any)}
+                  className='mt-5 text-sm italic'
+                >
+                  {product.capacities.note}
+                </motion.p>
+
+                <div className='mt-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-5'>
+                  {product.capacities.forms.map((form, i) => (
+                    <motion.div
+                      key={form.label}
+                      {...fadeUp}
+                      transition={
+                        { ...fadeUp.transition, delay: i * 0.06 } as any
+                      }
+                      className='flex flex-col items-center text-center'
+                    >
+                      <div className='h-28 w-28 overflow-hidden rounded-full border border-[#D8D2C2] bg-[#F4F1EA] shadow-[0_10px_30px_rgba(43,43,38,0.08)] sm:h-32 sm:w-32'>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={form.image}
+                          alt={form.label}
+                          className='h-full w-full object-cover'
+                        />
+                      </div>
+                      <p className='mt-4 text-xs uppercase tracking-[0.12em]'>
+                        {form.label}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Model range */}
+          {product.models && (
+            <section className='border-t border-[#D8D2C2] px-6 py-24 lg:px-12'>
+              <div className='mx-auto max-w-6xl'>
+                <motion.p
+                  {...(fadeUp as any)}
+                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
+                >
+                  Model Range
+                </motion.p>
+                <motion.h2
+                  {...(fadeUp as any)}
+                  className='mb-12 max-w-2xl text-3xl md:text-4xl'
+                  style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
+                >
+                  Six capacities, one drying principle
+                </motion.h2>
+
+                <motion.div
+                  {...(fadeUp as any)}
+                  className='overflow-x-auto border border-[#D8D2C2]'
+                >
+                  <table className='w-full min-w-120 border-collapse text-left'>
+                    <thead>
+                      <tr className='bg-white/60'>
+                        <th className='w-16 border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
+                          S.No
+                        </th>
+                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
+                          Model
+                        </th>
+                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
+                          Capacity (kgs/batch)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product.models.map(m => (
+                        <tr
+                          key={m.sNo}
+                          className='border-b border-[#D8D2C2] last:border-b-0'
+                        >
+                          <td className='px-5 py-4 text-sm'>
+                            {m.sNo}
+                          </td>
+                          <td className='px-5 py-4 text-sm'>
+                            {m.model}
+                          </td>
+                          <td className='px-5 py-4 text-sm'>
+                            {m.capacityKg}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </motion.div>
+
+                {product.modelSpecNotes && (
+                  <motion.div
+                    {...(fadeUp as any)}
+                    className='mt-8 border border-[#D8D2C2] bg-white/40 p-7'
+                  >
+                    <p className='mb-4 text-xs uppercase tracking-[0.15em]'>
+                      Shared Specifications
+                    </p>
+                    <ul className='space-y-2.5'>
+                      {product.modelSpecNotes.map(note => (
+                        <li
+                          key={note}
+                          className='text-[15px] leading-[1.7]'
+                        >
+                          {note}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {/* CTA band */}
+          <section
+            id='enquire'
+            className=' px-6 py-24 text-white lg:px-12'
+          >
+            <motion.div
+              {...(fadeUp as any)}
+              className='mx-auto max-w-6xl text-center'
+            >
+              <h2
+                className='text-3xl md:text-4xl'
                 style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
               >
-                Six capacities, one drying principle
-              </motion.h2>
-
-              <motion.div
-                {...fadeUp as any}
-                className='overflow-x-auto border border-[#D8D2C2]'
+                Ready to bring this to your facility?
+              </h2>
+              <p className='mx-auto mt-4 max-w-xl text-white/60'>
+                Tell us your crop, your volume, and your location — we'll
+                recommend the right configuration of the{' '}
+                {product.name.toLowerCase()}.
+              </p>
+              <a
+                href='/contact'
+                className='mt-9 inline-block bg-[#A6824F] px-8 py-4 text-sm tracking-wider text-[#15140F] transition-colors duration-300 hover:bg-white'
               >
-                <table className='w-full min-w-[480px] border-collapse text-left'>
-                  <thead>
-                    <tr className='bg-white/60'>
-                      <th className='w-16 border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em] text-[#8C8678]'>
-                        S.No
-                      </th>
-                      <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em] text-[#8C8678]'>
-                        Model
-                      </th>
-                      <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em] text-[#8C8678]'>
-                        Capacity (kgs/batch)
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {product.models.map(m => (
-                      <tr key={m.sNo} className='border-b border-[#D8D2C2] last:border-b-0'>
-                        <td className='px-5 py-4 text-sm text-[#8C8678]'>{m.sNo}</td>
-                        <td className='px-5 py-4 text-sm text-[#2B2B26]'>{m.model}</td>
-                        <td className='px-5 py-4 text-sm text-[#2B2B26]'>{m.capacityKg}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </motion.div>
-
-              {product.modelSpecNotes && (
-                <motion.div
-                  {...fadeUp as any}
-                  className='mt-8 border border-[#D8D2C2] bg-white/40 p-7'
-                >
-                  <p className='mb-4 text-xs uppercase tracking-[0.15em] text-[#8C8678]'>
-                    Shared Specifications
-                  </p>
-                  <ul className='space-y-2.5'>
-                    {product.modelSpecNotes.map(note => (
-                      <li
-                        key={note}
-                        className='text-[15px] leading-[1.7] text-[#5B564B]'
-                      >
-                        {note}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </div>
+                Talk to Our Team
+              </a>
+            </motion.div>
           </section>
-        )}
-
-       
-        {/* CTA band */}
-        <section
-          id='enquire'
-          className='bg-[#15140F] px-6 py-24 text-white lg:px-12'
-        >
-          <motion.div {...fadeUp as any} className='mx-auto max-w-6xl text-center'>
-            <h2
-              className='text-3xl md:text-4xl'
-              style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-            >
-              Ready to bring this to your facility?
-            </h2>
-            <p className='mx-auto mt-4 max-w-xl text-white/60'>
-              Tell us your crop, your volume, and your location — we'll
-              recommend the right configuration of the{' '}
-              {product.name.toLowerCase()}.
-            </p>
-            <a
-              href='/contact'
-              className='mt-9 inline-block bg-[#A6824F] px-8 py-4 text-sm tracking-[0.05em] text-[#15140F] transition-colors duration-300 hover:bg-white'
-            >
-              Talk to Our Team
-            </a>
-          </motion.div>
-        </section>
-
-       
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </KardiBackground>
     </>
   )
 }
@@ -451,15 +465,14 @@ function StatBlock ({ value, label }: { value: string; label: string }) {
   return (
     <div className='flex flex-col items-center gap-2 px-6 py-10 text-center'>
       <span
-        className='text-4xl text-[#2B2B26] md:text-5xl'
+        className='text-4xl md:text-5xl'
         style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
       >
         {value}
       </span>
-      <span className='text-xs uppercase tracking-[0.15em] text-[#8C8678]'>
+      <span className='text-xs uppercase tracking-[0.15em]'>
         {label}
       </span>
     </div>
   )
 }
-

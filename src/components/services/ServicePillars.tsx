@@ -9,7 +9,7 @@ const pillars = [
   },
   {
     title: 'In-house manufacturing',
-    desc: 'Every dryer is built at our own facilities in Chennai and Kerala, by the same engineering team that designed it.'
+    desc: 'Every dryer is built at our own facilities in Chennai, by the same engineering team that designed it.'
   },
   {
     title: 'Installation & commissioning',
@@ -21,13 +21,13 @@ const pillars = [
   },
   {
     title: 'Farmer training & community drying centres',
-    desc: "Beyond individual installations, we've set up community drying centres — like the Kardi Cardamom Curing House in Kerala — so smallholders can access drying capacity they couldn't justify alone."
+    desc: "Beyond individual installations, we've set up community drying centres."
   }
 ]
 
 const ServicePillars = () => {
   return (
-    <section className="bg-[#062920] py-24 px-6 md:px-10 text-white">
+    <section className=" py-24 px-6 md:px-10 text-white">
       <div className="mx-auto">
         <div className="md:flex justify-between items-start gap-10 mb-16">
           <div className="md:w-1/2">
@@ -40,7 +40,7 @@ const ServicePillars = () => {
           </div>
           <div className="md:w-[40%] mt-6 md:mt-0">
             <p className="text-body leading-7">
-              Kardi runs the full project in-house — assessment, design,
+              Kardi runs the full project in-house assessment, design,
               manufacturing, installation and the years of support after —
               rather than handing you off between contractors.
             </p>

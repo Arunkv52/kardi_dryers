@@ -1,19 +1,22 @@
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import AlliedProducts from "../components/products/AlliedProducts"
-import FuelFlexibility from "../components/products/FuelFlexibility"
-import HeroSection from "../components/products/HeroSection"
-import ProductDetails from "../components/products/ProductDetails"
+import Footer from '../components/Footer'
+import KardiBackground from '../components/KardiBackground'
+import Navbar from '../components/Navbar'
+import AlliedProducts from '../components/products/AlliedProducts'
+import FuelFlexibility from '../components/products/FuelFlexibility'
+import HeroSection from '../components/products/HeroSection'
+import ProductDetails from '../components/products/ProductDetails'
 
 const Products = () => {
   return (
     <>
-        <Navbar/>
-            <HeroSection />
-            <ProductDetails/>
-            <AlliedProducts />
-            <FuelFlexibility />
+      <KardiBackground>
+        <Navbar />
+        
+        <ProductDetails />
+        <AlliedProducts />
+        <FuelFlexibility />
         <Footer />
+      </KardiBackground>
     </>
   )
 }

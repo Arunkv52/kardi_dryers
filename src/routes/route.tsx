@@ -9,11 +9,13 @@ import ContactPage from '../pages/ContactPage'
 import NewsroomPage from '../pages/Newsroom'
 import Basic25 from '../pages/graindryers/Basic25'
 import Basic35 from '../pages/graindryers/Basic35'
-import CustomBuiltPage from '../pages/spicesdryers/CustomBuiltPage'
+import CustomBuiltPage from '../pages/CustomBuiltPage'
 import SagoPearl from '../pages/sagodryers/SagoPearl'
 import ComingSoonPage from '../pages/comesoon/Comingsoonpage'
 import CofeeDryers from '../pages/coffeedryers/CoffeeDryers'
 import BlogComingSoon from '../pages/comesoon/BlogComingSoon'
+import GrainDryers from '../pages/GrainDryers'
+import Spices from '../pages/spicesdryers/Spices'
 
 const route = () => {
   return (
@@ -35,6 +37,8 @@ const route = () => {
           <Route path='/comesoon' element={<ComingSoonPage/>}/>
           <Route path='/cofeedryers' element={<CofeeDryers />}/>
           <Route path='/blogsoon' element={<BlogComingSoon/>}/>
+          <Route path='/mobilepaddydryers' element={<GrainDryers/>}/>
+          <Route path='/spices' element={<Spices />}/>
         </Routes>
       </BrowserRouter>
     </>

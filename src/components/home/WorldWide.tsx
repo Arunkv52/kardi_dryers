@@ -1,4 +1,6 @@
-import WorldLogo from '../../assets/products/wind.svg'
+import { Link } from 'react-router'
+import WorldLogo from '../../assets/Home/maps.png'
+
 const WorldWide = () => {
   return (
     <>
@@ -7,15 +9,22 @@ const WorldWide = () => {
           <h2 className='text-white md:text-7xl text-5xl'>
             Worldwide <br /> <span className='text-white/50'>impact</span>
           </h2>
-          <p className='text-base mt-10 text-white'>Present across <span className='text-white/50'>3 continents</span>, <br />
-           in <span className='text-white/50'>15+ countries</span></p>
-           <div className='md:mt-10 mt-10'>
-          <button className='bg-white py-5 cursor-pointer px-8 rounded-2xl'>Peek Inside</button>
-
-           </div>
+          <p className='text-base mt-10 text-white'>
+            Present across <span className='text-white/50'>3 continents</span>,{' '}
+            <br />
+            in <span className='text-white/50'>15+ countries</span>
+          </p>
+          <div className='md:mt-10 mt-10'>
+            <Link
+              to='/about'
+              className='inline-block rounded-2xl bg-white px-8 py-5 text-black'
+            >
+              Peek Inside
+            </Link>
+          </div>
         </div>
         <div className='md:w-[60%] w-full md:mt-0 mt-20'>
-          <img src={WorldLogo} alt='' className='w-full'/>
+          <img src={WorldLogo} alt='' className='w-full' />
         </div>
       </div>
     </>

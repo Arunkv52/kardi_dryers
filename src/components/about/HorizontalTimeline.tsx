@@ -1,4 +1,3 @@
-'use client'
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -8,13 +7,13 @@ const timeline = [
     year: '2001',
     chapter: 'I',
     title: 'Founded',
-    desc: 'Kardi Dryers established in Chennai, pioneering small-scale crop drying solutions.'
+    desc: 'Kardi Dryers established in Chennai, pioneering small-scale crop drying solutions, Developed the worlds first small-scale dryer for high-value crops like cardamom and pepper.'
   },
   {
     year: '2005',
     chapter: 'II',
-    title: 'Cardamom dryer launch',
-    desc: "Developed the world's first small-scale dryer for high-value crops like cardamom and pepper."
+    title: 'Dryer launch',
+    desc: "Small Size Dryers Launch"
   },
   {
     year: '2010',
@@ -64,10 +63,10 @@ export default function VerticalTimeline() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section className="relative bg-[#083326] py-28 px-6">
+    <section className="relative ] py-28 px-6">
       {/* Section label */}
       <div className="max-w-3xl mx-auto mb-20 text-center">
-        <p className="text-sm tracking-[0.25em] uppercase text-[#53823c]">
+        <p className="text-sm tracking-[0.25em] uppercase">
           Kardi Dryers — A History
         </p>
         <div className="w-12 h-px bg-[#ffffff] mx-auto mt-4" />
@@ -162,7 +161,7 @@ function TimelineRow({
           fill="none"
           stroke="currentColor"
           strokeWidth={1.5}
-          className={`ml-auto h-3 w-3 flex-shrink-0 transition-all duration-500 ${
+          className={`ml-auto h-3 w-3 shrink-0 transition-all duration-500 ${
             isActive ? 'rotate-45 text-[#A6824F]' : 'text-[#C9B98F]'
           }`}
         >
@@ -179,12 +178,12 @@ function TimelineRow({
       >
         <div className="mt-5 max-w-xl rounded-sm border-l-2 border-[#A6824F] bg-white/60 px-7 py-6 shadow-[0_8px_30px_rgba(43,43,38,0.06)]">
           <h3
-            className="mb-2 text-xl md:text-2xl text-[#2B2B26]"
+            className="mb-2 text-xl md:text-2xl text-[#000000]"
             style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
           >
             {item.title}
           </h3>
-          <p className="text-[15px] leading-[1.8] text-[#5B564B]">{item.desc}</p>
+          <p className="text-[15px] leading-[1.8] text-[#030303]">{item.desc}</p>
         </div>
       </motion.div>
     </motion.div>

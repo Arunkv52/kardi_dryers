@@ -46,13 +46,13 @@ const Service = () => {
               <div className='md:grid md:grid-cols-4 md:gap-90 grid grid-cols-1 gap-10 mt-10'>
                 {Cardservice.map(item => (
                   <>
-                    <div className='w-[350px] h-[250px] border border-[#083326] rounded-[35px] p-8 bg-white/70'>
+                    <div className='w-87.5 h-62.5 border border-[#083326] rounded-[35px] p-8 bg-white/70'>
                       {/* Content */}
                       <div className='mt-5'>
                         <h2 className='text-2xl font-medium text-black/80 leading-none'>
                           {item.title}
                         </h2>
-                        <p className='mt-5 text-base leading-[20px] text-black font-normal'>
+                        <p className='mt-5 text-base leading-5 text-black font-normal'>
                           {item.desc}
                         </p>
                       </div>

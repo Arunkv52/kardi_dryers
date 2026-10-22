@@ -21,16 +21,12 @@ const HeroSection = () => {
           Kardi Dryers — Services
         </p>
 
-        <h1 className="text-[#F5F3ED] text-5xl  md:text-5xl font-light leading-[1.05] font-serif mb-6">
-          From the first site visit
-          <br />
-          to the next ten harvests.
+        <h1 className="text-[#F5F3ED] text-5xl  md:text-3xl font-light leading-[1.05] font-serif mb-6">
+          25+ years of engineering experience &nbsp;·&nbsp; 4,000+ dryers 
+          installed &nbsp;·&nbsp; Manufactured in Chennai
         </h1>
 
-        <p className="text-white/60 text-sm sm:text-base tracking-wide">
-          25+ years of engineering experience &nbsp;·&nbsp; 4,000+ dryers
-          installed &nbsp;·&nbsp; Manufactured in Chennai &amp; Kerala
-        </p>
+       
       </div>
     </div>
   )

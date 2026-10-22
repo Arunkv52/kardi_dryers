@@ -66,7 +66,7 @@ export default function LearnMore() {
 
           <div className="lg:col-span-8">
             <h2
-              className="text-3xl leading-none tracking-tight text-[#2B2B26] md:text-4xl lg:text-5xl"
+              className="text-3xl leading-none tracking-tight text-black md:text-4xl lg:text-5xl"
               style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
             >
               Any Fuel, Any Location
@@ -101,7 +101,7 @@ export default function LearnMore() {
                 >
                   <span
                     className={`text-2xl font-light transition-colors duration-500 md:text-3xl ${
-                      isActive ? 'text-[#2B2B26]' : 'text-[#2B2B26]/45'
+                      isActive ? 'text-[#000000]' : 'text-[#000000]'
                     }`}
                     style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
                   >

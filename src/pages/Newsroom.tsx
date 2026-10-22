@@ -144,7 +144,7 @@ export default function NewsroomPage () {
   return (
     <>
     <Navbar />
-      <main className='bg-[#083326] text-[#ffffff]'>
+      <main className=' text-[#ffffff]'>
         {/* Heading */}
         <section className='px-6 pb-4 pt-40 lg:px-12'>
           <motion.div {...fadeUp} className='mx-auto max-w-6xl text-center'>

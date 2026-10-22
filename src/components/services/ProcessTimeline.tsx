@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const steps = [
   {
     title: 'Enquiry & site visit',
-    desc: 'Tell us what you\u2019re drying and where. For most projects, an engineer visits the site before any design work starts.'
+    desc: 'Tell us what you’re drying and where. For most projects, an engineer visits the site before any design work starts.'
   },
   {
     title: 'Engineering & proposal',
@@ -29,44 +29,48 @@ const steps = [
 
 const ProcessTimeline = () => {
   return (
-    <section className="bg-[#083326] py-24 px-6 md:px-10">
-      <div className="max-w-4xl mx-auto">
-        <p className="text-white/70 text-xs uppercase tracking-[0.18em] font-medium mb-4">
+    <section className='px-6 py-24 md:px-10'>
+      <div className=''>
+        <p className='mb-4 text-xs font-medium uppercase tracking-[0.18em] text-white/70'>
           How a project moves
         </p>
-        <h2 className="text-4xl md:text-5xl text-white leading-tight font-serif mb-16 max-w-xl">
+
+        <h2 className='mb-16  font-serif text-4xl leading-tight text-white md:text-5xl'>
           From enquiry to your first harvest-ready batch
         </h2>
 
-        <div className="relative">
-          {/* Connecting line */}
-          <div className="absolute left-5 top-2 bottom-2 w-px bg-white/15 hidden sm:block" />
+        {/* Scroll horizontally on smaller screens */}
+        <div className='overflow-x-auto pb-5'>
+          <div className='relative lg:min-w-0'>
+            {/* Connecting line through the center of the markers */}
+            <div className='absolute left-0 right-0 top-[22px] h-px bg-white/15' />
 
-          <div className="flex flex-col gap-12">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="relative flex items-start gap-7"
-              >
-                <div className="relative z-10 flex-shrink-0 w-11 h-11 rounded-full border border-gold/60 bg-forest flex items-center justify-center">
-                  <span className="text-white text-sm font-serif">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                </div>
-                <div className="pt-1.5">
-                  <h3 className="text-white text-xl mb-2 font-serif">
+            <div className='grid grid-cols-6 gap-4'>
+              {steps.map((step, i) => (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  className='relative z-10'
+                >
+                  <div className='mb-6 flex h-11 w-11 items-center justify-center rounded-full border border-gold/60 bg-forest'>
+                    <span className='font-serif text-sm text-white'>
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <h3 className='mb-2 pr-3 font-serif text-lg text-white'>
                     {step.title}
                   </h3>
-                  <p className="text-white/60 leading-7 max-w-md text-[15px]">
+
+                  <p className='pr-4 text-sm leading-6 text-white'>
                     {step.desc}
                   </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

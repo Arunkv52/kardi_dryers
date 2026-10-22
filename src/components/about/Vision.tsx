@@ -3,13 +3,13 @@ import VisionImg from '../../assets/about/landscape-img.jpg'
 const Vision = () => {
   return (
     <>
-      <div className='md:px-10 px-5 bg-white'>
+      <div className='md:px-10 px-5 '>
         <div className='bg-[#f4f1ea] md:flex justify-start items-center gap-3 '>
           <div className='md:w-1/2 w-full'>
             <img
               src={VisionImg}
               alt=''
-              className='h-[600px] w-full object-cover'
+              className='h-150 w-full object-cover'
             />
           </div>
           <div className='md:w-1/2 w-full md:px-20 px-5'>

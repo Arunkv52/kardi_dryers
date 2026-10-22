@@ -49,7 +49,7 @@ const ProdData: Product[] = [
     Crops: 'Sago, Chilli, Bell Pepper, Herbs & Leaves',
     Capacity: '500 kg – 1.8 T/hr',
     Dryingtime: '2.5 hrs (Sun Dried: 8 hrs)',
-    Fuel: 'Wood / Biomass',
+    Fuel: 'Thermic Fluid / Wood / Biomass',
     Locations: 'Tamil Nadu'
   },
   {
@@ -63,26 +63,16 @@ const ProdData: Product[] = [
     Fuel: 'Wood Chips / Biomass Pellets',
     Locations: 'Karnataka'
   },
-  {
-    Image: PaddyDryerImg,
-    title: 'Paddy Dryer',
-    Type: 'Flat Bed Batch (Mobile & Stationary)',
-    Category: 'Crop Dryers',
-    Crops: 'Paddy, Maize & Other Grains',
-    Capacity: '5 T',
-    Dryingtime: '3–4 hrs (Sun Dried: 24–48 hrs)',
-    Fuel: 'Diesel / Kerosene',
-    Locations: 'Andhra Pradesh'
-  },
+
   {
     Image: KardiPedrottiMobileDryerImg,
     title: 'Kardi-Pedrotti Mobile Dryer',
     Type: 'Batch Type – Mobile',
     Category: 'Mobile Dryers',
     Crops: 'Paddy, Maize & Other Grains',
-    Capacity: '2 T – 70 T',
-    Dryingtime: '30 min – 4 hrs (Sun Dried: 24–48 hrs)',
-    Fuel: 'Diesel / Kerosene',
+    Capacity: '1 T – 70 T',
+    Dryingtime: '2.5 hrs – 4 hrs (Sun Dried: 24–48 hrs)',
+    Fuel: 'Diesel',
     Locations: 'Tamil Nadu'
   },
   {
@@ -93,20 +83,10 @@ const ProdData: Product[] = [
     Crops: 'Sago, Chilli, Bell Pepper, Herbs & Leaves',
     Capacity: '500 kg – 1.8 T/hr',
     Dryingtime: '2.5 hrs (Sun Dried: 8 hrs)',
-    Fuel: 'Wood / Biomass',
+    Fuel: 'Thermic Fluid / Wood / Biomass',
     Locations: 'Tamil Nadu'
   },
-  {
-    Image: MaizeSeedDryerImg,
-    title: 'Maize Seed Dryer',
-    Type: 'Flat Bed',
-    Category: 'Crop Dryers',
-    Crops: 'Maize Seeds (Germination Drying)',
-    Capacity: '3 T',
-    Dryingtime: '77 hrs (For Seed Germination)',
-    Fuel: 'Wood / Biomass',
-    Locations: 'Tamil Nadu'
-  },
+
   {
     Image: TrayDryerImg,
     title: 'Tray Dryer',
@@ -197,7 +177,7 @@ const ProductDetails = () => {
   }, [activeFilter])
 
   return (
-    <div className="bg-[#F4F1EA] py-40 px-10">
+    <div className=" py-40 px-10">
       <div className="md:grid md:grid-cols-[420px_1fr] gap-16  mx-auto">
 
         {/* LEFT — sticky filter rail */}
@@ -205,12 +185,12 @@ const ProductDetails = () => {
           <div className="md:sticky md:top-24">
             <p
 
-              className="text-[#53823c] text-xs uppercase tracking-[0.18em] font-medium mb-4"
+              className="text-white text-xs uppercase tracking-[0.18em] font-medium mb-4"
             >
               Our range
             </p>
             <h5
-              className="text-4xl font-normal leading-tight mb-2 text-[#2B2B26]"
+              className="text-4xl font-normal leading-tight mb-2 text-white"
             >
               Dryers for every crop, scale & fuel
             </h5>
@@ -225,7 +205,7 @@ const ProductDetails = () => {
                       onClick={() => setActiveFilter(filter)}
                       aria-pressed={isActive}
                       style={{
-                        color: isActive ? '#2B2B26' : '#8C8678',
+                        color: isActive ? '#f1f1f1' : '#ffffff',
                         borderLeft: isActive ? '2px solid #53823c' : '2px solid transparent',
                         backgroundColor: isActive ? 'rgba(166,130,79,0.08)' : 'transparent'
                       }}
@@ -247,7 +227,7 @@ const ProductDetails = () => {
               style={{ borderColor: '#D8D2C2' }}
               className="border border-dashed rounded-md py-24 text-center"
             >
-              <p style={{ color: '#8C8678' }} className="text-sm">
+              <p style={{ color: '#ffffff' }} className="text-sm">
                 No products in this category yet — check back soon, or browse
                 another category.
               </p>
@@ -275,36 +255,31 @@ const ProductDetails = () => {
                   </div>
 
                   <div>
-                    <p
-                      className="text-black/50 text-[11px] uppercase tracking-[0.1em] mb-2"
-                    >
-                      {item.Category}
-                    </p>
+                    
                     <h3
                       
-                      className="text-4xl font-normal mb-5"
+                      className="text-4xl font-normal mb-5 text-white"
                     >
                       {item.title}
                     </h3>
 
                     <dl className="grid grid-cols-[110px_1fr] gap-y-3.5 text-base">
-                      <dt style={{ color: '#8C8678' }}>Type</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Type}</dd>
+                      <dt style={{ color: '#f1f1f1' }}>Type</dt>
+                      <dd style={{ color: '#ffffff' }}>{item.Type}</dd>
 
-                      <dt style={{ color: '#8C8678' }}>Crops</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Crops}</dd>
+                      <dt style={{ color: '#f1f1f1' }}>Crops</dt>
+                      <dd style={{ color: '#ffffff' }}>{item.Crops}</dd>
 
-                      <dt style={{ color: '#8C8678' }}>Capacity</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Capacity}</dd>
+                      <dt style={{ color: '#f1f1f1' }}>Capacity</dt>
+                      <dd style={{ color: '#ffffff' }}>{item.Capacity}</dd>
 
-                      <dt style={{ color: '#8C8678' }}>Drying time</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Dryingtime}</dd>
+                      <dt style={{ color: '#f1f1f1' }}>Drying time</dt>
+                      <dd style={{ color: '#ffffff' }}>{item.Dryingtime}</dd>
 
-                      <dt style={{ color: '#8C8678' }}>Fuel</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Fuel}</dd>
+                      <dt style={{ color: '#f1f1f1' }}>Fuel</dt>
+                      <dd style={{ color: '#ffffff' }}>{item.Fuel}</dd>
 
-                      <dt style={{ color: '#8C8678' }}>Locations</dt>
-                      <dd style={{ color: '#5B564B' }}>{item.Locations}</dd>
+                    
                     </dl>
                   </div>
                 </div>

@@ -1,10 +1,43 @@
+import { Link } from 'react-router'
 import Logo from '../assets/logo/logo.png'
 import Button from './myui/Button'
+import { RiFacebookFill } from 'react-icons/ri'
+import { BsInstagram } from 'react-icons/bs'
+import { FaXTwitter } from 'react-icons/fa6'
+import { AiFillYoutube } from 'react-icons/ai'
 
 const Footer = () => {
+  const FooterItem = [
+    { name: 'Home', link: '/' },
+    { name: 'About', link: '/about' },
+    {
+      name: 'Products',
+      link: '/products'
+    },
+    { name: 'Services', link: '/services' },
+    { name: 'Videos', link: '/videos' },
+    { name: 'Blog', link: '/blogsoon' },
+    { name: 'Contact', link: '/contact' }
+  ]
+
+  const ProductItem = [
+    {
+      name: 'Mobile Paddy Dryers',
+      link: '/mobilepaddydryers'
+    },
+
+    { name: 'Spices Dryers', link: '/spices' },
+    { name: 'Coffee Dryers', link: '/cofeedryers' },
+    { name: 'Sago Dryers', link: '/sagopearl' },
+    { name: 'Tray Dryers', link: '/comesoon' },
+    { name: 'Dehydrators', link: '/custombuilt' },
+    { name: 'Chilli Dryers', link: '/custombuilt' },
+    { name: 'Groundnut Dryers', link: '/custombuilt' }
+  ]
+
   return (
     <>
-      <footer className=' md:px-10 px-5 md:py-5 py-20 md:max-h-screen'>
+      <footer className=' md:px-10 px-5 md:py-2 py-20'>
         <section className='px-0 py-10 '>
           <div className='relative overflow-hidden rounded-[40px] bg-[#135846] px-10 md:px-15 py-10 flex flex-col md:flex-row items-center justify-between'>
             {/* Background Decorative Shapes */}
@@ -41,96 +74,85 @@ const Footer = () => {
 
             {/* Button */}
             <div className='relative z-10 mt-10 md:mt-0'>
-              <Button text='Get Ready' variant='orange' />
+              <Link to='/contact'>
+                <Button text='Get Ready' variant='orange' />
+              </Link>
             </div>
           </div>
         </section>
 
-        <div className='footer-top md:flex flex md:flex-row flex-col justify-between'>
-          <div className='md:w-[55%] w-full'>
+        <div className='footer-top md:grid grid md:grid-cols-4 grid-cols-1'>
+          <div className='w-full'>
             <img src={Logo} alt='' className='w-12.5' />
             <h1 className='text-white py-2 font-semibold'>
               KARDI DRYERS PVT LTD
             </h1>
           </div>
-          <div className='md:w-[15%] w-full md:mt-0 mt-10'>
+          <div className=' w-full md:mt-0 mt-10'>
             <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>
               Quick Links
             </h6>
-            <ul className='text-white text-base'>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Home
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                About
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Products
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Services
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Download Brochure
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Blog
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Contact us
-              </li>
-            </ul>
+
+            {FooterItem.map(item => (
+              <>
+                <ul className='text-white text-base'>
+                  <li key={item.name} className='mb-0'>
+                    <Link
+                      to={item.link}
+                      className='cursor-pointer text-sm transition-all duration-300 hover:text-[#ff5938]'
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            ))}
           </div>
-          <div className='md:w-[15%] w-full md:mt-0 mt-10'>
+          <div className=' w-full md:mt-0 mt-10'>
             <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>
               Our Products
             </h6>
-            <ul className='text-white text-base'>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Cardamom Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Coffee Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Paddy Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Mobile Grain Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Sago & Starch Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Chilli & Spice Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Tray Dryer
-              </li>
-              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Custom Drying Systems
-              </li>
-            </ul>
+            {ProductItem.map(item => (
+              <>
+                <ul className='text-white text-base'>
+                  <li key={item.name} className='mb-0'>
+                    <Link
+                      to={item.link}
+                      className='cursor-pointer text-sm transition-all duration-300 hover:text-[#ff5938]'
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            ))}
           </div>
-          <div className='md:w-[15%] w-full md:mt-0 mt-10'>
-            <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>Contacts</h6>
+          <div className=' w-full md:mt-0 mt-10'>
+            <h6 className='text-[#ffffff] font-bold text-sm mb-5 '>Contact</h6>
             <ul className='text-white text-base'>
-              <li className='mb-2 text-sm text-white/50'>Location</li>
+              <li className='mb-2 text-sm text-white/80'>Registered Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
                 284, Avvai Shanmugam Salai, Chennai - 600 086.
               </li>
-             
+            </ul>
+            <ul className='text-white text-base'>
+              <li className='mb-2 text-sm text-white/80'>Admin Office</li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                Survey No. 203/2 (Old No. 86), New No. 69, 2nd Extension, Nageswara Rao Road, Athipet, <br /> Chennai – 600 058
+              </li>
             </ul>
 
             <ul className='text-white text-base md:mt-5'>
-              <li className='mb-2 text-sm text-white/50'>Call us</li>
+              <li className='mb-2 text-sm text-white/80'>Call us</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Phone : +91 9791664050 <br /> Tele-Fax : +91 44 2688 0001
+                Phone : +91 97916 64050
+              </li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                Phone : +91 94449 25948
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
                 E-mail : sales@kardidryers.com
               </li>
-             
             </ul>
           </div>
         </div>
@@ -142,13 +164,24 @@ const Footer = () => {
           <div className='bt-left md:mt-0 mt-3'>
             <ul className='flex items-center md:gap-6 gap-4 text-white text-sm font-medium'>
               <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>
-                Facebook
+                <RiFacebookFill /> Facebook
               </li>
               <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>
-                Instagram
+                <a href='https://www.instagram.com/kardipedrottidryers/'>
+                  <BsInstagram /> Instagram
+                </a>
               </li>
               <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>
-                Twitter
+                <a href='https://x.com/kdryers'>
+                  {' '}
+                  <FaXTwitter /> Twitter{' '}
+                </a>
+              </li>
+              <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>
+                <a href='https://youtu.be/N9-Nq5g_-uo?si=q83wvsdYXxZGgBRv'>
+                  {' '}
+                  <AiFillYoutube /> Youtube
+                </a>
               </li>
             </ul>
           </div>
