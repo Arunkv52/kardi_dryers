@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 import About from '../components/home/About'
 import StickySection from '../components/home/StickySection'
 import WorldWide from '../components/home/WorldWide'
-import BeforeFooter from '../components/home/BeforeFooter'
 import KardiBackground from '../components/KardiBackground'
+import Whychoosus from '../components/home/Whychoosus'
 
 const Home = () => {
   const scrollRef = useRef<HTMLElement>(null)
@@ -41,16 +41,8 @@ const Home = () => {
             <WorldWide />
           </section>
 
-          {/* Why Choose us */}
-          {/* <section className='snap-start md:h-screen'>
-        <Whychoosus />
-      </section> */}
-
-          {/* Service */}
-          <section>
-            <BeforeFooter />
-          </section>
-
+  
+          
           {/* Footer */}
           <section className='snap-start md:h-screen'>
             <Footer />

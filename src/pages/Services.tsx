@@ -19,7 +19,7 @@ const Services = () => {
           second heavy panel competing for the same attention. */}
         <section className='bg-white text-black py-20 px-6 md:px-10 text-center'>
           <p className='text-charcoal text-2xl md:text-3xl font-serif mb-8 max-w-lg mx-auto'>
-            Ready to talk specifics about your crop, capacity or site?
+           Ready to discuss your crop, capacity or site? 
           </p>
           <div className='flex flex-wrap items-center justify-center gap-4'>
             <a

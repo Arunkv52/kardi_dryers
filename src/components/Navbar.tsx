@@ -48,34 +48,34 @@ const menuItems: MenuItem[] = [
 
           { name: 'Basic 35', link: '/basic35' },
 
-          { name: 'Other Models', link: 'https://pedrottisrl.it/' }
+          { name: ' More Models (Pedrotti, Italy)', link: 'https://pedrottisrl.it/' }
         ]
       },
 
       {
-        name: 'Spices Dryers',
+        name: 'Spices',
 
         children: [{ name: 'Hot Air Dryers', link: '/spices' }]
       },
 
       {
-        name: 'Coffee Dryers',
+        name: 'Coffee',
 
         children: [{ name: 'Hot Air Dryers', link: '/cofeedryers' }]
       },
 
       {
-        name: 'Sago Dryers',
+        name: 'Sago and Starch',
 
         children: [
-          { name: 'Sago Pearl Dryers (Sabuthana)', link: '/sagopearl' },
+          { name: 'Sago Pearl Dryers (Sabudana)', link: '/sagopearl' },
 
-          { name: 'Starch / Flash Dryers (Custom Built)', link: '/custombuilt' }
+          { name: 'Starch and Flash Dryers (Custom-Built Dryers)', link: '/custombuilt' }
         ]
       },
 
       {
-        name: 'Tray Dryers (Vegetable / Herbs / Leaves Dryers)',
+        name: 'Vegetables, Herbs and Leaves',
 
         link: '/comesoon'
       },
@@ -83,19 +83,19 @@ const menuItems: MenuItem[] = [
       {
         name: 'Dehydrators',
 
-        children: [{ name: 'Custom Built', link: '/custombuilt' }]
+        children: [{ name: 'Custom-Built Dryers', link: '/custombuilt' }]
       },
 
       {
-        name: 'Chilli Dryers',
+        name: 'Chilli',
 
-        children: [{ name: 'Custom Built', link: '/custombuilt' }]
+        children: [{ name: 'Custom-Built Dryers', link: '/custombuilt' }]
       },
 
       {
-        name: 'Groundnut Dryers',
+        name: 'Groundnut',
 
-        children: [{ name: 'Custom Built', link: '/custombuilt' }]
+        children: [{ name: 'Custom-Built Dryers', link: '/custombuilt' }]
       }
     ]
   },
@@ -104,7 +104,7 @@ const menuItems: MenuItem[] = [
 
   { name: 'Videos', link: '/videos' },
 
-  { name: 'Blog', link: '/blogsoon' }
+  { name: 'News', link: '/blogsoon' }
 ]
 
 const isExternal = (url?: string) => !!url && /^https?:\/\//i.test(url)
@@ -362,7 +362,7 @@ const Navbar = () => {
               className='hidden lg:inline-flex items-center gap-2 rounded-full bg-[#ff5938] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff5938]/30 transition hover:bg-[#e54d2c] hover:-translate-y-0.5'
             >
               <Phone size={16} />
-              Get The Expert
+              Get a Quote
             </Link>
 
             {/* Mobile toggle */}
@@ -508,7 +508,7 @@ const Navbar = () => {
             className='mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-[#ff5938] py-4 font-semibold text-white'
           >
             <Phone size={18} />
-            Let's Talk
+            Get a Quote
           </Link>
         </div>
       </div>

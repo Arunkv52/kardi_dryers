@@ -7,7 +7,7 @@ const Leadership = () => {
     {
       Image: FounderImg,
       OwnerName: 'K M Manikandan',
-      Role: 'Founder & Managing Director',
+      Role: 'Founder and Managing Director',
       desc: "An agriculturist and technocrat possessing expertise in Heat & Mass Transfer, Mr. Manikandan started his journey by developing the world's first small-scale dryer for high-value crops like cardamom and pepper. An alumnus of PSG College of Technology, Coimbatore, he holds a degree in Mechanical Engineering with over 4 decades of experience in technology development, global marketing & sales."
     },
     {
@@ -19,7 +19,7 @@ const Leadership = () => {
     {
       Image: DilipImg,
       OwnerName: 'P Dilipan',
-      Role: 'General Manager — Marketi/ng, Sales & Business Development',
+      Role: 'General Manager, Marketing, Sales and Business Development',
       desc: "A Mechanical Engineer from Government College of Technology, Coimbatore, with 28 years of experience in marketing & sales, program & product life cycle management, business development & strategies, and CRM across GE Consumer & Industrial (USA), Boston Scientific (USA), KLA-Tencor (USA), HCL Technologies & Americas."
     }
   ]
@@ -35,7 +35,7 @@ const Leadership = () => {
            
             className="text-4xl font-semibold"
           >
-            Kardi leadership team
+            Leadership · Meet the team
           </h4>
           <div style={{ backgroundColor: '#A6824F' }} className="w-12 h-px mt-6" />
         </div>

@@ -2,28 +2,28 @@ import { motion } from 'framer-motion'
 
 const steps = [
   {
-    title: 'Enquiry & site visit',
-    desc: 'Tell us what you’re drying and where. For most projects, an engineer visits the site before any design work starts.'
+    title: 'Enquiry and Site Visit',
+    desc: 'tell us your crop and location. An engineer usually visits before design begins.'
   },
   {
-    title: 'Engineering & proposal',
-    desc: 'We size the dryer to your crop, throughput and available fuel, and put it in writing — capacity, drying time and cost, no guesswork.'
+    title: 'Design and Proposal',
+    desc: 'we size the dryer to your crop, volume and fuel, and put capacity, drying time and cost in writing.'
   },
   {
     title: 'Manufacturing',
-    desc: 'Your dryer is built at our Chennai or Kerala facility, to the specification agreed in the proposal.'
+    desc: ' built in Chennai or Kerala to the agreed specification.'
   },
   {
-    title: 'Installation & commissioning',
-    desc: 'Our team assembles the system on-site and runs it through a supervised first batch before handover.'
+    title: 'Installation',
+    desc: 'our team assembles it on site and runs a supervised first batch before handover.'
   },
   {
-    title: 'Training & handover',
-    desc: 'Your operators are trained on the actual machine, on your crop, before we leave.'
+    title: 'Training',
+    desc: ' your operators learn on the real machine, with your crop, before we leave.'
   },
   {
-    title: 'Ongoing support',
-    desc: 'Spare parts, scheduled maintenance and an AMC keep the dryer running for the years ahead.'
+    title: 'Support',
+    desc: ' spares, scheduled maintenance and AMC for the years ahead.'
   }
 ]
 

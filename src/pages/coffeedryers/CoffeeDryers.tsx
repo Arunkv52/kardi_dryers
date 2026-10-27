@@ -68,9 +68,9 @@ const coffeeDryer: Product = {
 
   crops: ['Coffee Parchment', 'Coffee Cherry', 'Green Pepper', 'Black Pepper'],
 
-  capacityRange: '500 - 4000 kgs/batch',
+  capacityRange: '500 - 4000 kg / per batch',
 
-  dryingTimeHrs: 24,
+  dryingTimeHrs: 18,
   sunDriedHrs: 168, // sun drying typically runs 5-7 days vs 24 hrs harvest-to-storage
 
   fuel: 'Diesel / Biomass',
@@ -80,46 +80,39 @@ const coffeeDryer: Product = {
 
   highlights: [
     {
-      title: 'Controlled & Uniform Temperature',
-      desc: 'Indirect heat exchanger keeps drying chamber temperature below 40°C throughout the batch.'
+      title: 'Cool, even heat',
+      desc: 'an indirect heat exchanger holds the chamber below 40°C for the whole batch'
     },
     {
-      title: 'Prevents Fungal Infestation',
-      desc: 'Even, consistent drying stops moisture pockets before they can spoil a batch.'
+      title: 'No mould',
+      desc: 'even drying removes the damp spots that spoil a batch.'
     },
     {
-      title: 'Automated Drying Process',
-      desc: 'Automatic ON/OFF firing keeps the batch on schedule without constant supervision.'
+      title: 'Runs itself',
+      desc: 'automatic firing keeps the batch on schedule with little supervision.'
     },
     {
-      title: 'Multiple Fuel Options',
-      desc: 'Runs on diesel or biomass, so fuel choice follows what is available on site.'
+      title: 'Fuel choice',
+      desc: 'diesel or biomass, whichever you have on site.'
     }
   ],
 
   // Benefits sheet → distilled to the outcomes that matter most to a buyer
   benefits: [
-    'Controlled & uniform temperature',
-    'Prevents fungal infestation',
-    'Consistent quality of dried coffee beans',
-    'Automated drying process',
-    'More than 80% savings on drying time & labour cost',
-    'Less maintenance cost',
-    'Better returns',
-    'Multiple fuel options',
+    'Even, controlled temperature',
+    'Prevents mould ',
+    'Consistent bean quality ',
+    'Automatic operation ',
+    'More than 80% saving in drying time and labour cost ',
+    'Low maintenance',
+    'Better returns ',
+    'Diesel or biomass fuel ',
     'Harvest to storage in 24 hours'
   ],
 
   capacities: {
-    batches: [
-      '500 kgs/batch',
-      '1000 kgs/batch',
-      '1500 kgs/batch',
-      '2000 kgs/batch',
-      '2500 kgs/batch',
-      '4000 kgs/batch'
-    ],
-    note: 'Models available with or without Mixer / Racker.',
+    batches: ['500 kg', '1000 kg', '1500 kg', '2000 kg', '2500 kg', '4000 kg'],
+    note: ' Each model is available with or without a mixer/raker.',
     forms: [
       { label: 'Dried Parchment', image: driedParchment },
       { label: 'Coffee Cherry', image: coffeeCherry },
@@ -139,16 +132,17 @@ const coffeeDryer: Product = {
   ],
 
   modelSpecNotes: [
-    'Flat bed dryer with indirect-type heat exchanger for generating hot air.',
-    'Temperature gauges at the drying chamber and hot air blower.',
-    'Control mechanism to maintain desired hot air temperature below 40°C.',
-    'Automatic firing with ON/OFF mechanism.',
-    'Centrifugal blower and combustion air blower with motors.',
-    'Note: Transportation and installation charges are additional.'
+    'Standard on every model',
+    ' Flat-bed dryer with an indirect heat exchanger ',
+    'Temperature gauges on the chamber and hot-air blower',
+    'Temperature control   below 40°C',
+    'Automatic on/off firing ',
+    'Centrifugal and combustion-air blowers with Monitor',
+    'Note: transport and installation are charged extra.'
   ],
 
   specifications: [
-    { label: 'Capacity Range', value: '500 - 4000 kgs/batch' },
+    { label: 'Capacity Range', value: '500 - 4000 kg / per batch' },
     { label: 'Dryer Type', value: 'Flat Bed, Indirect Heat Exchanger' },
     { label: 'Chamber Temperature', value: 'Below 40°C, gauge-controlled' },
     { label: 'Firing', value: 'Automatic ON/OFF' },
@@ -178,7 +172,7 @@ export default function CofeeDryers ({
     <>
       <KardiBackground>
         <Navbar />
-        
+
         <main className='  pt-20'>
           {/* Benefits */}
           {product.benefits && (
@@ -186,7 +180,7 @@ export default function CofeeDryers ({
               <div className='mx-auto max-w-6xl'>
                 <motion.p
                   {...(fadeUp as any)}
-                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
+                  className='mb-4 text-sm font-medium tracking-[0.2em]'
                 >
                   Benefits
                 </motion.p>
@@ -237,15 +231,12 @@ export default function CofeeDryers ({
             className='border-y border-[#D8D2C2] bg-white/40 text-white'
           >
             <div className='mx-auto grid max-w-6xl text-white grid-cols-1 divide-y divide-[#D8D2C2] px-6 sm:grid-cols-3 sm:divide-y-0 sm:divide-x lg:px-12'>
-              <StatBlock value={product.capacityRange} label='Capacity'/>
+              <StatBlock value={product.capacityRange} label='Capacity' />
               <StatBlock
                 value={`${product.dryingTimeHrs} hrs`}
                 label='Drying Time'
               />
-              <StatBlock
-                value={`${speedMultiple.toFixed(1)}×`}
-                label='Faster Than Sun Drying'
-              />
+              <StatBlock value='7 x' label='Faster Than Sun Drying' />
             </div>
           </motion.section>
 
@@ -270,9 +261,7 @@ export default function CofeeDryers ({
                     >
                       {h.title}
                     </h3>
-                    <p className='mt-3 text-[15px] leading-[1.8] '>
-                      {h.desc}
-                    </p>
+                    <p className='mt-3 text-[15px] leading-[1.8] '>{h.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -285,7 +274,7 @@ export default function CofeeDryers ({
               <div className='mx-auto max-w-6xl'>
                 <motion.p
                   {...(fadeUp as any)}
-                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
+                  className='mb-4 text-sm font-medium tracking-[0.2em]'
                 >
                   Capacities
                 </motion.p>
@@ -294,7 +283,7 @@ export default function CofeeDryers ({
                   className='mb-8 max-w-2xl text-3xl  md:text-4xl'
                   style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
                 >
-                  Batch sizes for every scale of operation
+                  Batch sizes for every estate
                 </motion.h2>
 
                 <motion.div
@@ -310,10 +299,7 @@ export default function CofeeDryers ({
                     </span>
                   ))}
                 </motion.div>
-                <motion.p
-                  {...(fadeUp as any)}
-                  className='mt-5 text-sm italic'
-                >
+                <motion.p {...(fadeUp as any)} className='mt-5 text-sm italic'>
                   {product.capacities.note}
                 </motion.p>
 
@@ -335,7 +321,7 @@ export default function CofeeDryers ({
                           className='h-full w-full object-cover'
                         />
                       </div>
-                      <p className='mt-4 text-xs uppercase tracking-[0.12em]'>
+                      <p className='mt-4 text-xs tracking-[0.12em]'>
                         {form.label}
                       </p>
                     </motion.div>
@@ -351,7 +337,7 @@ export default function CofeeDryers ({
               <div className='mx-auto max-w-6xl'>
                 <motion.p
                   {...(fadeUp as any)}
-                  className='mb-4 text-sm font-medium tracking-[0.2em] uppercase'
+                  className='mb-4 text-sm font-medium tracking-[0.2em]'
                 >
                   Model Range
                 </motion.p>
@@ -360,7 +346,7 @@ export default function CofeeDryers ({
                   className='mb-12 max-w-2xl text-3xl md:text-4xl'
                   style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
                 >
-                  Six capacities, one drying principle
+                  Six sizes, one proven design
                 </motion.h2>
 
                 <motion.div
@@ -370,14 +356,14 @@ export default function CofeeDryers ({
                   <table className='w-full min-w-120 border-collapse text-left'>
                     <thead>
                       <tr className='bg-white/60'>
-                        <th className='w-16 border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
+                        <th className='w-16 border-b border-[#D8D2C2] px-5 py-4 text-xs tracking-[0.12em]'>
                           S.No
                         </th>
-                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
-                          Model
+                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs tracking-[0.12em]'>
+                          Model / Capacity (kg per batch)
                         </th>
-                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs uppercase tracking-[0.12em]'>
-                          Capacity (kgs/batch)
+                        <th className='border-b border-[#D8D2C2] px-5 py-4 text-xs tracking-[0.12em]'>
+                          KDF-CO(GC)-05 to -40; MR = with mixer/raker
                         </th>
                       </tr>
                     </thead>
@@ -387,15 +373,9 @@ export default function CofeeDryers ({
                           key={m.sNo}
                           className='border-b border-[#D8D2C2] last:border-b-0'
                         >
-                          <td className='px-5 py-4 text-sm'>
-                            {m.sNo}
-                          </td>
-                          <td className='px-5 py-4 text-sm'>
-                            {m.model}
-                          </td>
-                          <td className='px-5 py-4 text-sm'>
-                            {m.capacityKg}
-                          </td>
+                          <td className='px-5 py-4 text-sm'>{m.sNo}</td>
+                          <td className='px-5 py-4 text-sm'>{m.model}</td>
+                          <td className='px-5 py-4 text-sm'>{m.capacityKg}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -407,15 +387,12 @@ export default function CofeeDryers ({
                     {...(fadeUp as any)}
                     className='mt-8 border border-[#D8D2C2] bg-white/40 p-7'
                   >
-                    <p className='mb-4 text-xs uppercase tracking-[0.15em]'>
+                    <p className='mb-4 text-xs tracking-[0.15em]'>
                       Shared Specifications
                     </p>
                     <ul className='space-y-2.5'>
                       {product.modelSpecNotes.map(note => (
-                        <li
-                          key={note}
-                          className='text-[15px] leading-[1.7]'
-                        >
+                        <li key={note} className='text-[15px] leading-[1.7]'>
                           {note}
                         </li>
                       ))}
@@ -427,10 +404,7 @@ export default function CofeeDryers ({
           )}
 
           {/* CTA band */}
-          <section
-            id='enquire'
-            className=' px-6 py-24 text-white lg:px-12'
-          >
+          <section id='enquire' className=' px-6 py-24 text-white lg:px-12'>
             <motion.div
               {...(fadeUp as any)}
               className='mx-auto max-w-6xl text-center'
@@ -439,18 +413,17 @@ export default function CofeeDryers ({
                 className='text-3xl md:text-4xl'
                 style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
               >
-                Ready to bring this to your facility?
+                Want this dryer at your estate?
               </h2>
               <p className='mx-auto mt-4 max-w-xl text-white/60'>
-                Tell us your crop, your volume, and your location — we'll
-                recommend the right configuration of the{' '}
-                {product.name.toLowerCase()}.
+                Tell us your crop, volume and location. We'll recommend the
+                right setup.
               </p>
               <a
                 href='/contact'
                 className='mt-9 inline-block bg-[#A6824F] px-8 py-4 text-sm tracking-wider text-[#15140F] transition-colors duration-300 hover:bg-white'
               >
-                Talk to Our Team
+                Get a Quote
               </a>
             </motion.div>
           </section>
@@ -470,9 +443,7 @@ function StatBlock ({ value, label }: { value: string; label: string }) {
       >
         {value}
       </span>
-      <span className='text-xs uppercase tracking-[0.15em]'>
-        {label}
-      </span>
+      <span className='text-xs tracking-[0.15em]'>{label}</span>
     </div>
   )
 }

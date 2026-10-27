@@ -35,8 +35,7 @@ const basic35: Product = {
 
   name: 'Basic 35',
 
-  tagline:
-    'High-capacity mobile paddy dryer engineered for commercial grain drying with superior performance and productivity.',
+  tagline: 'Our largest Basic model, built for commercial grain drying.',
 
   overview:
     'Basic 35 is designed for large-scale farming operations and commercial grain processing, delivering high drying capacity, fuel efficiency, and consistent grain quality.',
@@ -47,7 +46,7 @@ const basic35: Product = {
 
   crops: ['Paddy', 'Maize'],
 
-  capacityRange: '3 - 3.5 Ton',
+  capacityRange: ' 3 to 3.5 t',
 
   dryingTimeHrs: 3,
 
@@ -61,16 +60,21 @@ const basic35: Product = {
 
   highlights: [
     {
-      title: 'Maximum Capacity',
-      desc: 'Designed for high-volume grain drying with excellent operational efficiency.'
+      title: 'Highest capacity',
+      desc: 'built for high-volume drying'
     },
     {
       title: 'Fast Drying',
-      desc: 'Provides uniform and rapid drying while preserving grain quality.'
+      desc: 'Fast, even drying that protects grain quality'
+    },
+
+    {
+      title: 'Fuel Efficient',
+      desc: 'Runs on a 16.4 kW (35 PTO HP) tractor drive.'
     },
     {
       title: 'Automatic Burner',
-      desc: 'Equipped with a single-stage automatic diesel burner for continuous drying.'
+      desc: ' single-stage, steady heat.'
     }
   ],
 
@@ -85,11 +89,11 @@ const basic35: Product = {
 
     {
       label: 'Average Daily Output (Paddy)',
-      value: '18*'
+      value: '18* t/day'
     },
     {
       label: 'Average Daily Output (Maize)',
-      value: '21*'
+      value: '21* t/day'
     },
     { label: 'Electric Motors', value: '5' },
     { label: 'Fan Type', value: 'Centrifugal' },
@@ -170,13 +174,13 @@ export default function ProductPage ({
                     href='#enquire'
                     className='bg-[#2B2B26] px-7 py-3.5 text-sm tracking-wider text-white transition-colors duration-300 hover:bg-[#A6824F]'
                   >
-                    Request a Quote
+                    Get a Quote
                   </a>
                   <a
                     href='#specifications'
                     className='border border-[#C9B98F] px-7 py-3.5 text-sm tracking-wider text-white transition-colors duration-300 hover:border-[#A6824F] hover:text-white'
                   >
-                    View Specifications
+                    See Specifications
                   </a>
                 </div>
               </motion.div>
@@ -264,18 +268,17 @@ export default function ProductPage ({
               className='mx-auto max-w-6xl text-center'
             >
               <h2 className='text-3xl md:text-4xl'>
-                Ready to bring this to your facility?
+                Want this dryer on your farm?
               </h2>
               <p className='mx-auto mt-4 max-w-xl text-black/60'>
-                Tell us your crop, your volume, and your location — we'll
-                recommend the right configuration of the{' '}
-                {product.name.toLowerCase()}.
+                Tell us your crop, volume and location. We'll recommend the
+                right configuration.
               </p>
               <a
                 href='/contact'
                 className='mt-9 inline-block bg-[#145947] text-white px-8 py-4 text-sm tracking-wider  transition-colors duration-300  hover:text-white hover:bg-black'
               >
-                Talk to Our Team
+                Get a Quote
               </a>
             </motion.div>
           </section>

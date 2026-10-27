@@ -31,7 +31,7 @@ type Product = {
 const basic15: Product = {
   slug: 'basic-15',
 
-  category: 'Mobile Paddy Dryer',
+  category: 'Sago Conveyor Dryer',
 
   name: 'KDF - SG Series',
 
@@ -41,7 +41,7 @@ const basic15: Product = {
 
   heroImage: ProdImage,
 
-  type: 'Mobile Paddy Dryer',
+  type: ' Continuous conveyor dryer',
 
   crops: ['Paddy', 'Maize'],
 
@@ -77,12 +77,12 @@ const basic15: Product = {
 
   specifications: [
     { label: 'Type', value: 'Continous Conveyor Dryer' },
-    { label: 'Rated Capacity', value: '500 kgs to 200 kgs / Hour (±10%)' },
-    { label: 'Input Moisture (Wet)', value: '40% (Maximum)' },
+    { label: 'Rated Capacity', value: '500 to 2,500 kg/hr or 6 to 28 bags/hr (±10%) ' },
+    { label: 'Input Moisture (Wet)', value: 'up to 40%' },
     { label: 'Output Moisture (Dry)', value: '11%' },
     {
       label: 'Fuel Type',
-      value: 'Firewood/furmana oil/Biogars/coal/Brickettes'
+      value: 'Thermic Fluid/firewood/Biomass'
     },
     {
       label: 'Kilograms',
@@ -136,8 +136,7 @@ export default function SagoPearl ({
                   />
                 </div>
                 <p className='mt-3 text-xs tracking-widest'>
-                  Fig. 01 — {product.type} system,{' '}
-                  {product.locations.join(', ')} facility
+                   KDF-SG sago conveyor dryer at Kardi Dryers
                 </p>
               </motion.div>
 

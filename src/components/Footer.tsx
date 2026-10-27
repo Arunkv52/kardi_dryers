@@ -21,18 +21,18 @@ const Footer = () => {
   ]
 
   const ProductItem = [
+    { name: 'Cardamom Dryers', link: '/cofeedryers' },
+    { name: 'Coffee Dryers', link: '/cofeedryers' },
+    { name: 'Paddy Dryers', link: '/' },
+
     {
-      name: 'Mobile Paddy Dryers',
+      name: 'Mobile Grain Dryers',
       link: '/mobilepaddydryers'
     },
-
-    { name: 'Spices Dryers', link: '/spices' },
-    { name: 'Coffee Dryers', link: '/cofeedryers' },
-    { name: 'Sago Dryers', link: '/sagopearl' },
+    { name: 'Sago and Starch Dryers', link: '/sagopearl' },
+    { name: ' Chilli and Spice Dryers ', link: '/spices' },
     { name: 'Tray Dryers', link: '/comesoon' },
-    { name: 'Dehydrators', link: '/custombuilt' },
-    { name: 'Chilli Dryers', link: '/custombuilt' },
-    { name: 'Groundnut Dryers', link: '/custombuilt' }
+    { name: 'Custom Drying Systems', link: '/custombuilt' }
   ]
 
   return (
@@ -63,19 +63,19 @@ const Footer = () => {
 
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
-              <h1 className='text-white text-4xl md:text-6xl leading-tight font-light md:mt-0 mt-5'>
+              <h1 className='text-white text-4xl md:text-4xl leading-tight font-light md:mt-0 mt-5'>
                 Dry smarter.
                 <span className='text-[#ff5938]'>
                   <strong>Preserve better. </strong>
                 </span>
-                Grow stronger.
+                Protect quality. Grow with confidence
               </h1>
             </div>
 
             {/* Button */}
             <div className='relative z-10 mt-10 md:mt-0'>
               <Link to='/contact'>
-                <Button text='Get Ready' variant='orange' />
+                <Button text='Talk to an Engineer' variant='orange' />
               </Link>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Footer = () => {
           <div className='w-full'>
             <img src={Logo} alt='' className='w-12.5' />
             <h1 className='text-white py-2 font-semibold'>
-              KARDI DRYERS PVT LTD
+              Kardi Dryers Pvt. Ltd.
             </h1>
           </div>
           <div className=' w-full md:mt-0 mt-10'>
@@ -132,13 +132,14 @@ const Footer = () => {
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Registered Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                284, Avvai Shanmugam Salai, Chennai - 600 086.
+                 284, Avvai Shanmugam Salai, Gopalapuram, <br /> Chennai 600 086
               </li>
             </ul>
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Admin Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Survey No. 203/2 (Old No. 86), New No. 69, 2nd Extension, Nageswara Rao Road, Athipet, <br /> Chennai – 600 058
+                Survey No. 203/2 (Old No. 86), New No. 69, 2nd Extension,
+                Nageswara Rao Road, Athipet, <br /> Chennai – 600 058
               </li>
             </ul>
 
@@ -151,14 +152,14 @@ const Footer = () => {
                 Phone : +91 94449 25948
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                E-mail : sales@kardidryers.com
+                Email: sales@kardidryers.com & info@kardidryers.com
               </li>
             </ul>
           </div>
         </div>
         <div className='footer-bottom mt-10 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between'>
           <p className='text-sm text-gray-300'>
-            © 2026 Kardi Dryers. Developed by Prism Adverto
+             © 2026 Kardi Dryers Pvt. Ltd. All rights reserved. Website by <a href="www.prismadverto.com"> Prism Adverto Pvt Ltd </a>
           </p>
 
           <div className='bt-left md:mt-0 mt-3'>
@@ -174,7 +175,7 @@ const Footer = () => {
               <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>
                 <a href='https://x.com/kdryers'>
                   {' '}
-                  <FaXTwitter /> Twitter{' '}
+                  <FaXTwitter /> X{' '}
                 </a>
               </li>
               <li className='cursor-pointer hover:text-green-400 transition-all duration-300'>

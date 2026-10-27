@@ -35,8 +35,7 @@ const basic25: Product = {
 
   name: 'Basic 25',
 
-  tagline:
-    'High-performance mobile paddy dryer designed for medium-scale grain drying with improved capacity and efficiency.',
+  tagline: 'A mid-size mobile dryer for larger paddy and maize batches.',
 
   overview:
     'Basic 25 is ideal for farmers and commercial operators looking for a reliable, fuel-efficient mobile drying solution for paddy and maize with higher batch capacity.',
@@ -47,7 +46,7 @@ const basic25: Product = {
 
   crops: ['Paddy', 'Maize'],
 
-  capacityRange: '2 - 2.5 Ton',
+  capacityRange: '2 - 2.5 t',
 
   dryingTimeHrs: 3,
 
@@ -61,16 +60,21 @@ const basic25: Product = {
 
   highlights: [
     {
-      title: 'Higher Capacity',
-      desc: 'Designed to handle larger grain batches with improved productivity.'
+      title: 'Bigger batches',
+      desc: 'Bigger batches: more grain per cycle'
     },
     {
       title: 'Fast Drying',
-      desc: 'Ensures uniform drying while maintaining grain quality.'
+      desc: 'Fast, even drying that protects grain quality'
+    },
+
+    {
+      title: 'Fuel Efficient',
+      desc: 'Runs on an 11.2 kW (Min 35 HP) tractor PTO drive or 3 Phase Power Supply. With efficient fuel consumption'
     },
     {
       title: 'Automatic Burner',
-      desc: 'Single-stage automatic diesel burner for reliable and consistent drying.'
+      desc: ' single-stage, steady heat.'
     }
   ],
 
@@ -85,11 +89,11 @@ const basic25: Product = {
 
     {
       label: 'Average Daily Output (Paddy)',
-      value: '12*'
+      value: '12* t/day'
     },
     {
       label: 'Average Daily Output (Maize)',
-      value: '15*'
+      value: '15* t/day'
     },
     { label: 'Electric Motors', value: '5' },
     { label: 'Fan Type', value: 'Centrifugal' },
@@ -119,7 +123,7 @@ export default function ProductPage ({
     <>
       <KardiBackgroundGray>
         <Navbar />
-        
+
         <main className=' text-white pt-20'>
           {/* Breadcrumb */}
           <div className='mx-auto max-w-6xl px-6 pt-10 md:px-0'>
@@ -144,7 +148,7 @@ export default function ProductPage ({
                   />
                 </div>
                 <p className='mt-3 text-xs tracking-widest '>
-                 **Images for reference purpose only
+                  **Images for reference purpose only
                 </p>
               </motion.div>
 
@@ -171,13 +175,13 @@ export default function ProductPage ({
                     href='#enquire'
                     className='bg-[#2B2B26] px-7 py-3.5 text-sm tracking-wider text-white transition-colors duration-300 hover:bg-[#A6824F]'
                   >
-                    Request a Quote
+                    Get a Quote
                   </a>
                   <a
                     href='#specifications'
                     className='border border-[#C9B98F] px-7 py-3.5 text-sm tracking-wider  transition-colors duration-300 hover:border-[#A6824F] hover:text-white'
                   >
-                    View Specifications
+                    See Specifications
                   </a>
                 </div>
               </motion.div>
@@ -250,7 +254,8 @@ export default function ProductPage ({
           <section>
             <Certificates />
           </section>
-         
+
+          {/* CTA band */}
           {/* CTA band */}
           <section
             id='enquire'
@@ -261,22 +266,20 @@ export default function ProductPage ({
               className='mx-auto max-w-6xl text-center'
             >
               <h2 className='text-3xl md:text-4xl'>
-                Ready to bring this to your facility?
+                Want this dryer on your farm?
               </h2>
               <p className='mx-auto mt-4 max-w-xl text-black/60'>
-                Tell us your crop, your volume, and your location — we'll
-                recommend the right configuration of the{' '}
-                {product.name.toLowerCase()}.
+                Tell us your crop, volume and location. We'll recommend the
+                right configuration.
               </p>
               <a
                 href='/contact'
                 className='mt-9 inline-block bg-[#145947] text-white px-8 py-4 text-sm tracking-wider  transition-colors duration-300  hover:text-white hover:bg-black'
               >
-                Talk to Our Team
+                Get a Quote
               </a>
             </motion.div>
           </section>
-          
         </main>
         <Footer />
       </KardiBackgroundGray>

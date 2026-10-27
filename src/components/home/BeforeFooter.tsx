@@ -13,7 +13,7 @@ const BeforeFooter = () => {
         <div className='md:mt-0 mt-10'>
           <Link to='/contact'>
             <button className='bg-[#125341] text-white py-5 cursor-pointer px-8 rounded-2xl'>
-              Connect with us
+               Talk to Us
             </button>
           </Link>
         </div>

@@ -11,7 +11,6 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
 }
 
-
 export default function BlogComingSoon () {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -35,7 +34,7 @@ export default function BlogComingSoon () {
           <section className='mx-auto flex min-h-[80vh] max-w-3xl flex-col items-center justify-center px-6 py-30 text-center'>
             <motion.p
               {...(fadeUp as any)}
-              className='text-sm font-medium tracking-[0.2em] uppercase text-white'
+              className='text-sm font-medium tracking-[0.2em]  text-white'
             >
               Blog
             </motion.p>
@@ -46,9 +45,7 @@ export default function BlogComingSoon () {
               className='mt-5 text-4xl leading-tight text-white md:text-5xl'
               style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
             >
-              Stories from the drying floor,
-              <br />
-              coming soon.
+              Stories from the drying floor, coming soon
             </motion.h1>
 
             <motion.p
@@ -56,9 +53,9 @@ export default function BlogComingSoon () {
               transition={{ ...fadeUp.transition, delay: 0.16 } as any}
               className='mt-6 max-w-xl text-lg leading-relaxed text-white/70'
             >
-              We're writing up what we've learned from years on farms and in
-              mills — crop by crop, harvest by harvest. Leave your email and
-              we'll send the first post the day it goes live.
+              We are writing up what we have learned on farms and in mills, crop
+              by crop. Leave your email and we will send you the first post when
+              it is live.
             </motion.p>
 
             <motion.div
@@ -113,10 +110,10 @@ export default function BlogComingSoon () {
             <motion.a
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: 0.4 } as any}
-              href='/products'
+              href='/'
               className='mt-14 text-xs uppercase tracking-[0.2em] text-[#8C8678] transition-colors hover:text-[#A6824F]'
             >
-              ← Back to Products
+              ← Back to home
             </motion.a>
           </section>
         </main>

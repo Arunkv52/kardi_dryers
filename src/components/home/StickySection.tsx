@@ -19,8 +19,7 @@ const stickcards = [
     link: '/basic15',
     tint: '#ffffff',
     crops: ['Rice', 'Maize', 'Pulses', 'Oilseeds'],
-    description:
-      'Our Grain Dryers are engineered to deliver uniform and efficient drying for rice, maize, pulses, oilseeds, and other agricultural commodities. Designed to reduce moisture content while preserving grain quality, these systems help prevent storage losses, mold growth, and quality deterioration. With energy-efficient operation and reliable performance, Kardi Grain Dryers support farmers, millers, and processors in achieving safe storage and higher market value for their produce.'
+    description: ' Even, efficient drying for paddy, maize, pulses and oilseeds. Prevents mould and storage loss, and helps you get a better price.'
   },
   {
     image: Image2,
@@ -28,8 +27,7 @@ const stickcards = [
     link: '/comesoon',
     tint: '#ffffff',
     crops: ['Cardamom', 'Pepper', 'Turmeric', 'Ginger', 'Chilli'],
-    description:
-      'Kardi Spices Dryers are specially designed to maintain the natural color, aroma, flavor, and quality of valuable spices such as cardamom, pepper, turmeric, ginger, and chilli. Using controlled low-temperature drying technology, our systems ensure consistent moisture removal without compromising essential oils and product characteristics. The result is premium-quality dried spices suitable for domestic and export markets.'
+    description: 'Gentle, low-temperature drying that keeps the colour, aroma and oils of cardamom, pepper, turmeric, ginger and chilli. Export-ready quality.'
   },
   {
     image: Image3,
@@ -37,8 +35,7 @@ const stickcards = [
     link: '/cofeedryers',
     tint: '#ffffff',
     crops: ['Coffee beans', 'Plantations', 'Processing units'],
-    description:
-      'Our Coffee Dryers provide precise and gentle drying for coffee beans, ensuring optimal moisture levels for storage, roasting, and processing. The advanced airflow and temperature control systems help preserve bean integrity, flavor profile, and overall quality. Whether for small plantations or large-scale processing facilities, Kardi Coffee Dryers deliver dependable performance and improved product consistency.'
+    description: 'Controlled airflow and temperature dry cherry and parchment to the right moisture, with flavour intact. For estates of any size.'
   },
   {
     image: Image4,
@@ -46,8 +43,7 @@ const stickcards = [
     link: '/sagopearl',
     tint: '#ffffff',
     crops: ['Sago starch', 'Sago pearls', 'Continuous operation'],
-    description:
-      'Kardi Sago Dryers are developed to provide efficient and hygienic drying solutions for sago starch and related products. By maintaining controlled drying conditions, these systems help achieve uniform moisture reduction, improved product quality, and extended shelf life. Built for continuous industrial operation, our sago drying technology enhances productivity while minimizing energy consumption and operational costs.'
+    description: 'Hygienic, continuous drying for sago and starch. Uniform moisture, longer shelf life, lower fuel cost.'
   }
 ]
 
@@ -102,18 +98,14 @@ const StickySection = () => {
         <div className='w-full flex justify-center'>
           <div className='text-left'>
             <h2 className='text-4xl font-medium leading-tight text-[#031c14] md:text-5xl'>
-              <span className='text-[#52823c]'>Strategic </span> <br />
-              Product Range
+              <span className='text-[#52823c]'>Our Dryers </span>
             </h2>
           </div>
         </div>
         <div className='w-full'>
           <p className='max-w-xl py-3 text-base leading-relaxed  md:text-lg text-black'>
-            Our strategic product range is designed to meet the diverse drying
-            requirements of modern agriculture, from spices and coffee to grains
-            and seeds. With customized, energy-efficient solutions, we help
-            farmers and processors achieve consistent quality, reduced losses,
-            and improved productivity.
+            Energy-efficient dryers for every major crop, built to give 
+consistent quality and lower losses.
           </p>
         </div>
       </div>

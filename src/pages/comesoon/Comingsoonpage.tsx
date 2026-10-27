@@ -76,16 +76,14 @@ export default function ComingSoonPage () {
               <Sprout />
 
               <p className='mt-6 text-xs font-medium tracking-[0.25em] text-[#E2572B]'>
-                COMING SOON
+                Coming Soon
               </p>
 
               <h1
                 className='mt-4 text-4xl leading-tight text-white md:text-6xl'
                 style={displayFont}
               >
-                The next dryer in our lineup
-                <br />
-                is <span className='italic text-[#E2572B]'>taking root.</span>
+                Our next dryer is on its way
               </h1>
             </div>
           </header>
@@ -94,9 +92,9 @@ export default function ComingSoonPage () {
           <section className='border-b border-black/[0.08 bg-white'>
             <div className='mx-auto grid max-w-5xl grid-cols-1 divide-y divide-black/8 sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
               {[
-                { big: 'Every crop', small: 'BUILT TO DRY' },
-                { big: 'Any scale', small: 'SMALL FARM TO MILL' },
-                { big: 'Any fuel', small: 'DIESEL, ELECTRIC, HYBRID' }
+                { big: 'Every crop', small: 'built to dry it' },
+                { big: 'Any scale', small: 'farm to mill' },
+                { big: 'Any fuel', small: 'diesel, electric or hybrid' }
               ].map(s => (
                 <div key={s.small} className='px-8 py-10 text-center'>
                   <p className='text-2xl md:text-3xl' style={displayFont}>
@@ -113,19 +111,19 @@ export default function ComingSoonPage () {
           {/* ---------------- CTA band ---------------- */}
           <section className=' px-6 py-20 text-center md:py-24'>
             <p className='text-xs font-medium tracking-[0.25em] text-[#E2572B]'>
-              IN THE MEANTIME
+              Meanwhile
             </p>
             <h2
               className='mx-auto mt-4 max-w-xl text-3xl text-white md:text-4xl'
               style={displayFont}
             >
-              Talk to us about what your operation needs today.
+              Tell us what your operation needs today.
             </h2>
             <a
               href='/products'
               className='mt-8 inline-block rounded-sm bg-[#C08A3E] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#a97733]'
             >
-              Explore our current dryers
+              See Our Dryers 
             </a>
           </section>
 

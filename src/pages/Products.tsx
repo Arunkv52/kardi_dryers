@@ -10,7 +10,7 @@ const Products = () => {
     <>
       <KardiBackground>
         <Navbar />
-        
+      
         <ProductDetails />
         <AlliedProducts />
         <FuelFlexibility />

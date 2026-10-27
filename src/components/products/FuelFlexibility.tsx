@@ -6,80 +6,80 @@ import { useState } from 'react'
 const fuels = [
   {
     name: 'Briquettes',
-    note: 'Compressed biomass logs that burn slow and steady, easy to store in bulk.'
+    note: 'Compressed biomass logs. Slow, steady burn and easy bulk storage.'
   },
   {
     name: 'Wood Pellets',
-    note: 'Uniform, low-moisture pellets that feed automatically for consistent heat.'
+    note: 'Uniform, dry pellets that feed automatically for steady heat.'
   },
   {
     name: 'Wood Chips',
-    note: 'Processed wood pieces offering an economical, steady burn for larger dryers.'
+    note: 'Low-cost, steady fuel for larger dryers.'
   },
   {
     name: 'Firewood',
-    note: 'Traditional split logs — the simplest fuel, available almost anywhere.'
+    note: 'Split logs. The simplest fuel, available almost everywhere'
   },
   {
     name: 'Diesel',
-    note: 'Clean-burning liquid fuel that gives precise control and fast start-up.'
+    note: 'Clean-burning, with precise control and quick start-up'
   },
   {
     name: 'Kerosene',
-    note: 'A lighter distillate fuel, easy to handle for smaller-scale drying.'
+    note: 'A lighter fuel that is easy to handle for small dryers'
   },
   {
     name: 'LPG',
-    note: 'Bottled or piped gas for instant ignition and fine-grained heat control.'
+    note: 'Bottled or piped gas. Instant ignition and fine heat control.'
   },
   {
     name: 'Thermic Fluid',
-    note: 'A closed-loop heat transfer oil that delivers steady, indirect heat.'
+    note: 'Closed-loop heat-transfer oil that gives steady, indirect heat.'
   },
   {
     name: 'Natural Gas',
-    note: 'Piped gas supply that runs continuously without on-site storage.'
+    note: 'Piped gas for continuous running with no on-site storage.'
   },
   {
     name: 'Hot Water',
-    note: 'Heated water circulated as a gentle, indirect drying medium.'
+    note: 'Circulated hot water for gentle, indirect drying.'
   },
   {
     name: 'Steam',
-    note: 'High-temperature vapour for rapid, intense heat transfer.'
+    note: 'High-temperature steam for fast, intense heating'
   }
 ]
 
-export default function LearnMore() {
+export default function LearnMore () {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section className="bg-[#F4F1EA] py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6 lg:px-12">
+    <section className='bg-[#F4F1EA] py-24 md:py-32'>
+      <div className='mx-auto max-w-6xl px-6 lg:px-12'>
         {/* Heading row */}
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-3">
-            <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]">
+        <div className='grid gap-12 lg:grid-cols-12'>
+          <div className='lg:col-span-3'>
+            <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#A6824F]'>
               Fuel Flexibility
             </p>
           </div>
 
-          <div className="lg:col-span-8">
+          <div className='lg:col-span-8'>
             <h2
-              className="text-3xl leading-none tracking-tight text-black md:text-4xl lg:text-5xl"
+              className='text-3xl leading-none tracking-tight text-black md:text-4xl lg:text-5xl'
               style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
             >
-              Any Fuel, Any Location
+              Any fuel, anywhere
             </h2>
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-[#5B564B]">
-              Kardi dryers can be customized for the fuel available in your
-              region — from biomass pellets to thermic fluid.
+            <p className='mt-5 max-w-xl text-[15px] leading-[1.8] text-[#5B564B]'>
+              We build each dryer around the fuel you can get locally, from
+              biomass pellets to thermic fluid.
             </p>
           </div>
         </div>
 
         {/* Vertical fuel list */}
-        <div className="mt-20 border-t border-[#D8D2C2]">
+        <div className='mt-20 border-t border-[#D8D2C2]'>
           {fuels.map((fuel, i) => {
             const isActive = activeIndex === i
             return (
@@ -88,16 +88,24 @@ export default function LearnMore() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
+                transition={{
+                  duration: 0.5,
+                  delay: i * 0.04,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
                 onMouseEnter={() => setActiveIndex(i)}
-                onMouseLeave={() => setActiveIndex((curr) => (curr === i ? null : curr))}
-                className="border-b border-[#D8D2C2]"
+                onMouseLeave={() =>
+                  setActiveIndex(curr => (curr === i ? null : curr))
+                }
+                className='border-b border-[#D8D2C2]'
               >
                 <button
-                  type="button"
-                  onClick={() => setActiveIndex((curr) => (curr === i ? null : i))}
+                  type='button'
+                  onClick={() =>
+                    setActiveIndex(curr => (curr === i ? null : i))
+                  }
                   aria-expanded={isActive}
-                  className="flex w-full items-center justify-between gap-6 py-7 text-left md:py-8"
+                  className='flex w-full items-center justify-between gap-6 py-7 text-left md:py-8'
                 >
                   <span
                     className={`text-2xl font-light transition-colors duration-500 md:text-3xl ${
@@ -117,12 +125,15 @@ export default function LearnMore() {
 
                 <motion.div
                   initial={false}
-                  animate={{ height: isActive ? 'auto' : 0, opacity: isActive ? 1 : 0 }}
+                  animate={{
+                    height: isActive ? 'auto' : 0,
+                    opacity: isActive ? 1 : 0
+                  }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden"
+                  className='overflow-hidden'
                 >
-                  <div className="mb-7 max-w-xl border-l-2 border-[#A6824F] bg-white/60 px-6 py-5 md:mb-8">
-                    <p className="text-[15px] leading-[1.8] text-[#5B564B]">
+                  <div className='mb-7 max-w-xl border-l-2 border-[#A6824F] bg-white/60 px-6 py-5 md:mb-8'>
+                    <p className='text-[15px] leading-[1.8] text-[#5B564B]'>
                       {fuel.note}
                     </p>
                   </div>

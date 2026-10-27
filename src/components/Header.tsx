@@ -15,9 +15,9 @@ interface HeaderProps {
 
 const heroTexts = [
   {
-    line1: "We've the technology",
-    line2: 'that expands',
-    line3: 'With you'
+    line1: "Dryers that grow ",
+    line2: 'with your harvest.'
+   
   },
   {
     line1: 'Leading the ',

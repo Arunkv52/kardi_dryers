@@ -15,15 +15,13 @@ export default function CustomBuiltPage () {
           <header className='relative overflow-hidden px-6 pb-16 pt-18 md:px-10 md:pb-20'>
             <div className='mx-auto mt-18 max-w-3xl text-center'>
               <p className='text-[11px] font-medium tracking-[0.25em] text-white/50'>
-                KARDI DRYERS
+                Custom-Built Dryers
               </p>
               <h1
                 className='mt-3 text-4xl leading-tight text-white md:text-6xl'
                 style={displayFont}
               >
-                Built around your crop,
-                <br />
-                not the other way around.
+                Built around your crop, not the other way round.
               </h1>
             </div>
           </header>
@@ -40,10 +38,9 @@ export default function CustomBuiltPage () {
               Custom Built
             </h2>
             <p className='mt-4 max-w-2xl text-sm leading-relaxed  md:text-base text-white'>
-              No two harvests are the same. Tell us your crop, your scale, and
-              your fuel source, and we'll configure a dryer around them — not
-              the reverse. Every custom build starts from the same engineering
-              used across our standard lineup.
+              Every harvest is different. Tell us your crop, scale and fuel, and
+              we will design the dryer around them, using the same proven
+              engineering as our standard range.
             </p>
             <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
               <a
@@ -59,9 +56,9 @@ export default function CustomBuiltPage () {
             <div className='mx-auto mt-14 max-w-5xl border-y border-black/[0.08] px-6 md:px-10 '>
               <div className='grid grid-cols-1 divide-y divide-black/[0.08] sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
                 {[
-                  { big: '3 inputs', small: 'CROP, SCALE, FUEL' },
-                  { big: '100%', small: 'TAILORED SPEC SHEET' },
-                  { big: 'Nationwide', small: 'INSTALL & SERVICE' }
+                  { big: '3 inputs', small: 'crop, scale, fuel' },
+                  { big: '100%', small: ' Written spec sheet for your project' },
+                  { big: 'Nationwide', small: ' Install and service across India' }
                 ].map(s => (
                   <div key={s.small} className='px-6 py-10 text-center'>
                     <p className='text-2xl md:text-3xl' style={displayFont}>
@@ -76,7 +73,6 @@ export default function CustomBuiltPage () {
             </div>
           </section>
 
-         
           {/* <section className='bg-[#0B1912] px-6 py-20 text-center md:py-24'>
             <h2
               className='mx-auto max-w-xl text-3xl text-white md:text-4xl'

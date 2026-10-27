@@ -7,55 +7,55 @@ const timeline = [
     year: '2001',
     chapter: 'I',
     title: 'Founded',
-    desc: 'Kardi Dryers established in Chennai, pioneering small-scale crop drying solutions, Developed the worlds first small-scale dryer for high-value crops like cardamom and pepper.'
+    desc: 'Founded in Chennai to bring small-scale crop drying to farmers.'
   },
   {
     year: '2005',
     chapter: 'II',
     title: 'Dryer launch',
-    desc: "Small Size Dryers Launch"
+    desc: "Launched the first small-scale dryer for cardamom and pepper"
   },
   {
     year: '2010',
     chapter: 'III',
     title: '1,000+ dryers supplied',
-    desc: 'Crossed the milestone of 1,000 dryers supplied across India.'
+    desc: 'Passed 1,000 dryers supplied across India'
   },
   {
     year: '2014',
     chapter: 'IV',
     title: 'Government recognition',
-    desc: 'Mobile Paddy Dryer tested & approved by Acharya N.G. Ranga Agricultural University.'
+    desc: 'Mobile Paddy Dryer tested and approved by Acharya N.G. Ranga Agricultural University.'
   },
   {
     year: '2016',
     chapter: 'V',
     title: 'AP Chief Minister inauguration',
-    desc: 'CM Thiru. N. Chandrababu Naidu dedicated the Mobile Paddy Dryer to Andhra Pradesh.'
+    desc: 'Andhra Pradesh Chief Minister N. Chandrababu Naidu dedicated the Mobile Paddy Dryer to the state.'
   },
   {
     year: '2018',
     chapter: 'VI',
     title: 'Kerala operations',
-    desc: 'Expanded manufacturing to Kerala; launched Kardi Cardamom Curing House community drying centre.'
+    desc: 'Began manufacturing in Kerala and opened the Kardi Cardamom Curing House, a community drying centre'
   },
   {
     year: '2020',
     chapter: 'VII',
     title: '3,000+ dryers globally',
-    desc: 'Expanded to Sri Lanka, the Far East, the Middle East, and Africa.'
+    desc: '3,000+ dryers installed; entered Sri Lanka, the Far East, the Middle East and Africa.'
   },
   {
     year: '2023',
     chapter: 'VIII',
     title: 'Pedrotti joint venture',
-    desc: 'Joint venture with Fratelli Pedrotti of Italy for mobile grain dryers, formalised as Kardi Pedrotti Dryers Pvt Ltd.'
+    desc: 'Formed Kardi Pedrotti Dryers Pvt. Ltd. with Fratelli Pedrotti of Italy to build mobile grain dryers.'
   },
   {
     year: '2025',
     chapter: 'IX',
     title: '4,000+ dryers',
-    desc: 'Serving 35 agricultural commodities across 8 states and multiple countries.'
+    desc: '4,000+ dryers serving 35 crops in 8 states and several countries.'
   }
 ]
 
@@ -147,14 +147,7 @@ function TimelineRow({
           {item.year}
         </span>
 
-        <span
-          className={`text-xs tracking-[0.15em] uppercase text-[#A6824F] transition-opacity duration-500 ${
-            isActive ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          {item.title}
-        </span>
-
+        
         {/* plus → × hint that something opens here */}
         <svg
           viewBox="0 0 24 24"
@@ -177,12 +170,7 @@ function TimelineRow({
         className="overflow-hidden"
       >
         <div className="mt-5 max-w-xl rounded-sm border-l-2 border-[#A6824F] bg-white/60 px-7 py-6 shadow-[0_8px_30px_rgba(43,43,38,0.06)]">
-          <h3
-            className="mb-2 text-xl md:text-2xl text-[#000000]"
-            style={{ fontFamily: 'var(--font-serif, Georgia, serif)' }}
-          >
-            {item.title}
-          </h3>
+        
           <p className="text-[15px] leading-[1.8] text-[#030303]">{item.desc}</p>
         </div>
       </motion.div>

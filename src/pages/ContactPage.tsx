@@ -10,9 +10,9 @@ import KardiBackground from '../components/KardiBackground'
 // looked dated and may not have been updated in a while.
 const CONTACT = {
   headOffice:
-    '284, Avvai Shanmugam Salai, Chennai – 600 086, Tamil Nadu, India',
+    '284, Avvai Shanmugam Salai, Gopalapuram, Chennai 600 086, Tamil Nadu, India',
   factory:
-    'Survey No. 203/2 (Old No. 86), New No. 69, 2nd Extension, Nageswara Rao Road, Athipet, Chennai – 600 058',
+    'Factory · No. 16, AUETAA Industrial Estate, Morai, Veerapuram, ChennaI – 600055',
   phone: '+91 97916 64050',
   email: 'sales@kardidryers.com'
 }
@@ -22,8 +22,6 @@ const CONTACT = {
 // WhatsApp option, which is what this is based on).
 const WHATSAPP_URL = 'https://wa.me/919791664050'
 
-
-
 // Standard embed, no API key needed — geocodes the address text itself
 // rather than relying on hardcoded coordinates.
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(
@@ -31,13 +29,14 @@ const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(
 )}&output=embed`
 
 const PRODUCTS = [
-  'Grain Dryers',
-  'Spices Dryers',
-  'Coffee Dryers',
-  'Sago Dryers',
-  'Tray Dryers',
-  'Chilli Dryers',
-  'Groundnut Dryers'
+  'Grain',
+  'Spices',
+  'Coffee',
+  'Sago and Starch',
+  ' Vegetables, Herbs and Leaves ',
+  'Chilli',
+  'Groundnut',
+  'Custom-built'
 ]
 
 const States = [
@@ -68,7 +67,7 @@ const States = [
   'Tripura',
   'Uttar Pradesh',
   'Uttarakhand',
-  'West Bengal',
+  'West Bengal'
 ]
 
 const RESEND_SECONDS = 30
@@ -80,7 +79,7 @@ type ContactFormValues = {
   mobile: string
   product: string
   comments: string
-  states : string
+  states: string
 }
 
 type OtpStatus = 'idle' | 'sending' | 'sent' | 'verifying' | 'verified'
@@ -96,7 +95,7 @@ const inputClass =
   'w-full border border-[#D8D2C2] bg-white/50 px-4 py-3 text-[15px] text-[#2B2B26] placeholder:text-[#8C8678]/60 transition-colors duration-300 focus:border-[#A6824F] focus:bg-white focus:outline-none disabled:cursor-not-allowed disabled:border-[#D8D2C2] disabled:bg-[#EDE9DD] disabled:text-[#8C8678]'
 
 const labelClass =
-  'mb-2 block text-xs uppercase tracking-[0.15em] text-[#8C8678]'
+  'mb-2 block text-xs tracking-[0.15em] text-[#8C8678]'
 
 const errorClass = 'mt-1.5 text-xs text-[#9C4A3A]'
 
@@ -113,7 +112,6 @@ export default function ContactPage () {
   const [otpStatus, setOtpStatus] = useState<OtpStatus>('idle')
   const [devOtp, setDevOtp] = useState<string | null>(null)
   const [otpInput, setOtpInput] = useState('')
-  const [otpError, setOtpError] = useState<string | null>(null)
   const [resendIn, setResendIn] = useState(0)
   const [submitted, setSubmitted] = useState(false)
 
@@ -199,16 +197,15 @@ export default function ContactPage () {
           {/* Heading */}
           <section className='px-6 pb-4 pt-30 lg:px-12'>
             <motion.div {...fadeUp} className='mx-auto max-w-6xl text-center'>
-              <p className='mb-5 text-sm font-medium tracking-[0.25em] uppercase text-[#f1f1f1]'>
-                Contact
+              <p className='mb-5 text-sm font-medium tracking-[0.25em]  text-[#f1f1f1]'>
+                Contact us
               </p>
               <h1 className='text-4xl leading-tight md:text-5xl'>
-                Let's Start a Conversation
+                Let's talk about your dryer
               </h1>
               <p className='mx-auto mt-5 max-w-xl leading-[1.8] text-[#f1f1f1]'>
-                Tell us about your crop, your volume, and your location — our
-                team will recommend the right dryer and get back to you
-                personally.
+                Tell us your crop, volume and location. We will recommend the
+                right dryer and reply personally.
               </p>
             </motion.div>
           </section>
@@ -332,9 +329,6 @@ export default function ContactPage () {
                               inputMode='numeric'
                               placeholder='98765 43210'
                               className={inputClass}
-                              disabled={otpStatus === 'verified'}
-                              aria-invalid={!!errors.mobile}
-                              {...mobileReg}
                               onChange={e => {
                                 e.target.value = e.target.value
                                   .replace(/\D/g, '')
@@ -352,142 +346,11 @@ export default function ContactPage () {
                                 }
                               }}
                             />
-                            {otpStatus === 'verified' && (
-                              <span className='absolute right-3 top-1/2 flex -translate-y-1/2 items-center gap-1.5 text-xs text-[#53823c]'>
-                                <svg
-                                  viewBox='0 0 24 24'
-                                  fill='none'
-                                  stroke='currentColor'
-                                  strokeWidth={2}
-                                  className='h-4 w-4'
-                                >
-                                  <path
-                                    d='M5 13l4 4L19 7'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                  />
-                                </svg>
-                                Verified
-                              </span>
-                            )}
                           </div>
-
-                          {otpStatus === 'verified' ? (
-                            <button
-                              type='button'
-                              onClick={changeNumber}
-                              className='shrink-0 whitespace-nowrap border border-[#C9B98F] px-5 py-3 text-sm text-[#5B564B] transition-colors duration-300 hover:border-[#A6824F] hover:text-[#f1f1f1]'
-                            >
-                              Change
-                            </button>
-                          ) : (
-                            <button
-                              type='button'
-                              onClick={sendOtp}
-                              disabled={
-                                !mobileValid ||
-                                otpStatus === 'sending' ||
-                                otpStatus === 'sent' ||
-                                otpStatus === 'verifying'
-                              }
-                              className='shrink-0 whitespace-nowrap border border-[#2B2B26] bg-[#2B2B26] px-5 py-3 text-sm text-white transition-colors duration-300 hover:bg-[#A6824F] hover:border-[#A6824F] disabled:cursor-not-allowed disabled:border-[#D8D2C2] disabled:bg-[#D8D2C2] disabled:text-[#8C8678]'
-                            >
-                              {otpStatus === 'sending'
-                                ? 'Sending…'
-                                : otpStatus === 'sent' ||
-                                  otpStatus === 'verifying'
-                                ? 'Code sent'
-                                : 'Send OTP'}
-                            </button>
-                          )}
                         </div>
                         {errors.mobile && (
                           <p className={errorClass}>{errors.mobile.message}</p>
                         )}
-
-                        {/* OTP entry */}
-                        <AnimatePresence>
-                          {(otpStatus === 'sent' ||
-                            otpStatus === 'verifying') && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{
-                                duration: 0.35,
-                                ease: [0.22, 1, 0.36, 1]
-                              }}
-                              className='overflow-hidden'
-                            >
-                              <div className='mt-4 border-l-2 border-[#A6824F] bg-white/50 px-5 py-5'>
-                                <p className='text-xs text-[#5B564B]'>
-                                  Enter the 6-digit code sent to{' '}
-                                  <span className='text-[#2B2B26]'>
-                                    +91 {mobile}
-                                  </span>
-                                </p>
-
-                                {devOtp && (
-                                  <p className='mt-2 border border-dashed border-[#C9B98F] bg-[#F4F1EA] px-3 py-2 text-xs text-[#8C8678]'>
-                                    Demo mode — no SMS backend connected yet.
-                                    Your test code is{' '}
-                                    <span className='font-medium text-[#f1f1f1]'>
-                                      {devOtp}
-                                    </span>
-                                  </p>
-                                )}
-
-                                <div className='mt-3 flex items-center gap-3'>
-                                  <input
-                                    type='text'
-                                    inputMode='numeric'
-                                    maxLength={6}
-                                    placeholder='••••••'
-                                    value={otpInput}
-                                    onChange={e =>
-                                      setOtpInput(
-                                        e.target.value
-                                          .replace(/\D/g, '')
-                                          .slice(0, 6)
-                                      )
-                                    }
-                                    className='w-32 border border-[#D8D2C2] bg-white px-4 py-2.5 text-center text-lg tracking-[0.3em] text-[#2B2B26] focus:border-[#A6824F] focus:outline-none'
-                                  />
-                                  <button
-                                    type='button'
-                                    onClick={verifyOtp}
-                                    disabled={
-                                      otpInput.length !== 6 ||
-                                      otpStatus === 'verifying'
-                                    }
-                                    className='border border-[#2B2B26] bg-[#2B2B26] px-5 py-2.5 text-sm text-white transition-colors duration-300 hover:bg-[#A6824F] hover:border-[#A6824F] disabled:cursor-not-allowed disabled:border-[#D8D2C2] disabled:bg-[#D8D2C2] disabled:text-[#8C8678]'
-                                  >
-                                    {otpStatus === 'verifying'
-                                      ? 'Verifying…'
-                                      : 'Verify'}
-                                  </button>
-
-                                  {resendIn > 0 ? (
-                                    <span className='text-xs text-[#8C8678]'>
-                                      Resend in {resendIn}s
-                                    </span>
-                                  ) : (
-                                    <button
-                                      type='button'
-                                      onClick={sendOtp}
-                                      className='text-xs text-[#f1f1f1] underline-offset-2 hover:underline'
-                                    >
-                                      Resend code
-                                    </button>
-                                  )}
-                                </div>
-                                {otpError && (
-                                  <p className={errorClass}>{otpError}</p>
-                                )}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
                       </div>
 
                       {/* Product */}
@@ -625,7 +488,7 @@ export default function ContactPage () {
                 <div className='border border-[#D8D2C2] bg-white/40'>
                   {/* Locations */}
                   <div className='space-y-6 p-8'>
-                    <p className='text-sm font-medium tracking-[0.2em] uppercase text-[#f1f1f1]'>
+                    <p className='text-sm font-medium tracking-[0.2em]  text-[#f1f1f1]'>
                       Visit Us
                     </p>
 
@@ -719,7 +582,7 @@ function LocationRow ({ label, value }: { label: string; value: string }) {
         <PinIcon />
       </span>
       <div>
-        <p className='text-xs uppercase tracking-widest text-[#ffffff]'>
+        <p className='text-xs tracking-widest text-[#ffffff]'>
           {label}
         </p>
         <p className='mt-1 text-[15px] leading-[1.7] text-[#e7e7e7]'>{value}</p>
@@ -747,7 +610,7 @@ function ContactRow ({
       >
         <span className='text-[#f1f1f1]'>{icon}</span>
         <span>
-          <span className='block text-xs uppercase tracking-widest text-[#ffffff]'>
+          <span className='block text-xs tracking-widest text-[#ffffff]'>
             {label}
           </span>
           {value}
@@ -830,4 +693,3 @@ function ChatIcon () {
     </svg>
   )
 }
-
