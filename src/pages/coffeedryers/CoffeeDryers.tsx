@@ -166,7 +166,6 @@ export default function CofeeDryers ({
 }: {
   product?: Product
 }) {
-  const speedMultiple = product.sunDriedHrs / product.dryingTimeHrs
 
   return (
     <>

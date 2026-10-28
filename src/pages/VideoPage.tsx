@@ -75,7 +75,7 @@ export default function YouTubeShowcase () {
       <main className='relative overflow-hidden py-20 text-white md:py-28'>
         <div
           aria-hidden='true'
-          className='pointer-events-none absolute -right-40 top-0 h-[480px] w-[480px] rounded-full bg-[#A6824F]/10 blur-[120px]'
+          className='pointer-events-none absolute -right-40 top-0 h-120 w-120 rounded-full bg-[#A6824F]/10 blur-[120px]'
         />
 
         <header className='relative mx-auto max-w-3xl px-6 text-center'>
@@ -112,7 +112,7 @@ export default function YouTubeShowcase () {
               href={CHANNEL_URL}
               target='_blank'
               rel='noopener noreferrer'
-              className='border border-[#A6824F] px-6 py-3 text-sm tracking-[0.05em] text-[#A6824F] transition-colors duration-300 hover:bg-[#A6824F] hover:text-[#15140F]'
+              className='border border-[#A6824F] px-6 py-3 text-sm tracking-wider text-[#A6824F] transition-colors duration-300 hover:bg-[#A6824F] hover:text-[#15140F]'
             >
               Visit our YouTube channel →
             </a>

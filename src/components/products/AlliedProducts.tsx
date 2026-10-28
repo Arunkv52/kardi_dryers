@@ -20,7 +20,7 @@ const AlliedProducts = () => {
       {/* ambient glow — single accent, kept quiet */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-40 top-0 h-[480px] w-[480px] rounded-full bg-[#A6824F]/10 blur-[120px]"
+        className="pointer-events-none absolute -left-40 top-0 h-120 w-120 rounded-full bg-[#A6824F]/10 blur-[120px]"
       />
 
       <div className="relative mx-auto w-full">
@@ -59,9 +59,9 @@ const AlliedProducts = () => {
                 className="group relative flex items-baseline gap-6 border-b border-white/10 py-7 pl-6 transition-colors duration-500 hover:border-[#A6824F]/40 md:py-8"
               >
                 {/* accent bar, grows in from the gutter */}
-                <span className="absolute inset-y-0 left-0 w-[3px] origin-center scale-y-0 bg-[#A6824F] transition-transform duration-500 group-hover:scale-y-100" />
+                <span className="absolute inset-y-0 left-0 w-0.75 origin-center scale-y-0 bg-[#A6824F] transition-transform duration-500 group-hover:scale-y-100" />
 
-                <span className="w-8 flex-shrink-0 font-mono text-[11px] tracking-[0.15em] text-[#8C8678] transition-colors duration-500 group-hover:text-[#A6824F]">
+                <span className="w-8 shrink-0 font-mono text-[11px] tracking-[0.15em] text-[#8C8678] transition-colors duration-500 group-hover:text-[#A6824F]">
                   {String(i + 1).padStart(2, '0')}
                 </span>
 

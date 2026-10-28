@@ -85,7 +85,7 @@ const Whychoosus = () => {
             </span>
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl'>
               Built to help you{' '}
-              <span className='bg-gradient-to-r from-indigo-600 to-fuchsia-600 bg-clip-text text-transparent'>
+              <span className='bg-linear-to-r from-indigo-600 to-fuchsia-600 bg-clip-text text-transparent'>
                 grow faster
               </span>
             </h2>
@@ -103,7 +103,7 @@ const Whychoosus = () => {
               >
                 {/* Gradient glow on hover */}
                 <div
-                  className={`absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20`}
+                  className={`absolute inset-0 -z-10 rounded-2xl bg-linear-to-br ${item.gradient} opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20`}
                 />
 
                 {/* Number */}
@@ -113,7 +113,7 @@ const Whychoosus = () => {
 
                 {/* Icon */}
                 <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${item.gradient} shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
+                  className={`flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br ${item.gradient} shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
                 >
                   {item.icon}
                 </div>

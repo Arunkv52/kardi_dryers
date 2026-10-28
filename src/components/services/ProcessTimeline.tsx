@@ -43,7 +43,7 @@ const ProcessTimeline = () => {
         <div className='overflow-x-auto pb-5'>
           <div className='relative lg:min-w-0'>
             {/* Connecting line through the center of the markers */}
-            <div className='absolute left-0 right-0 top-[22px] h-px bg-white/15' />
+            <div className='absolute left-0 right-0 top-5.5 h-px bg-white/15' />
 
             <div className='grid grid-cols-6 gap-4'>
               {steps.map((step, i) => (

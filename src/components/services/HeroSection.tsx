@@ -3,7 +3,7 @@ import HeroImg from '../../assets/about/hero-bg.jpg'
 const HeroSection = () => {
   return (
     <div
-      className='relative bg-cover bg-center h-[80vh] min-h-[520px] max-h-[760px]'
+      className='relative bg-cover bg-center h-[80vh] min-h-130 max-h-190'
       style={{ backgroundImage: `url(${HeroImg})` }}
     >
       {/* Cinematic overlay — darkest at the bottom where the type sits,

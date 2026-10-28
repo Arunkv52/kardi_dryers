@@ -53,8 +53,8 @@ export default function CustomBuiltPage () {
           </section>
 
           <section className='bg-white'>
-            <div className='mx-auto mt-14 max-w-5xl border-y border-black/[0.08] px-6 md:px-10 '>
-              <div className='grid grid-cols-1 divide-y divide-black/[0.08] sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
+            <div className='mx-auto mt-14 max-w-5xl border-y border-black/8 px-6 md:px-10 '>
+              <div className='grid grid-cols-1 divide-y divide-black/8 sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
                 {[
                   { big: '3 inputs', small: 'crop, scale, fuel' },
                   { big: '100%', small: ' Written spec sheet for your project' },

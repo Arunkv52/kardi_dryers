@@ -210,7 +210,7 @@ export default function NewsroomPage () {
                     key={cat}
                     type='button'
                     onClick={() => setActive(cat)}
-                    className='relative border border-[#D8D2C2] px-4 py-2 text-xs uppercase tracking-[0.1em] transition-colors duration-300'
+                    className='relative border border-[#D8D2C2] px-4 py-2 text-xs uppercase tracking-widest transition-colors duration-300'
                   >
                     {isActive && (
                       <motion.span
@@ -234,7 +234,7 @@ export default function NewsroomPage () {
                 )
               })}
             </div>
-            <p className='flex-shrink-0 text-xs uppercase tracking-[0.1em] text-[#8C8678]'>
+            <p className='shrink-0 text-xs uppercase tracking-widest text-[#8C8678]'>
               {visible.length} {visible.length === 1 ? 'story' : 'stories'}
             </p>
           </div>
@@ -375,7 +375,7 @@ export default function NewsroomPage () {
                     />
                     <button
                       type='submit'
-                      className='flex-shrink-0 border border-[#A6824F] px-5 py-3 text-sm text-[#A6824F] transition-colors duration-300 hover:bg-[#A6824F] hover:text-[#15140F]'
+                      className='shrink-0 border border-[#A6824F] px-5 py-3 text-sm text-[#A6824F] transition-colors duration-300 hover:bg-[#A6824F] hover:text-[#15140F]'
                     >
                       Subscribe
                     </button>
@@ -400,8 +400,8 @@ function PlaceholderArt ({
 }) {
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#EDE9DD] to-[#E0D9C4] ${
-        large ? 'aspect-[4/3] md:aspect-auto md:h-full' : 'aspect-[16/10]'
+      className={`relative flex items-center justify-center overflow-hidden bg-linear-to-br from-[#EDE9DD] to-[#E0D9C4] ${
+        large ? 'aspect-4/3 md:aspect-auto md:h-full' : 'aspect-16/10'
       }`}
     >
       <div className='absolute inset-0 opacity-[0.07]' style={DIAGONAL_LINES} />

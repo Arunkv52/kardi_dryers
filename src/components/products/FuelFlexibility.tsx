@@ -117,7 +117,7 @@ export default function LearnMore () {
                   </span>
 
                   <span
-                    className={`h-1.5 w-1.5 flex-shrink-0 rounded-full transition-all duration-500 ${
+                    className={`h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 ${
                       isActive ? 'scale-150 bg-[#A6824F]' : 'bg-[#C9B98F]'
                     }`}
                   />
