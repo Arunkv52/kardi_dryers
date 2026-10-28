@@ -7,7 +7,6 @@ import About from '../components/home/About'
 import StickySection from '../components/home/StickySection'
 import WorldWide from '../components/home/WorldWide'
 import KardiBackground from '../components/KardiBackground'
-import Whychoosus from '../components/home/Whychoosus'
 
 const Home = () => {
   const scrollRef = useRef<HTMLElement>(null)

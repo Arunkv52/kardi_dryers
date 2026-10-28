@@ -98,9 +98,7 @@ const About = () => {
                 <h3 className='mt-4 text-base font-semibold leading-snug text-[#26352e]'>
                   {stat.title}
                 </h3>
-                <p className='mt-1 text-sm leading-6 text-[#69736d]'>
-                  {stat.detail}
-                </p>
+                
               </motion.article>
             )
           })}
