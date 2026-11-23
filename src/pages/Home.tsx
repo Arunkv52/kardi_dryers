@@ -8,6 +8,7 @@ import StickySection from '../components/home/StickySection'
 import WorldWide from '../components/home/WorldWide'
 import KardiBackground from '../components/KardiBackground'
 
+
 const Home = () => {
   const scrollRef = useRef<HTMLElement>(null)
 
@@ -29,6 +30,7 @@ const Home = () => {
           </section>
 
           {/* Image */}
+          
 
           {/* Product */}
           <section className=''>

@@ -200,7 +200,7 @@ export default function ProductPage ({
               />
               <StatBlock
                 value={`${speedMultiple.toFixed(1)}×`}
-                label='Drying time days to hours'
+                label=' faster than sun drying'
               />
             </div>
           </motion.section>
@@ -298,7 +298,7 @@ function StatBlock ({ value, label }: { value: string; label: string }) {
       >
         {value}
       </span>
-      <span className='text-xs uppercase tracking-[0.15em] text-white'>
+      <span className='text-xs  tracking-[0.15em] text-white'>
         {label}
       </span>
     </div>

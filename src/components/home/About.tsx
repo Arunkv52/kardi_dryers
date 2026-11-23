@@ -1,7 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { CalendarDays, Factory, Globe, Wheat } from 'lucide-react'
 import { Link } from 'react-router'
-import { Phone } from 'lucide-react'
+import { Phone, ArrowDownToLine } from 'lucide-react'
+import Brochure from '../../assets/brochure/Kardi Dryers - A4_final.pdf'
 
 const companyStats = [
   {
@@ -17,7 +18,7 @@ const companyStats = [
   {
     value: '8+',
     title: ' Indian states & International Presence',
-   
+
     icon: Globe
   },
   {
@@ -49,7 +50,7 @@ const About = () => {
               and processors in India and abroad. Our engineering protects
               harvest quality and cuts drying losses.
             </h2>
-            
+            <p>Find the right dryer for your crop, climate and capacity.</p>
           </div>
           <div>
             <Link
@@ -59,13 +60,14 @@ const About = () => {
               <Phone size={16} />
               Get a Quote
             </Link>
-            <Link
-              to='/contact'
-              className='hidden lg:inline-flex items-center gap-2 rounded-full border border-white px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff5938]/30 transition hover:bg-[#e54d2c] hover:-translate-y-0.5'
+            <a
+              href={Brochure}
+              download='Kardi-Dryers-Brochure.pdf'
+              className='download hidden lg:inline-flex items-center gap-2 rounded-full border border-white px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff5938]/30 transition hover:bg-[#e54d2c] hover:-translate-y-0.5'
             >
-              <Phone size={16} />
-              Get a Quote
-            </Link>
+              <ArrowDownToLine size={16} />
+              Download Brochure
+            </a>
           </div>
         </div>
 
@@ -98,7 +100,6 @@ const About = () => {
                 <h3 className='mt-4 text-base font-semibold leading-snug text-[#26352e]'>
                   {stat.title}
                 </h3>
-                
               </motion.article>
             )
           })}

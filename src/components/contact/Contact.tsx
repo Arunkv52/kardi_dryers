@@ -8,8 +8,11 @@ const FACTORY =
   ' No. 16, AUETAA Industrial Estate, Morai, Veerapuram, Chennai – 600055'
 const PHONE_DISPLAY = '+91 97916 64050'
 const PHONE_TEL = '+919791664050'
+const PHONE_DISPLAY1 = '+91 90940 13375'
+const PHONE_TEL1 = '+919094013375'
 const WHATSAPP_NUMBER = '919791664050'
 const EMAIL = 'sales@kardidryers.com'
+const EMAIL1 = 'info@kardidryers.com'
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(
   '284, Avvai Shanmugam Salai, Gopalapuram, Chennai 600086'
 )}&output=embed`
@@ -134,13 +137,20 @@ export default function Contact () {
                   <InfoRow icon={<PhoneIcon />} label='Call'>
                     <a href={`tel:${PHONE_TEL}`} className='hover:underline'>
                       {PHONE_DISPLAY}
+                    </a> <br />
+                    <a href={`tel:${PHONE_TEL1}`} className='hover:underline'>
+                      {PHONE_DISPLAY1}
                     </a>
                   </InfoRow>
                   <InfoRow icon={<MailIcon />} label='Email'>
                     <a href={`mailto:${EMAIL}`} className='hover:underline'>
                       {EMAIL}
+                    </a> <br />
+                     <a href={`mailto:${EMAIL1}`} className='hover:underline'>
+                      {EMAIL1}
                     </a>
                   </InfoRow>
+                  
                   <InfoRow icon={<ChatIcon />}>
                     <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}`}

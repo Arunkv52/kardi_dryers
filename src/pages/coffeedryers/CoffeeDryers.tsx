@@ -137,7 +137,7 @@ const coffeeDryer: Product = {
     'Temperature gauges on the chamber and hot-air blower',
     'Temperature control   below 40°C',
     'Automatic on/off firing ',
-    'Centrifugal and combustion-air blowers with Monitor',
+    'Centrifugal and combustion-air blowers with motors',
     'Note: transport and installation are charged extra.'
   ],
 

@@ -14,69 +14,89 @@ const Leadership = () => {
       Image: BalanImg,
       OwnerName: 'M S Balan',
       Role: 'Director',
-      desc: "A Mechanical Engineer and Fellow of the Institution of Engineers of India (FIE) with 5 decades of experience in marketing, sales, business strategies & development. He has held senior management roles for marketing, planning & strategizing in various MNCs across cement, power, steel, chemicals & fertiliser industries, and has been mentoring youngsters & entrepreneurs throughout his long career."
+      desc: 'A Mechanical Engineer and Fellow of the Institution of Engineers of India (FIE) with 5 decades of experience in marketing, sales, business strategies & development. He has held senior management roles for marketing, planning & strategizing in various MNCs across cement, power, steel, chemicals & fertiliser industries, and has been mentoring youngsters & entrepreneurs throughout his long career.'
     },
     {
       Image: DilipImg,
       OwnerName: 'P Dilipan',
       Role: 'General Manager, Marketing, Sales and Business Development',
-      desc: "A Mechanical Engineer from Government College of Technology, Coimbatore, with 28 years of experience in marketing & sales, program & product life cycle management, business development & strategies, and CRM across GE Consumer & Industrial (USA), Boston Scientific (USA), KLA-Tencor (USA), HCL Technologies & Americas."
+      desc: 'A Mechanical Engineer from Government College of Technology, Coimbatore, with 28 years of experience in marketing & sales, program & product life cycle management, business development & strategies, and CRM across GE Consumer & Industrial (USA), Boston Scientific (USA), KLA-Tencor (USA), HCL Technologies & Americas.'
     }
   ]
 
   return (
-    <div className="md:py-20 py-10 ">
-      <div className="mx-auto px-10">
-
+    <div className='md:py-20 py-10 '>
+      <div className='mx-auto px-10'>
         {/* Section header — matches the timeline's masthead language */}
-        <div className="py-10 mb-4">
-         
-          <h4
-           
-            className="text-4xl font-semibold"
-          >
-            Leadership · Meet the team
-          </h4>
-          <div style={{ backgroundColor: '#A6824F' }} className="w-12 h-px mt-6" />
+        <div className='py-10 mb-4'>
+          <h4 className='text-4xl font-semibold'>Leadership · Meet the team</h4>
+          <div
+            style={{ backgroundColor: '#A6824F' }}
+            className='w-12 h-px mt-6'
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {Foundercard.map((item, index) => (
             <div
               key={index}
-              className="group relative h-87.5 overflow-hidden cursor-pointer w-full"
+              tabIndex={0}
+              className='group relative h-87.5 overflow-hidden cursor-pointer w-full outline-none'
             >
-              {/* Photo — stays visible at all times, never fully covered */}
+              {/* Photo */}
               <img
                 src={item.Image}
                 alt={item.OwnerName}
-                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                className='absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-focus:scale-105'
               />
 
-              {/* Dimming veil on hover — photo recedes but never disappears */}
-             
+              {/* Dimming veil on hover */}
+              <div className='absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus:opacity-100' />
 
-              {/* Resting state: name + role only, lower third */}
+              {/* Resting state: name + role */}
               <div
                 style={{
-                  background: 'linear-gradient(to top, rgba(20,20,18,0.92), transparent)'
+                  background:
+                    'linear-gradient(to top, rgba(20,20,18,0.92), transparent)'
                 }}
-                className="absolute bottom-0 left-0 w-full p-6 pt-16 transition-opacity duration-500 group-hover:opacity-0"
+                className='absolute bottom-0 left-0 w-full p-6 pt-16 transition-opacity duration-500 group-hover:opacity-0 group-focus:opacity-0'
               >
                 <h3
-                  style={{ fontFamily: 'var(--font-serif, Georgia, serif)', color: '#F0EEE8' }}
-                  className="text-2xl font-normal mb-1"
+                  style={{
+                    fontFamily: 'var(--font-serif, Georgia, serif)',
+                    color: '#F0EEE8'
+                  }}
+                  className='text-2xl font-normal mb-1'
                 >
                   {item.OwnerName}
                 </h3>
-                <p
-                  className="text-[#53823c] text-[11px] uppercase tracking-[0.12em]"
-                >
+                <p className='text-[#53823c] text-[11px] uppercase tracking-[0.12em]'>
                   {item.Role}
                 </p>
               </div>
 
-             
+              {/* Hover state: bio panel */}
+              <div className='leadership-bio-scroll absolute inset-0 p-6 overflow-y-auto opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-focus:opacity-100 group-focus:translate-y-0'>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-serif, Georgia, serif)',
+                    color: '#F0EEE8'
+                  }}
+                  className='text-xl font-normal mb-1'
+                >
+                  {item.OwnerName}
+                </h3>
+                <p className='text-[#53823c] text-[11px] uppercase tracking-[0.12em] mb-3'>
+                  {item.Role}
+                </p>
+                <div
+                  style={{ backgroundColor: '#A6824F' }}
+                  className='w-8 h-px mb-3'
+                />
+                <p className='text-sm leading-relaxed text-[#F0EEE8]/90'>
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>

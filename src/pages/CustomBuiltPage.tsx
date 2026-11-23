@@ -38,16 +38,14 @@ export default function CustomBuiltPage () {
               Custom Built
             </h2>
             <p className='mt-4 max-w-2xl text-sm leading-relaxed  md:text-base text-white'>
-              Every harvest is different. Tell us your crop, scale and fuel, and
-              we will design the dryer around them, using the same proven
-              engineering as our standard range.
+             Share your crop, scale and fuel and we will reply within one business day
             </p>
-            <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
+            <div className='mt-3 flex flex-wrap items-center justify-center gap-3'>
               <a
                 href='/contact'
                 className='rounded-sm border bg-white px-6 py-3 text-sm font-medium transition hover:border-black/30'
               >
-                Talk to an engineer
+                Send Brief
               </a>
             </div>
           </section>

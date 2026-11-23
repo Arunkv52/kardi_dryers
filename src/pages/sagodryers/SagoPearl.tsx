@@ -76,13 +76,13 @@ const basic15: Product = {
   ],
 
   specifications: [
-    { label: 'Type', value: 'Continous Conveyor Dryer' },
-    { label: 'Rated Capacity', value: '500 to 2,500 kg/hr or 6 to 28 bags/hr (±10%) ' },
+    { label: 'Type', value: ' Continuous conveyor' },
+    { label: 'Rated Capacity', value: '500 to 2,000 kg/hr or 6 to 28 bags/hr (±10%) ' },
     { label: 'Input Moisture (Wet)', value: 'up to 40%' },
     { label: 'Output Moisture (Dry)', value: '11%' },
     {
       label: 'Fuel Type',
-      value: 'Thermic Fluid/firewood/Biomass'
+      value: 'Thermic fluid, firewood or biomass.'
     },
     {
       label: 'Kilograms',
@@ -163,13 +163,13 @@ export default function SagoPearl ({
                     href='#enquire'
                     className='bg-[#2B2B26] px-7 py-3.5 text-sm tracking-wider text-white transition-colors duration-300 hover:bg-[#A6824F]'
                   >
-                    Request a Quote
+                    Get a Quote
                   </a>
                   <a
                     href='#specifications'
                     className='border border-[#C9B98F] px-7 py-3.5 text-sm tracking-wider transition-colors duration-300 hover:border-[#A6824F]'
                   >
-                    View Specifications
+                    See Specifications
                   </a>
                 </div>
               </motion.div>
@@ -251,7 +251,7 @@ export default function SagoPearl ({
                 href='/contact'
                 className='mt-9 inline-block bg-[#125341] px-8 py-4 text-sm tracking-wider text-white transition-colors duration-300 hover:bg-black'
               >
-                Talk to Our Team
+                Get a Quote
               </a>
             </motion.div>
           </section>

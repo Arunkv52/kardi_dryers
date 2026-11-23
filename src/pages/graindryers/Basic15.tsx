@@ -78,19 +78,22 @@ const basic15: Product = {
   ],
 
   specifications: [
-    { label: 'Height', value: '4400 mm' },
-    { label: 'Width', value: '2903 mm' },
-    { label: 'Total Length', value: '6105 mm' },
-    { label: 'Weight', value: '2000 kg' },
-    { label: 'Power Required', value: '11.2 kW (30 PTO HP)' },
-    { label: 'Batch Capacity (Maize)', value: '2.5 Ton' },
-    { label: 'Batch Capacity (Paddy)', value: '2 Ton' },
-    { label: 'Average Daily Output (Paddy)', value: '12*' },
-    { label: 'Average Daily Output (Maize)', value: '15*' },
+
+    { label: 'Height', value: '3975 mm' },
+    { label: 'Width', value: '2010 mm' },
+    { label: 'Total Length', value: '5718 mm' },
+    { label: 'Weight', value: '1500 kg' },
+    { label: 'Power Required', value: '10 kW (25 PTO HP)' },
+    { label: 'Batch Capacity (Maize)', value: '1.25 Ton' },
+    { label: 'Batch Capacity (Paddy)', value: '1 Ton' },
+    { label: 'Average Daily Output (Paddy)', value: '12* t/day' },
+    { label: 'Average Daily Output (Maize)', value: '15* t/day' },
     { label: 'Electric Motors', value: '5' },
     { label: 'Fan Type', value: 'Centrifugal' },
     { label: 'Agitator', value: 'Yes' },
-    { label: 'Burner Diesel Automatic Single Stage', value: 'Yes' }
+    { label: 'Burner Diesel Automatic Single Stage', value: 'Yes' },
+    { label: 'Loading', value: '10 Min' },
+    { label: 'Unloading', value: '5 Min' }
   ]
 }
 
@@ -277,7 +280,7 @@ function StatBlock ({ value, label }: { value: string; label: string }) {
       >
         {value}
       </span>
-      <span className='text-xs uppercase tracking-[0.15em] text-white'>
+      <span className='text-xs tracking-[0.15em] text-white'>
         {label}
       </span>
     </div>

@@ -67,7 +67,7 @@ export default function VerticalTimeline() {
       {/* Section label */}
       <div className="max-w-3xl mx-auto mb-20 text-center">
         <p className="text-sm tracking-[0.25em] uppercase">
-          Kardi Dryers — A History
+          Our Journey
         </p>
         <div className="w-12 h-px bg-[#ffffff] mx-auto mt-4" />
       </div>

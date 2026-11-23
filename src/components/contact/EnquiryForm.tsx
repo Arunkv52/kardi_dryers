@@ -215,7 +215,7 @@ export default function EnquiryForm({ onSubmitForm, className = "" }: Props) {
               className={`${selectCls} bg-white`}
               {...register("product", { required: "Please select a product" })}
             >
-              <option value="">Select a product</option>
+              <option value="">Choose a product</option>
               {PRODUCTS.map((p) => (
                 <option key={p} value={p}>
                   {p}
@@ -261,7 +261,7 @@ export default function EnquiryForm({ onSubmitForm, className = "" }: Props) {
               htmlFor="comments"
               className="text-[11px] tracking-[0.18em] text-[#b9ad8f]"
             >
-              Comments
+              Your message
             </label>
             <span
               className="text-[12px] tabular-nums text-[#b9ad8f]"
@@ -295,7 +295,7 @@ export default function EnquiryForm({ onSubmitForm, className = "" }: Props) {
             disabled={isSubmitting}
             className="h-13 min-w-32.5 bg-[#d9d0bd] px-8 text-[15px] text-[#0b2a21] transition hover:bg-[#f1ead8] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#f1ead8] disabled:cursor-not-allowed disabled:text-[#0b2a21]/50 disabled:hover:bg-[#d9d0bd]"
           >
-            {isSubmitting ? "Sending…" : "Submit"}
+            {isSubmitting ? "Sending…" : "Get a Quote"}
           </button>
 
           {isSubmitSuccessful && (

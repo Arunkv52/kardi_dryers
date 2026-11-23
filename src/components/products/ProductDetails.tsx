@@ -40,7 +40,7 @@ const ProdData: Product[] = [
   {
     Image: SagoDryerImg,
     title: 'Sago Dryers',
-    Type: 'Conveyor-bed dryer for sago',
+    Type: ' Dryer type only',
     Category: 'Industrial and Processing',
     Crops: 'Chilli, bell pepper, herbs and leaves.',
     Capacity: '500 kg to 1.8 t/hr',
@@ -65,7 +65,7 @@ const ProdData: Product[] = [
     title: 'Kardi-Pedrotti Mobile Dryer',
     Type: 'Mobile batch dryer for paddy, maize and other grains',
     Category: 'Mobile Dryers',
-    Crops: '2 to 70 t.',
+    Crops: '2 t to 70 t',
     Capacity: '1 T – 70 T',
     Dryingtime: ' Dries in 30 min to 4 hrs against 24 to 48 hrs in the sun.',
     Fuel: 'Diesel or kerosene',
@@ -112,7 +112,7 @@ const ProdData: Product[] = [
     Type: 'Flat Bed',
     Category: 'Crop Dryers',
     Crops: 'Ginger, turmeric and meat.',
-    Capacity: 'Compact 50 kg flat-bed dryer for large cardamom',
+    Capacity: 'Compact 50 kg ',
     Dryingtime: 'Custom',
     Fuel: ' Firewood fuel.',
     Installedin: ' Installed in the North-East'
@@ -182,7 +182,7 @@ const ProductDetails = () => {
               Our range
             </p>
             <h5 className='text-4xl font-normal leading-tight mb-2 text-white'>
-              Dryers for every crop, scale & fuel
+              A dryer for every crop, scale and fuel
             </h5>
             <div
               style={{ backgroundColor: '#A6824F' }}

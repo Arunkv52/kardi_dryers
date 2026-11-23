@@ -26,12 +26,10 @@ const About = () => {
         <section>
           <HorizontalTimeline />
         </section>
-         <section>
+        <section>
           <Certificates />
         </section>
-
-                  <Footer />
-
+        <Footer />
       </KardiBackground>
     </>
   )

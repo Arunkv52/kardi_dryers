@@ -386,6 +386,8 @@ export default function NewsroomPage () {
           </div>
         </section>
       </main>
+
+      
       <Footer/>
     </>
   )

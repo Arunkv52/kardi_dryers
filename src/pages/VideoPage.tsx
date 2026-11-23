@@ -114,7 +114,7 @@ export default function YouTubeShowcase () {
               rel='noopener noreferrer'
               className='border border-[#A6824F] px-6 py-3 text-sm tracking-wider text-[#A6824F] transition-colors duration-300 hover:bg-[#A6824F] hover:text-[#15140F]'
             >
-              Visit our YouTube channel →
+              Subscribe on YouTube →
             </a>
           </div>
         </section>

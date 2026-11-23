@@ -18,8 +18,7 @@ const Ourstory = () => {
             grain dryers in India.
           </p>
           <p className='py-2'>
-            Kardi brings 25 years of Indian farm experience. Pedrotti adds 60
-            years of grain-drying know-how. The result is European technology,
+            Kardi brings 25 years of Indian farm experience. The result is European technology,
             made locally, tuned for Indian crops and conditions.
           </p>
         </div>

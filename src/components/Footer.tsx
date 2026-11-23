@@ -17,13 +17,13 @@ const Footer = () => {
     { name: 'Services', link: '/services' },
     { name: 'Videos', link: '/videos' },
     { name: 'Blog', link: '/blogsoon' },
-    { name: 'Contact', link: '/contact' }
+    { name: 'Contact us', link: '/contact' }
   ]
 
   const ProductItem = [
-    { name: 'Cardamom Dryers', link: '/cofeedryers' },
+    { name: 'Cardamom Dryers', link: '/spices' },
     { name: 'Coffee Dryers', link: '/cofeedryers' },
-    { name: 'Paddy Dryers', link: '/' },
+    { name: 'Paddy Dryers', link: '/basic15' },
 
     {
       name: 'Mobile Grain Dryers',
@@ -64,11 +64,11 @@ const Footer = () => {
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
               <h1 className='text-white text-4xl md:text-4xl leading-tight font-light md:mt-0 mt-5'>
-                Dry smarter.
+                Dry smarter. 
                 <span className='text-[#ff5938]'>
-                  <strong>Preserve better. </strong>
+                  <strong> Protect quality. </strong>
                 </span>
-                Protect quality. Grow with confidence
+                 Grow with confidence.
               </h1>
             </div>
 
@@ -138,8 +138,13 @@ const Footer = () => {
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Admin Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Survey No. 203/2 (Old No. 86), New No. 69, 2nd Extension,
-                Nageswara Rao Road, Athipet, <br /> Chennai – 600 058
+                SP79, 1st Main Road, Ambattur Industrial Estate, Ambattur, Chennai – 600058
+              </li>
+            </ul>
+            <ul className='text-white text-base'>
+              <li className='mb-2 text-sm text-white/80'>Factory</li>
+              <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
+                 No. 16, AUETAA Industrial Estate, Morai, Veerapuram, Chennai – 600055
               </li>
             </ul>
 
@@ -149,7 +154,7 @@ const Footer = () => {
                 Phone : +91 97916 64050
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Phone : +91 94449 25948
+                Phone : +91 90940 13375
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
                 Email: sales@kardidryers.com & info@kardidryers.com

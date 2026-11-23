@@ -13,7 +13,8 @@ const Certificates = () => {
         <div className="max-w-xl">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#dce8df] bg-white px-4 py-2 text-sm font-semibold text-[#135846] shadow-sm">
             <BadgeCheck aria-hidden="true" size={17} />
-            Tested &amp; approved
+            Tested & approved by ICAR – 
+Coimbatore
           </div>
 
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#e95435]">

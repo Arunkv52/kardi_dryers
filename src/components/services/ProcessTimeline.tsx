@@ -32,11 +32,12 @@ const ProcessTimeline = () => {
     <section className='px-6 py-24 md:px-10'>
       <div className=''>
         <p className='mb-4 text-xs font-medium uppercase tracking-[0.18em] text-white/70'>
-          How a project moves
+          How It Works
         </p>
 
         <h2 className='mb-16  font-serif text-4xl leading-tight text-white md:text-5xl'>
-          From enquiry to your first harvest-ready batch
+          
+          From enquiry to your first dried batch
         </h2>
 
         {/* Scroll horizontally on smaller screens */}
