@@ -48,7 +48,10 @@ const menuItems: MenuItem[] = [
 
           { name: 'Basic 35', link: '/basic35' },
 
-          { name: ' More Models (Pedrotti, Italy)', link: 'https://pedrottisrl.it/' }
+          {
+            name: ' More Models (Pedrotti, Italy)',
+            link: 'https://pedrottisrl.it/'
+          }
         ]
       },
 
@@ -70,7 +73,10 @@ const menuItems: MenuItem[] = [
         children: [
           { name: 'Sago Pearl Dryers (Sabudana)', link: '/sagopearl' },
 
-          { name: 'Starch and Flash Dryers (Custom-Built Dryers)', link: '/custombuilt' }
+          {
+            name: 'Starch and Flash Dryers (Custom-Built Dryers)',
+            link: '/custombuilt'
+          }
         ]
       },
 

@@ -11,6 +11,7 @@ const PHONE_TEL = '+919791664050'
 const PHONE_DISPLAY1 = '+91 90940 13375'
 const PHONE_TEL1 = '+919094013375'
 const WHATSAPP_NUMBER = '919791664050'
+const EMAIL0 = 'vijayakumar@kardidryers.com'
 const EMAIL = 'sales@kardidryers.com'
 const EMAIL1 = 'info@kardidryers.com'
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(
@@ -143,6 +144,9 @@ export default function Contact () {
                     </a>
                   </InfoRow>
                   <InfoRow icon={<MailIcon />} label='Email'>
+                   <a href={`mailto:${EMAIL}`} className='hover:underline'>
+                      {EMAIL0} <br />
+                    </a> 
                     <a href={`mailto:${EMAIL}`} className='hover:underline'>
                       {EMAIL}
                     </a> <br />

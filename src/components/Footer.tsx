@@ -5,6 +5,7 @@ import { RiFacebookFill } from 'react-icons/ri'
 import { BsInstagram } from 'react-icons/bs'
 import { FaXTwitter } from 'react-icons/fa6'
 import { AiFillYoutube } from 'react-icons/ai'
+import Brochure from '../assets/brochure/Kardi Dryers - A4_final.pdf'
 
 const Footer = () => {
   const FooterItem = [
@@ -16,8 +17,9 @@ const Footer = () => {
     },
     { name: 'Services', link: '/services' },
     { name: 'Videos', link: '/videos' },
-    { name: 'Blog', link: '/blogsoon' },
-    { name: 'Contact us', link: '/contact' }
+    { name: 'News', link: '/blogsoon' },
+    { name: 'Contact us', link: '/contact' },
+    { name: 'Download Brochure', link: Brochure }
   ]
 
   const ProductItem = [
@@ -26,7 +28,7 @@ const Footer = () => {
     { name: 'Paddy Dryers', link: '/basic15' },
 
     {
-      name: 'Mobile Grain Dryers',
+      name: 'Mobile Paddy Dryers',
       link: '/mobilepaddydryers'
     },
     { name: 'Sago and Starch Dryers', link: '/sagopearl' },
@@ -64,18 +66,18 @@ const Footer = () => {
             {/* Content */}
             <div className='relative z-10 max-w-3xl'>
               <h1 className='text-white text-4xl md:text-4xl leading-tight font-light md:mt-0 mt-5'>
-                Dry smarter. 
+                Dry smarter.
                 <span className='text-[#ff5938]'>
                   <strong> Protect quality. </strong>
                 </span>
-                 Grow with confidence.
+                Grow with confidence.
               </h1>
             </div>
 
             {/* Button */}
             <div className='relative z-10 mt-10 md:mt-0'>
               <Link to='/contact'>
-                <Button text='Talk to an Engineer' variant='orange' />
+                <Button text='Get a Quote' variant='orange' />
               </Link>
             </div>
           </div>
@@ -94,18 +96,26 @@ const Footer = () => {
             </h6>
 
             {FooterItem.map(item => (
-              <>
-                <ul className='text-white text-base'>
-                  <li key={item.name} className='mb-0'>
+              <ul key={item.name} className='text-white text-base'>
+                <li className='mb-0'>
+                  {item.name === 'Download Brochure' ? (
+                    <a
+                      href={item.link}
+                      download='Kardi-Dryers-Brochure.pdf'
+                      className='cursor-pointer text-sm transition-all duration-300 hover:text-[#ff5938]'
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
                     <Link
                       to={item.link}
                       className='cursor-pointer text-sm transition-all duration-300 hover:text-[#ff5938]'
                     >
                       {item.name}
                     </Link>
-                  </li>
-                </ul>
-              </>
+                  )}
+                </li>
+              </ul>
             ))}
           </div>
           <div className=' w-full md:mt-0 mt-10'>
@@ -132,19 +142,21 @@ const Footer = () => {
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Registered Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                 284, Avvai Shanmugam Salai, Gopalapuram, <br /> Chennai 600 086
+                284, Avvai Shanmugam Salai, Gopalapuram, <br /> Chennai 600 086
               </li>
             </ul>
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Admin Office</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                SP79, 1st Main Road, Ambattur Industrial Estate, Ambattur, Chennai – 600058
+                SP79, 1st Main Road, Ambattur Industrial Estate, Ambattur,
+                Chennai – 600058
               </li>
             </ul>
             <ul className='text-white text-base'>
               <li className='mb-2 text-sm text-white/80'>Factory</li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                 No. 16, AUETAA Industrial Estate, Morai, Veerapuram, Chennai – 600055
+                No. 16, AUETAA Industrial Estate, Morai, Veerapuram, Chennai –
+                600055
               </li>
             </ul>
 
@@ -157,14 +169,16 @@ const Footer = () => {
                 Phone : +91 90940 13375
               </li>
               <li className='mb-2 text-sm cursor-pointer  hover:text-[#ff5938] transition-all duration-300'>
-                Email: sales@kardidryers.com & info@kardidryers.com
+                Email: vijayakumar@kardidryers.com, sales@kardidryers.com &
+                info@kardidryers.com
               </li>
             </ul>
           </div>
         </div>
         <div className='footer-bottom mt-10 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between'>
           <p className='text-sm text-gray-300'>
-             © 2026 Kardi Dryers Pvt. Ltd. All rights reserved. Website by <a href="www.prismadverto.com"> Prism Adverto Pvt Ltd </a>
+            © 2026 Kardi Dryers Pvt. Ltd. All rights reserved. Website by{' '}
+            <a href='www.prismadverto.com'> Prism Adverto Pvt Ltd </a>
           </p>
 
           <div className='bt-left md:mt-0 mt-3'>
