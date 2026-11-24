@@ -211,7 +211,7 @@ export default function NewsroomPage () {
 }
 
 function PlaceholderArt ({
-  category,
+  
   large = false
 }: {
   category: Category
@@ -224,9 +224,7 @@ function PlaceholderArt ({
       }`}
     >
       <div className='absolute inset-0 opacity-[0.07]' style={DIAGONAL_LINES} />
-      <span className={`relative text-[#A6824F] ${large ? 'scale-150' : ''}`}>
-        <CategoryIcon category={category} />
-      </span>
+      
     </div>
   )
 }
@@ -236,73 +234,7 @@ const DIAGONAL_LINES = {
     'repeating-linear-gradient(135deg, #2B2B26 0, #2B2B26 1px, transparent 1px, transparent 14px)'
 }
 
-function CategoryIcon ({ category }: { category: Category }) {
-  const common = {
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.3
-  } as const
 
-  switch (category) {
-    case 'Partnership':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <circle cx='9' cy='12' r='6' />
-          <circle cx='15' cy='12' r='6' />
-        </svg>
-      )
-    case 'Recognition':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <circle cx='12' cy='8' r='5' />
-          <path
-            d='M9 12.5L7 21l5-3 5 3-2-8.5'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-        </svg>
-      )
-    case 'Expansion':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <path
-            d='M4 9V4h5M4 4l6 6M20 15v5h-5M20 20l-6-6'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-        </svg>
-      )
-    case 'Company News':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <rect x='3' y='5' width='18' height='14' rx='1' />
-          <path d='M3 9h18M8 13h3M8 16h7' strokeLinecap='round' />
-        </svg>
-      )
-    case 'Product Launch':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <path
-            d='M12 2l1.6 4.8L18 8l-4.4 1.2L12 14l-1.6-4.8L6 8l4.4-1.2L12 2z'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <path
-            d='M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-        </svg>
-      )
-    case 'Event':
-      return (
-        <svg viewBox='0 0 24 24' {...common} className='h-8 w-8'>
-          <rect x='3' y='5' width='18' height='16' rx='1' />
-          <path d='M3 10h18M8 3v4M16 3v4' strokeLinecap='round' />
-        </svg>
-      )
-  }
-}
 
 function ArrowIcon () {
   return (
